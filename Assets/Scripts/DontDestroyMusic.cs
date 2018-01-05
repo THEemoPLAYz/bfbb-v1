@@ -7,10 +7,8 @@ public class DontDestroyMusic : MonoBehaviour {
 	private AudioSource _audioSource;
 	void Awake()
 	{
+		DontDestroyOnLoad(transform.gameObject);
 		_audioSource = GetComponent<AudioSource>();
-		if (!_audioSource.isPlaying) {
-			DontDestroyOnLoad (transform.gameObject);
-		}
 	}
 
 	public void PlayMusic()
