@@ -12,7 +12,7 @@ public class Fade_Text : MonoBehaviour {
 	{
 		StartCoroutine(FadeOutRoutine());
 		player.GetComponent<Player_Controller> ().enabled = false;
-		opponent.GetComponent<David_ControllerAI> ().enabled = false;
+		opponent.GetComponent<MainOpponent_Controller> ().enabled = false;
 	}
 	private IEnumerator FadeOutRoutine()
 	{ 
@@ -26,6 +26,6 @@ public class Fade_Text : MonoBehaviour {
 		gameObject.SetActive (false);
 
 		player.GetComponent<Player_Controller> ().enabled = true;
-		opponent.GetComponent<David_ControllerAI> ().enabled = true;
+		opponent.GetComponent<MainOpponent_Controller> ().enabled = true;
 	}
 }

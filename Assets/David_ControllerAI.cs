@@ -1,44 +1,46 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class David_ControllerAI : MonoBehaviour {
 
+	[Header("Variables")]
+	public float speed;
 
-	public float currenthealth, newhealth, speed, jumppower;
-	public bool played;
-	public Slider healthbar;
-	public AnimationClip hurt;
-	public Animation healthanim;
-	public GameObject player, punchtriggerR, punchtriggerL, sparks;
+
+	[Space]
+
+	[Header("GameObjects")]
+	public GameObject player;
+	public GameObject punchtriggerR;
+	public GameObject punchtriggerL;
+	public GameObject sparks;
+
+	[Space]
+
+	[Header("Animation")]
 	public Animator anim;
+
+	[Space]
+
+	[Header("Audio")]
 	public AudioSource audio;
 	public AudioClip scream;
+
+	[Space]
+
+	[Header("Sprites")]
 	public SpriteRenderer currentsprite;
 	public Sprite right1, right2, right3, right4;
 	public Sprite left1, left2, left3, left4;
 
 	// Use this for initialization
 	void Start () {
-
-		currenthealth = 1f;
-		newhealth = 1f;
-
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		//healthcheck
-		if (currenthealth != newhealth) {
-
-			healthbar.value = newhealth;
-			currenthealth = newhealth;
-			healthanim.clip = hurt;
-			healthanim.Play ();
-		}
-
 		//AI
 		float distance = Vector3.Distance (transform.position, player.transform.position);
 		float direction = player.transform.position.x - transform.position.x;
@@ -71,8 +73,8 @@ public class David_ControllerAI : MonoBehaviour {
 				audio.PlayOneShot (scream, 0.5f);
 				sparks.SetActive(true);
 			}
-			
-	}
+
+		}
 
 		if (currentsprite.sprite == right1 || currentsprite.sprite == right2 || currentsprite.sprite == right3 || currentsprite.sprite == right4) {
 
@@ -97,5 +99,5 @@ public class David_ControllerAI : MonoBehaviour {
 			transform.position = new Vector3 (-21f, transform.position.y, transform.position.z);
 
 		}
-}
+	}
 }

@@ -1531,7 +1531,7 @@ GameObject:
   - component: {fileID: 855848082}
   - component: {fileID: 855848081}
   m_Layer: 5
-  m_Name: OpponentStart
+  m_Name: OpponentHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3216,6 +3216,7 @@ GameObject:
   - component: {fileID: 1547836874}
   - component: {fileID: 1547836875}
   - component: {fileID: 1547836876}
+  - component: {fileID: 1547836877}
   m_Layer: 8
   m_Name: Opponent
   m_TagString: Opponent
@@ -3324,28 +3325,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currenthealth: 1
   newhealth: 1
-  speed: 5
-  jumppower: 0
-  played: 0
   healthbar: {fileID: 855848082}
   hurt: {fileID: 7400000, guid: c942033e11a1a49a1904d5bb45daac20, type: 2}
   healthanim: {fileID: 855848081}
-  player: {fileID: 332881591}
-  punchtriggerR: {fileID: 769285807}
-  punchtriggerL: {fileID: 1102881862}
-  sparks: {fileID: 1848112898}
   anim: {fileID: 1547836875}
-  audio: {fileID: 1547836876}
-  scream: {fileID: 8300000, guid: 040c5805779344e7685a085ddcec6d90, type: 3}
-  currentsprite: {fileID: 1547836872}
-  right1: {fileID: 21300000, guid: f270e047ed37240cf8365b0f1f2942bf, type: 3}
-  right2: {fileID: 21300000, guid: 215600e5da78f403887a26811395fc7f, type: 3}
-  right3: {fileID: 21300000, guid: a490ac91eba204d928997edcc0ea7919, type: 3}
-  right4: {fileID: 21300000, guid: d883b6ecda5b24edfbfec79d92fb5866, type: 3}
-  left1: {fileID: 21300000, guid: bb40567bdcb864efea826fdcb33b142d, type: 3}
-  left2: {fileID: 21300000, guid: ceca4e3a961914b2785d3bfc0be8a6cf, type: 3}
-  left3: {fileID: 21300000, guid: 8d2afb9f098c0427f97a8fdc5c797f76, type: 3}
-  left4: {fileID: 21300000, guid: db5dbb04fce074bbab84cbf3baf3597d, type: 3}
 --- !u!95 &1547836875
 Animator:
   serializedVersion: 3
@@ -3443,6 +3426,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1547836877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1547836869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9c1e275ef964c5ab97470698d7df75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  player: {fileID: 332881591}
+  punchtriggerR: {fileID: 769285807}
+  punchtriggerL: {fileID: 1102881862}
+  sparks: {fileID: 1848112898}
+  anim: {fileID: 1547836875}
+  audio: {fileID: 1547836876}
+  scream: {fileID: 8300000, guid: 040c5805779344e7685a085ddcec6d90, type: 3}
+  currentsprite: {fileID: 1547836872}
+  right1: {fileID: 21300000, guid: f270e047ed37240cf8365b0f1f2942bf, type: 3}
+  right2: {fileID: 21300000, guid: 215600e5da78f403887a26811395fc7f, type: 3}
+  right3: {fileID: 21300000, guid: a490ac91eba204d928997edcc0ea7919, type: 3}
+  right4: {fileID: 21300000, guid: d883b6ecda5b24edfbfec79d92fb5866, type: 3}
+  left1: {fileID: 21300000, guid: bb40567bdcb864efea826fdcb33b142d, type: 3}
+  left2: {fileID: 21300000, guid: ceca4e3a961914b2785d3bfc0be8a6cf, type: 3}
+  left3: {fileID: 21300000, guid: 8d2afb9f098c0427f97a8fdc5c797f76, type: 3}
+  left4: {fileID: 21300000, guid: db5dbb04fce074bbab84cbf3baf3597d, type: 3}
 --- !u!1 &1564449595
 GameObject:
   m_ObjectHideFlags: 0
@@ -7567,6 +7578,21 @@ Prefab:
         type: 2}
       propertyPath: ShapeModule.radiusThickness
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
         type: 2}
