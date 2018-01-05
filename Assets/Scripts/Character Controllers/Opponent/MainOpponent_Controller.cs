@@ -8,9 +8,12 @@ public class MainOpponent_Controller : MonoBehaviour {
 
 	public float currenthealth, newhealth;
 	public Slider healthbar;
+	public GameObject bar, player;
 	public AnimationClip hurt;
 	public Animation healthanim;
 	public Animator anim;
+	public AudioSource audio, music;
+	public AudioClip death;
 
 	// Use this for initialization
 	void Start () {
@@ -31,9 +34,17 @@ public class MainOpponent_Controller : MonoBehaviour {
 			healthanim.clip = hurt;
 			healthanim.Play ();
 		}
-		if (currenthealth == 0f) {
+		if (currenthealth < 0f) {
 
 			anim.SetTrigger ("Death");
+			gameObject.GetComponent<David_ControllerAI> ().enabled = false;
+			bar.SetActive (false);
+			audio.PlayOneShot (death);
+			gameObject.GetComponent<MainOpponent_Controller>().enabled = false;
+			player.GetComponent<Pencil_ControllerPlayer> ().enabled = false;
+			music.Stop ();
+
+
 
 		}
 
