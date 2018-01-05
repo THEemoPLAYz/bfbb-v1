@@ -236,6 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionPlay: {fileID: 0}
   transitionOptions: {fileID: 0}
+  transitionMain: {fileID: 0}
 --- !u!111 &225512378
 Animation:
   m_ObjectHideFlags: 0
@@ -1477,7 +1478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1489813882
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1884,6 +1885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionPlay: {fileID: 0}
   transitionOptions: {fileID: 0}
+  transitionMain: {fileID: 0}
 --- !u!1 &1736453330
 GameObject:
   m_ObjectHideFlags: 0
@@ -2213,6 +2215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionPlay: {fileID: 1729024578}
   transitionOptions: {fileID: 225512375}
+  transitionMain: {fileID: 0}
 --- !u!1 &1977795925
 GameObject:
   m_ObjectHideFlags: 0
