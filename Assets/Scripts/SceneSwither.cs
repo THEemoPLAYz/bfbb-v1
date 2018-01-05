@@ -6,16 +6,32 @@ using UnityEngine.UI;
 
 public class SceneSwither : MonoBehaviour {
 
-	public GameObject transition;
+	public GameObject transitionPlay, transitionOptions;
 
-	public void LoadScene(string sceneName){
+	public void ClickPlay(){
 
-		transition.SetActive (true);
-		SceneManager.LoadSceneAsync(sceneName);
+		transitionPlay.SetActive (true);
 
 	}
 
-	public void Exit(){
+	public void ClickOptions(){
+
+		transitionOptions.SetActive (true);
+
+	}
+
+	public void LoadPlay(){
+		
+		SceneManager.LoadSceneAsync("Play");
+
+	}
+	public void LoadOptions(){
+
+		SceneManager.LoadSceneAsync ("Options");
+
+	}
+
+	public void LoadExit(){
 
 		Application.Quit();
 
