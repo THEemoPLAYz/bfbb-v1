@@ -11,8 +11,6 @@ public class Fade_Text : MonoBehaviour {
 	public void FadeOut()
 	{
 		StartCoroutine(FadeOutRoutine());
-		player.GetComponent<Player_Controller> ().enabled = false;
-		opponent.GetComponent<MainOpponent_Controller> ().enabled = false;
 	}
 	private IEnumerator FadeOutRoutine()
 	{ 
@@ -24,8 +22,5 @@ public class Fade_Text : MonoBehaviour {
 			yield return null;
 		}
 		gameObject.SetActive (false);
-
-		player.GetComponent<Player_Controller> ().enabled = true;
-		opponent.GetComponent<MainOpponent_Controller> ().enabled = true;
 	}
 }

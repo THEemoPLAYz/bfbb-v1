@@ -20,6 +20,7 @@ public class David_ControllerAI : MonoBehaviour {
 
 	[Header("Animation")]
 	public Animator anim;
+	public RuntimeAnimatorController davidcontroller;
 
 	[Space]
 
@@ -36,7 +37,7 @@ public class David_ControllerAI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		anim.runtimeAnimatorController = davidcontroller;
 	}
 	
 	// Update is called once per frame

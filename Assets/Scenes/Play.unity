@@ -574,8 +574,9 @@ GameObject:
   - component: {fileID: 332881595}
   - component: {fileID: 332881594}
   - component: {fileID: 332881593}
-  - component: {fileID: 332881596}
   - component: {fileID: 332881597}
+  - component: {fileID: 332881596}
+  - component: {fileID: 332881599}
   - component: {fileID: 332881598}
   m_Layer: 8
   m_Name: Player
@@ -677,28 +678,17 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 332881591}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f749de5e7d0904b718d418b3324498bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  jumppower: 15
-  anim: {fileID: 332881597}
-  jumped: 0
-  rb: {fileID: 332881594}
-  punchtriggerR: {fileID: 2025633752}
-  punchTriggerL: {fileID: 382844230}
-  punchR: {fileID: 21300000, guid: 866925167714a40c6a219cacea164492, type: 3}
-  punchL: {fileID: 21300000, guid: 4549775def5524f4d80fe1927912c866, type: 3}
-  playersprite: {fileID: 332881595}
-  audio: {fileID: 332881598}
-  hmph: {fileID: 8300000, guid: 768df6e71a9a246d29ef715bbc6c4825, type: 3}
   currenthealth: 1
   newhealth: 1
   healthbar: {fileID: 793861466}
   hurt: {fileID: 7400000, guid: c942033e11a1a49a1904d5bb45daac20, type: 2}
   healthanim: {fileID: 793861465}
+  anim: {fileID: 332881597}
 --- !u!95 &332881597
 Animator:
   serializedVersion: 3
@@ -796,6 +786,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &332881599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 332881591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1477812c17c3146828059affb7b858ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 332881594}
+  punchtriggerR: {fileID: 2025633752}
+  punchTriggerL: {fileID: 382844230}
+  speed: 10
+  jumppower: 0
+  jumped: 0
+  anim: {fileID: 332881597}
+  pencilcontroller: {fileID: 9100000, guid: 7fe45c3908fad4399b7be310f2d1cb2c, type: 2}
+  punchR: {fileID: 21300000, guid: 1c81f87ccaf9e4d69984171dd0d5cfba, type: 3}
+  punchL: {fileID: 21300000, guid: 2674092606fb94fc08216b2da1786b3d, type: 3}
+  playersprite: {fileID: 332881595}
+  audio: {fileID: 332881598}
+  hmph: {fileID: 8300000, guid: 768df6e71a9a246d29ef715bbc6c4825, type: 3}
 --- !u!1 &382844230
 GameObject:
   m_ObjectHideFlags: 0
@@ -3213,10 +3227,10 @@ GameObject:
   - component: {fileID: 1547836872}
   - component: {fileID: 1547836871}
   - component: {fileID: 1547836870}
-  - component: {fileID: 1547836874}
   - component: {fileID: 1547836875}
-  - component: {fileID: 1547836876}
+  - component: {fileID: 1547836874}
   - component: {fileID: 1547836877}
+  - component: {fileID: 1547836876}
   m_Layer: 8
   m_Name: Opponent
   m_TagString: Opponent
@@ -3318,7 +3332,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1547836869}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8a6c054e53f541b48b009ef3ce49c9d, type: 3}
   m_Name: 
@@ -3443,6 +3457,7 @@ MonoBehaviour:
   punchtriggerL: {fileID: 1102881862}
   sparks: {fileID: 1848112898}
   anim: {fileID: 1547836875}
+  davidcontroller: {fileID: 9100000, guid: 96363e3368a424852aa42f57d6eda6b0, type: 2}
   audio: {fileID: 1547836876}
   scream: {fileID: 8300000, guid: 040c5805779344e7685a085ddcec6d90, type: 3}
   currentsprite: {fileID: 1547836872}
@@ -7578,6 +7593,36 @@ Prefab:
         type: 2}
       propertyPath: ShapeModule.radiusThickness
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
         type: 2}
