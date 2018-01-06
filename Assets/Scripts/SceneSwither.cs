@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class SceneSwither : MonoBehaviour {
 
-	public GameObject transitionPlay, transitionOptions, transitionMain;
+	public GameObject transitionPlay, transitionOptions, transitionMain, loader;
 
 	public void ClickPlay(){
 
@@ -29,16 +29,19 @@ public class SceneSwither : MonoBehaviour {
 	public void LoadPlay(){
 		
 		SceneManager.LoadSceneAsync("Play");
+		loader.SetActive (true);
 
 	}
 	public void LoadOptions(){
 
 		SceneManager.LoadSceneAsync ("Options");
+		loader.SetActive (true);
 
 	}
 	public void LoadMain(){
 
 		SceneManager.LoadSceneAsync ("MainMenu");
+		loader.SetActive (true);
 
 	}
 
