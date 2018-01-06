@@ -3888,7 +3888,7 @@ MonoBehaviour:
   audio: {fileID: 1117942453}
   winMusic: {fileID: 8300000, guid: 65bff4c28ccee44e1b862c37eeb6982d, type: 3}
   loseMusic: {fileID: 0}
-  lerpSpeed: 2
+  lerpSpeed: 3
   playerPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1564449595
 GameObject:
@@ -8014,6 +8014,46 @@ Prefab:
         type: 2}
       propertyPath: ShapeModule.radiusThickness
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
         type: 2}
