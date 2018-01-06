@@ -646,6 +646,7 @@ GameObject:
   - component: {fileID: 332881596}
   - component: {fileID: 332881599}
   - component: {fileID: 332881598}
+  - component: {fileID: 332881600}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -879,6 +880,19 @@ MonoBehaviour:
   playersprite: {fileID: 332881595}
   audio: {fileID: 332881598}
   hmph: {fileID: 8300000, guid: 768df6e71a9a246d29ef715bbc6c4825, type: 3}
+--- !u!114 &332881600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 332881591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d98e280bba244cfdbe25c14c06aacd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 332881598}
+  pencil: {fileID: 8300000, guid: 0adec9e815e2c4c028364ba2b5d14cee, type: 3}
 --- !u!1 &382844230
 GameObject:
   m_ObjectHideFlags: 0
@@ -3907,7 +3921,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1564449596
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8014,6 +8028,16 @@ Prefab:
         type: 2}
       propertyPath: ShapeModule.radiusThickness
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
         type: 2}
