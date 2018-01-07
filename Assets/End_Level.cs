@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class End_Level : MonoBehaviour {
 
-	public GameObject player, opponent, endMessage, healthPlayer, healthOpponent;
+	public GameObject player, opponent, endMessage, healthPlayer, healthOpponent, timer;
 	public Camera cam;
 	public AnimationClip healthExit;
 	public AudioSource audio;
@@ -35,8 +35,11 @@ public class End_Level : MonoBehaviour {
 		opponent.GetComponent<End_Level>().enabled = true;
 		Animation playerAnim = healthPlayer.GetComponent<Animation> ();
 		Animation opponentAnim = healthOpponent.GetComponent<Animation> ();
+		Animation timerAnim = timer.GetComponent<Animation> ();
 		playerAnim.clip = healthExit;
 		opponentAnim.clip = healthExit;
+		timerAnim.clip = healthExit;
+		timerAnim.Play ();
 		playerAnim.Play ();
 		opponentAnim.Play ();
 		endMessage.SetActive (true);
