@@ -858,8 +858,6 @@ MonoBehaviour:
   punchR: {fileID: 21300000, guid: 866925167714a40c6a219cacea164492, type: 3}
   punchL: {fileID: 21300000, guid: 4549775def5524f4d80fe1927912c866, type: 3}
   playersprite: {fileID: 332881595}
-  audio: {fileID: 332881598}
-  hmph: {fileID: 8300000, guid: 768df6e71a9a246d29ef715bbc6c4825, type: 3}
 --- !u!114 &332881600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -872,7 +870,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio: {fileID: 332881598}
-  pencil: {fileID: 8300000, guid: 0adec9e815e2c4c028364ba2b5d14cee, type: 3}
+  pencilWin: {fileID: 8300000, guid: 0adec9e815e2c4c028364ba2b5d14cee, type: 3}
+  pencilPunch: {fileID: 8300000, guid: 768df6e71a9a246d29ef715bbc6c4825, type: 3}
 --- !u!1 &382844230
 GameObject:
   m_ObjectHideFlags: 0
@@ -3721,6 +3720,7 @@ GameObject:
   - component: {fileID: 1547836877}
   - component: {fileID: 1547836876}
   - component: {fileID: 1547836878}
+  - component: {fileID: 1547836879}
   m_Layer: 8
   m_Name: Opponent
   m_TagString: Opponent
@@ -3835,9 +3835,7 @@ MonoBehaviour:
   hurt: {fileID: 7400000, guid: c942033e11a1a49a1904d5bb45daac20, type: 2}
   healthanim: {fileID: 855848081}
   anim: {fileID: 1547836875}
-  audio: {fileID: 1547836876}
   music: {fileID: 1117942453}
-  death: {fileID: 8300000, guid: 350c682534aee4c6caf8cd7d325ce2b4, type: 3}
 --- !u!95 &1547836875
 Animator:
   serializedVersion: 3
@@ -3954,8 +3952,6 @@ MonoBehaviour:
   sparks: {fileID: 1848112898}
   anim: {fileID: 1547836875}
   davidcontroller: {fileID: 9100000, guid: 96363e3368a424852aa42f57d6eda6b0, type: 2}
-  audio: {fileID: 1547836876}
-  scream: {fileID: 8300000, guid: 040c5805779344e7685a085ddcec6d90, type: 3}
   currentsprite: {fileID: 1547836872}
   right1: {fileID: 21300000, guid: f270e047ed37240cf8365b0f1f2942bf, type: 3}
   right2: {fileID: 21300000, guid: 215600e5da78f403887a26811395fc7f, type: 3}
@@ -3989,6 +3985,20 @@ MonoBehaviour:
   loseMusic: {fileID: 0}
   lerpSpeed: 3
   playerPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &1547836879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1547836869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1c654aaf3d43aa4eaaf5485508ad71e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 1547836876}
+  davidAttack: {fileID: 8300000, guid: 040c5805779344e7685a085ddcec6d90, type: 3}
+  davidLose: {fileID: 8300000, guid: 350c682534aee4c6caf8cd7d325ce2b4, type: 3}
 --- !u!1 &1564449595
 GameObject:
   m_ObjectHideFlags: 0
@@ -8113,6 +8123,31 @@ Prefab:
         type: 2}
       propertyPath: ShapeModule.radiusThickness
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 198848967368680250, guid: fb3e29ac8722145c8952636f1ce5cb08,
         type: 2}

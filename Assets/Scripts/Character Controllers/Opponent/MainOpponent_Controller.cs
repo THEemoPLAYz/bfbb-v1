@@ -12,8 +12,7 @@ public class MainOpponent_Controller : MonoBehaviour {
 	public AnimationClip hurt;
 	public Animation healthanim;
 	public Animator anim;
-	public AudioSource audio, music;
-	public AudioClip death;
+	public AudioSource music;
 
 	// Use this for initialization
 	void Start () {
@@ -39,7 +38,6 @@ public class MainOpponent_Controller : MonoBehaviour {
 			anim.SetTrigger ("Death");
 			gameObject.GetComponent<David_ControllerAI> ().enabled = false;
 			bar.SetActive (false);
-			audio.PlayOneShot (death);
 			gameObject.GetComponent<MainOpponent_Controller>().enabled = false;
 			player.GetComponent<Pencil_ControllerPlayer> ().enabled = false;
 			music.Stop ();

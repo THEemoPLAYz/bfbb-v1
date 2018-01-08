@@ -24,12 +24,6 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 	public Sprite punchL;
 	public SpriteRenderer playersprite;
 
-	[Space]
-
-	[Header("Audio")]
-	public AudioSource audio;
-	public AudioClip hmph;
-
 	// Use this for initialization
 	void Start () {
 		anim.runtimeAnimatorController = pencilcontroller;
@@ -61,7 +55,6 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 		} else if (Input.GetKeyDown (KeyCode.Z)) {
 
 			anim.SetTrigger ("Punch");
-			audio.PlayOneShot (hmph);
 
 		}
 

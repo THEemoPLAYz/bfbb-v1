@@ -24,12 +24,6 @@ public class David_ControllerAI : MonoBehaviour {
 
 	[Space]
 
-	[Header("Audio")]
-	public AudioSource audio;
-	public AudioClip scream;
-
-	[Space]
-
 	[Header("Sprites")]
 	public SpriteRenderer currentsprite;
 	public Sprite right1, right2, right3, right4;
@@ -69,11 +63,8 @@ public class David_ControllerAI : MonoBehaviour {
 		} else {
 
 			anim.SetBool ("IsMoving", false);
-			if (!audio.isPlaying) {
-				anim.SetTrigger ("Scream");
-				audio.PlayOneShot (scream, 0.5f);
-				sparks.SetActive(true);
-			}
+			anim.SetTrigger ("Scream");
+			sparks.SetActive(true);
 
 		}
 
