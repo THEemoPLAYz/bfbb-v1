@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class DontDestroyMusic : MonoBehaviour {
 
+	public List<AudioClip> music;
+
 	private AudioSource _audioSource;
 	void Awake()
 	{
-		DontDestroyOnLoad(transform.gameObject);
 		_audioSource = GetComponent<AudioSource>();
+		int randomize = Random.Range (0, music.Count);
+		_audioSource.clip = music[randomize];
+		DontDestroyOnLoad(transform.gameObject);
 	}
 
 	public void PlayMusic()
@@ -19,6 +23,7 @@ public class DontDestroyMusic : MonoBehaviour {
 
 	public void StopMusic()
 	{
+		Destroy (gameObject);
 		_audioSource.Stop();
 	}
 }
