@@ -465,6 +465,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1086854845}
+  - component: {fileID: 1086854846}
   m_Layer: 5
   m_Name: Player
   m_TagString: Untagged
@@ -492,6 +493,21 @@ RectTransform:
   m_AnchoredPosition: {x: 400, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!111 &1086854846
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1086854844}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 1040d253fe6a2c646bc5e2d52cb7abb6, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 1040d253fe6a2c646bc5e2d52cb7abb6, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1179449763
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,6 +516,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1179449764}
+  - component: {fileID: 1179449765}
   m_Layer: 5
   m_Name: Opponent
   m_TagString: Untagged
@@ -527,6 +544,21 @@ RectTransform:
   m_AnchoredPosition: {x: -400, y: 0.000015258789}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!111 &1179449765
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1179449763}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 967b5ffc322c3b148819c0b75696f634, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 967b5ffc322c3b148819c0b75696f634, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1408314961
 GameObject:
   m_ObjectHideFlags: 0
