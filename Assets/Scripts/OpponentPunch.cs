@@ -6,7 +6,7 @@ public class OpponentPunch : MonoBehaviour {
 
 	public float punchpower = 0.03f;
 	public float knockback;
-	public GameObject player;
+	public Transform player;
 	public AudioSource audio;
 	public AudioClip smolslap;
 	public GameObject debris;
@@ -31,12 +31,12 @@ public class OpponentPunch : MonoBehaviour {
 			if (gameObject.name == "PunchTriggerR") {
 
 				player.GetComponent<Rigidbody> ().AddForce (Vector3.right * knockback, ForceMode.Impulse);
-				GameObject debrisclone = Instantiate (debris, player.transform.position, Quaternion.identity);
+				GameObject DebrisClone = Instantiate (debris, player.position, Quaternion.identity);
 
 			} else if (gameObject.name == "PunchTriggerL") {
 
 				player.GetComponent<Rigidbody> ().AddForce (Vector3.left * knockback, ForceMode.Impulse);
-				GameObject debrisclone = Instantiate (debris, player.transform.position, Quaternion.identity);
+				GameObject DebrisClone = Instantiate (debris, player.position, Quaternion.identity);
 
 			}
 		}

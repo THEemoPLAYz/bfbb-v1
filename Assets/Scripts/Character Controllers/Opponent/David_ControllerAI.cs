@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class David_ControllerAI : MonoBehaviour {
 
+	[Header("Initialize Stuff")]
+	public BoxCollider collider;
+	public Vector3 ColliderPosition;
+	public Vector3 ColliderScale;
+
+	[Space]
+
 	[Header("Variables")]
 	public float speed;
 
@@ -32,6 +39,8 @@ public class David_ControllerAI : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		anim.runtimeAnimatorController = davidcontroller;
+		collider.center = new Vector3 (ColliderPosition.x, ColliderPosition.y, ColliderPosition.z);
+		collider.size = new Vector3 (ColliderScale.x, ColliderScale.y, ColliderScale.z);
 	}
 	
 	// Update is called once per frame

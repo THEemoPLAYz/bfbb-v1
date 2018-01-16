@@ -7,6 +7,13 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 	public Rigidbody rb;
 	public GameObject punchtriggerR, punchTriggerL;
 
+	[Header("Initialize Stuff")]
+	public BoxCollider collider;
+	public Vector3 ColliderPosition;
+	public Vector3 ColliderScale;
+
+	[Space]
+
 	[Header("Variables")]
 	public float speed, jumppower;
 	public bool jumped;
@@ -27,6 +34,8 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		anim.runtimeAnimatorController = pencilcontroller;
+		collider.center = new Vector3 (ColliderPosition.x, ColliderPosition.y, ColliderPosition.z);
+		collider.size = new Vector3 (ColliderScale.x, ColliderScale.y, ColliderScale.z);
 	}
 	
 	// Update is called once per frame
@@ -62,10 +71,6 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 
 			anim.SetBool ("IsMoving", false);
 
-		}
-
-		if (transform.position.y < 1.5f) {
-			transform.position = new Vector3(transform.position.x, 1.52f, transform.position.z);
 		}
 
 		if (playersprite.sprite == punchR) {
