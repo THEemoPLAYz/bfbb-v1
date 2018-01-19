@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class MainOpponent_Controller : MonoBehaviour {
 
 
-	public float currenthealth, newhealth;
-	public Slider healthbar;
+	public float currenthealth, newhealth, currentpower;
+	public Slider healthbar, powerbar;
 	public GameObject bar, player;
 	public AnimationClip hurt;
 	public Animation healthanim;
@@ -17,6 +17,7 @@ public class MainOpponent_Controller : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+		currentpower = 0f;
 		currenthealth = 1f;
 		newhealth = 1f;
 
@@ -24,6 +25,8 @@ public class MainOpponent_Controller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		powerbar.value = currentpower;
 
 		//healthcheck
 		if (currenthealth != newhealth) {

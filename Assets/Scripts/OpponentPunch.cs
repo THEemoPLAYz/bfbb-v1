@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class OpponentPunch : MonoBehaviour {
 
-	public float punchpower = 0.03f;
+	public float punchpower;
+	public float powerAddAttack,powerAddDefense;
 	public float knockback;
 	public Transform player;
 	public AudioSource audio;
 	public AudioClip smolslap;
-	public GameObject debris;
+	public GameObject debris, opponent;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +26,8 @@ public class OpponentPunch : MonoBehaviour {
 
 		if (other.gameObject.CompareTag ("Player")) {
 			player.GetComponent<Player_Controller> ().newhealth -= punchpower;
+			opponent.GetComponent<MainOpponent_Controller> ().currentpower += powerAddAttack;
+			player.GetComponent<Player_Controller> ().currentpower += powerAddDefense;
 			Debug.Log ("Punch!");
 			audio.PlayOneShot (smolslap);
 
