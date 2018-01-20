@@ -26,9 +26,9 @@ public class PlayerPunch : MonoBehaviour {
 	void OnTriggerEnter(Collider other){
 
 		if (other.gameObject.CompareTag ("Opponent")) {
-			opponent.GetComponent<MainOpponent_Controller> ().newhealth -= punchpower;
-			player.GetComponent<Player_Controller> ().currentpower += powerAddAttack;
-			opponent.GetComponent<MainOpponent_Controller> ().currentpower += powerAddDefense;
+			opponent.GetComponent<MainOpponent_Controller> ().newHealth -= punchpower;
+			player.GetComponent<Player_Controller> ().currentPower += powerAddAttack;
+			opponent.GetComponent<MainOpponent_Controller> ().currentPower += powerAddDefense;
 			Debug.Log ("Punch!");
 			audio.PlayOneShot (smolslap);
 

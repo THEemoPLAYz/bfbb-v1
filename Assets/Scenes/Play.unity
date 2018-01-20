@@ -800,6 +800,7 @@ GameObject:
   m_Component:
   - component: {fileID: 215409278}
   - component: {fileID: 215409279}
+  - component: {fileID: 215409280}
   m_Layer: 5
   m_Name: OpponentPower
   m_TagString: Untagged
@@ -875,6 +876,23 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!95 &215409280
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 215409277}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05d53077440c6804cbee86810dcb57d7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &261619354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,10 +1099,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f749de5e7d0904b718d418b3324498bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currenthealth: 1
-  newhealth: 1
-  currentpower: 0
-  newpower: 0
+  currentHealth: 0
+  newHealth: 0
+  currentPower: 0
+  newPower: 0
   healthbar: {fileID: 793861466}
   powerbar: {fileID: 1071839471}
   hurt: {fileID: 7400000, guid: c942033e11a1a49a1904d5bb45daac20, type: 2}
@@ -4782,9 +4800,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a6c054e53f541b48b009ef3ce49c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currenthealth: 1
-  newhealth: 1
-  currentpower: 0
+  currentHealth: 0
+  newHealth: 0
+  currentPower: 0
   healthbar: {fileID: 855848082}
   powerbar: {fileID: 215409279}
   bar: {fileID: 1306664477}
@@ -4792,6 +4810,7 @@ MonoBehaviour:
   hurt: {fileID: 7400000, guid: c942033e11a1a49a1904d5bb45daac20, type: 2}
   healthanim: {fileID: 855848081}
   anim: {fileID: 1547836875}
+  powerAnim: {fileID: 215409280}
   music: {fileID: 1117942453}
 --- !u!95 &1547836875
 Animator:

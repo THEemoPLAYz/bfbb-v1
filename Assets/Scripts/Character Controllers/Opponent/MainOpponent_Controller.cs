@@ -6,37 +6,38 @@ using UnityEngine.UI;
 public class MainOpponent_Controller : MonoBehaviour {
 
 
-	public float currenthealth, newhealth, currentpower;
+	public float currentHealth, newHealth, currentPower;
 	public Slider healthbar, powerbar;
 	public GameObject bar, player;
 	public AnimationClip hurt;
 	public Animation healthanim;
-	public Animator anim;
+	public Animator anim, powerAnim;
 	public AudioSource music;
 
 	// Use this for initialization
 	void Start () {
 
-		currentpower = 0f;
-		currenthealth = 1f;
-		newhealth = 1f;
+		currentPower = 0f;
+		currentHealth = 1f;
+		newHealth = 1f;
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		powerbar.value = currentpower;
+		powerbar.value = currentPower;
+		powerAnim.SetFloat ("Power", currentPower);
 
 		//healthcheck
-		if (currenthealth != newhealth) {
+		if (currentHealth != newHealth) {
 
-			healthbar.value = newhealth;
-			currenthealth = newhealth;
+			healthbar.value = newHealth;
+			currentHealth = newHealth;
 			healthanim.clip = hurt;
 			healthanim.Play ();
 		}
-		if (currenthealth < 0f) {
+		if (currentHealth < 0f) {
 
 			anim.SetTrigger ("Death");
 			gameObject.GetComponent<David_ControllerAI> ().enabled = false;

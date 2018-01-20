@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: PlayerPower
+  m_Name: OpponentPower
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Power
@@ -13,7 +13,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -95,7 +95,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6234e55c9e6f64ee6a9202d2add9f8c0, type: 2}
+  m_Motion: {fileID: 7400000, guid: f4a8dbde0dcc89949950235dc671b65f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -121,7 +121,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4701078cee7914dd785bccc242c420c3, type: 2}
+  m_Motion: {fileID: 7400000, guid: 14edac839976a9e48a39238d74c978b5, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

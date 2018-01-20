@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class End_Level : MonoBehaviour {
 
-	public GameObject player, opponent, endMessage, healthPlayer, healthOpponent, timer;
+	public GameObject player, opponent, endMessage, healthPlayer, healthOpponent, timer, playerCenter;
 	public Camera cam;
 	public AnimationClip healthExit;
 	public AudioSource audio;
@@ -22,7 +22,7 @@ public class End_Level : MonoBehaviour {
 	}
 	void Update(){
 
-		playerPosition = new Vector3 (player.transform.position.x + 2f, player.transform.position.y, player.transform.position.z - 7f);
+		playerPosition = new Vector3 (playerCenter.transform.position.x + 2f, playerCenter.transform.position.y, playerCenter.transform.position.z - 7f);
 		cam.transform.position = Vector3.Lerp (cam.transform.position, playerPosition, Time.deltaTime * lerpSpeed);
 		cam.fieldOfView = 36f;
 

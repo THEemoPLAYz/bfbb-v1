@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Player_Controller : MonoBehaviour {
 
-	public float currenthealth, newhealth;
-	public float currentpower, newpower;
+	public float currentHealth, newHealth;
+	public float currentPower, newPower;
 	public Slider healthbar, powerbar;
 	public AnimationClip hurt;
 	public Animation healthanim;
@@ -15,9 +15,9 @@ public class Player_Controller : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		currentpower = 0f;
-		currenthealth = 1f;
-		newhealth = 1f;
+		currentPower = 0f;
+		currentHealth = 1f;
+		newHealth = 1f;
 
 	}
 	
@@ -28,18 +28,18 @@ public class Player_Controller : MonoBehaviour {
 
 	void Update () {
 
-		powerbar.value = currentpower;
-		powerAnim.SetFloat ("PowerMeter", currentpower);
+		powerbar.value = currentPower;
+		powerAnim.SetFloat("Power", powerbar.value);
 
-		if (currenthealth != newhealth) {
+		if (currentHealth != newHealth) {
 
 			healthanim.clip = hurt;
-			healthbar.value = newhealth;
-			currenthealth = newhealth;
+			healthbar.value = newHealth;
+			currentHealth = newHealth;
 			healthanim.Play ();
 
 		}
-		if (currenthealth == 0f) {
+		if (currentHealth == 0f) {
 
 			anim.SetTrigger ("Death");
 
