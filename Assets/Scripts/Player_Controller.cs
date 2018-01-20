@@ -10,7 +10,7 @@ public class Player_Controller : MonoBehaviour {
 	public Slider healthbar, powerbar;
 	public AnimationClip hurt;
 	public Animation healthanim;
-	public Animator anim;
+	public Animator anim, powerAnim;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +29,7 @@ public class Player_Controller : MonoBehaviour {
 	void Update () {
 
 		powerbar.value = currentpower;
+		powerAnim.SetFloat ("PowerMeter", currentpower);
 
 		if (currenthealth != newhealth) {
 
