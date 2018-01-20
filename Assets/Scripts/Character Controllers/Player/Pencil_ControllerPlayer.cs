@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pencil_ControllerPlayer : MonoBehaviour {
 
 	public Rigidbody rb;
-	public GameObject punchtriggerR, punchTriggerL;
+	public GameObject punchtriggerR, punchTriggerL, cam, specialParticles, playerCenter, opponent;
 
 	[Header("Initialize Stuff")]
 	public BoxCollider collider;
@@ -42,21 +42,21 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 	void Update () {
 
 
-		if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)){
+		if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) {
 
-			rb.velocity =  new Vector3(0f, rb.velocity.y, rb.velocity.z);
+			rb.velocity = new Vector3 (0f, rb.velocity.y, rb.velocity.z);
 			transform.Translate (Vector3.left * speed * Time.deltaTime);
 			anim.SetInteger ("Direction", -1);
 			anim.SetBool ("IsMoving", true);
 
-		} else if (Input.GetKey(KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) {
+		} else if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) {
 
-			rb.velocity =  new Vector3(0f, rb.velocity.y, rb.velocity.z);
+			rb.velocity = new Vector3 (0f, rb.velocity.y, rb.velocity.z);
 			transform.Translate (Vector3.right * speed * Time.deltaTime);
 			anim.SetInteger ("Direction", 1);
 			anim.SetBool ("IsMoving", true);
 
-		} else if (Input.GetKeyDown(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)){
+		} else if (Input.GetKeyDown (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) {
 
 			if (jumped == false) {
 				anim.SetBool ("Jumped", true);
@@ -64,6 +64,14 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 		} else if (Input.GetKeyDown (KeyCode.Z)) {
 
 			anim.SetTrigger ("Punch");
+
+		} else if (Input.GetKey (KeyCode.Z) && Input.GetKey (KeyCode.X)) {
+
+			if (gameObject.GetComponent<Player_Controller> ().powerbar.value == 1f) {
+
+				anim.SetTrigger ("Special");
+
+			}
 
 		}
 
@@ -115,5 +123,28 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 			rb.AddForce (Vector3.up * jumppower, ForceMode.Impulse);
 			jumped = true;
 		}
+	}
+
+
+	//Special Handlers
+	public void Special_CameraFocusToPlayer(){
+
+		cam.GetComponent<Camera_Controller> ().enabled = false;
+		cam.GetComponent<Special_PlayerFocus> ().enabled = true;
+		opponent.GetComponent<David_ControllerAI> ().enabled = false;
+
+	}
+	public void Special_CameraBackToNormal(){
+
+		cam.GetComponent<Camera_Controller> ().enabled = true;
+		cam.GetComponent<Special_PlayerFocus> ().enabled = false;
+		opponent.GetComponent<David_ControllerAI> ().enabled = true;
+
+	}
+	public void Special_Particles(){
+
+		GameObject specialClone = Instantiate (specialParticles, playerCenter.transform.position, Quaternion.identity);
+		specialClone.SetActive (true);
+
 	}
 }

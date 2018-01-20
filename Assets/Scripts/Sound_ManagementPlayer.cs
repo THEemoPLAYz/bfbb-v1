@@ -10,6 +10,7 @@ public class Sound_ManagementPlayer : MonoBehaviour {
 	[Header("Pencil")]
 	public AudioClip pencilWin;
 	public AudioClip pencilPunch;
+	public AudioClip pencilSpecial;
 
 	//PENCIL
 	public void PencilWin(){
@@ -20,6 +21,11 @@ public class Sound_ManagementPlayer : MonoBehaviour {
 	public void PencilPunch(){
 
 		audio.PlayOneShot (pencilPunch);
+
+	}
+	public void PencilSpecial(){
+
+		audio.PlayOneShot (pencilSpecial);
 
 	}
 }

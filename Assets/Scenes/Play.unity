@@ -246,7 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6925760}
   m_Layer: 0
-  m_Name: PlayerSpawns
+  m_Name: PlayerCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -274,7 +274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 38238279}
   m_Layer: 0
-  m_Name: OpponentSpawns
+  m_Name: OpponentCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1221,6 +1221,10 @@ MonoBehaviour:
   rb: {fileID: 332881594}
   punchtriggerR: {fileID: 2025633752}
   punchTriggerL: {fileID: 382844230}
+  cam: {fileID: 1117942446}
+  specialParticles: {fileID: 0}
+  playerCenter: {fileID: 6925759}
+  opponent: {fileID: 1547836869}
   collider: {fileID: 332881593}
   ColliderPosition: {x: 0, y: 1.74, z: 0}
   ColliderScale: {x: 0.77, y: 3.03, z: 1}
@@ -1246,6 +1250,7 @@ MonoBehaviour:
   audio: {fileID: 332881598}
   pencilWin: {fileID: 8300000, guid: 0adec9e815e2c4c028364ba2b5d14cee, type: 3}
   pencilPunch: {fileID: 8300000, guid: 768df6e71a9a246d29ef715bbc6c4825, type: 3}
+  pencilSpecial: {fileID: 8300000, guid: 1fe7fa87fcc724e91bfc6e0425e01e2f, type: 3}
 --- !u!1 &382844230
 GameObject:
   m_ObjectHideFlags: 0
@@ -3370,6 +3375,7 @@ GameObject:
   - component: {fileID: 1117942452}
   - component: {fileID: 1117942453}
   - component: {fileID: 1117942454}
+  - component: {fileID: 1117942456}
   - component: {fileID: 1117942455}
   m_Layer: 0
   m_Name: Main Camera
@@ -3575,6 +3581,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e982d111ad4db4993819a6e053095bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1117942456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1117942446}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 116b28af3f0ff48f380bb1f362b2a768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCenter: {fileID: 6925759}
+  lerpSpeed: 5
 --- !u!1 &1132538283
 GameObject:
   m_ObjectHideFlags: 0
@@ -4957,6 +4976,7 @@ MonoBehaviour:
   healthPlayer: {fileID: 793861463}
   healthOpponent: {fileID: 855848079}
   timer: {fileID: 424035598}
+  playerCenter: {fileID: 6925759}
   cam: {fileID: 1117942449}
   healthExit: {fileID: 7400000, guid: ba5ad7c6aab9042fd861fd198bb9e263, type: 2}
   audio: {fileID: 1117942453}
