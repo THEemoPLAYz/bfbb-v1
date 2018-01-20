@@ -8,10 +8,10 @@ public class PlayerPunch : MonoBehaviour {
 	public float powerAddAttack, powerAddDefense;
 	public float knockback;
 	public float powerValue;
-	public Transform opponent;
+	public Transform opponentSpawn;
 	public AudioSource audio;
 	public AudioClip smolslap;
-	public GameObject debris, player;
+	public GameObject opponent, debris, player;
 
 	// Use this for initialization
 	void Start () {
@@ -35,12 +35,14 @@ public class PlayerPunch : MonoBehaviour {
 			if (gameObject.name == "PunchTriggerR") {
 
 				opponent.GetComponent<Rigidbody> ().AddForce (Vector3.right * knockback, ForceMode.Impulse);
-				GameObject DebrisClone = Instantiate (debris, opponent.position, Quaternion.identity);
+				GameObject DebrisClone = Instantiate (debris, opponentSpawn.position, Quaternion.identity);
+				DebrisClone.SetActive (true);
 
 			} else if (gameObject.name == "PunchTriggerL") {
 
 				opponent.GetComponent<Rigidbody> ().AddForce (Vector3.left * knockback, ForceMode.Impulse);
-				GameObject DebrisClone = Instantiate (debris, opponent.transform.position, Quaternion.identity);
+				GameObject DebrisClone = Instantiate (debris, opponentSpawn.position, Quaternion.identity);
+				DebrisClone.SetActive (true);
 
 			}
 		}
