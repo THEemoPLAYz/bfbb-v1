@@ -16,7 +16,7 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 
 	[Header("Variables")]
 	public float speed, jumppower;
-	public bool jumped, freezeControl;
+	public bool jumped, freezeControl = false;
 
 	[Space]
 
@@ -39,7 +39,7 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
 		if (freezeControl == false) {
 			if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) {
@@ -65,7 +65,7 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 
 				anim.SetTrigger ("Punch");
 
-			} else if (Input.GetKey (KeyCode.Z) && Input.GetKey (KeyCode.X)) {
+			} else if (Input.GetKey (KeyCode.Z) && Input.GetKey (KeyCode.X) || Input.GetKey (KeyCode.X) && Input.GetKey (KeyCode.Z)) {
 
 				if (gameObject.GetComponent<Player_Controller> ().powerbar.value == 1f) {
 
@@ -74,13 +74,11 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 
 				}
 
+			} else {
+
+				anim.SetBool ("IsMoving", false);
+
 			}
-		}
-
-		else {
-
-			anim.SetBool ("IsMoving", false);
-
 		}
 
 		if (playersprite.sprite == punchR) {
@@ -141,6 +139,11 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 		cam.GetComponent<Camera_Controller> ().enabled = true;
 		cam.GetComponent<Special_PlayerFocus> ().enabled = false;
 		opponent.GetComponent<David_ControllerAI> ().enabled = true;
+
+	}
+	public void Special_Done(){
+
+		freezeControl = false;
 
 	}
 	public void Special_Particles(){
