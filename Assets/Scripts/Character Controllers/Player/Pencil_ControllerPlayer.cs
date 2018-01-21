@@ -16,7 +16,7 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 
 	[Header("Variables")]
 	public float speed, jumppower;
-	public bool jumped;
+	public bool jumped, freezeControl;
 
 	[Space]
 
@@ -41,38 +41,40 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		if (freezeControl == false) {
+			if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) {
 
-		if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) {
+				rb.velocity = new Vector3 (0f, rb.velocity.y, rb.velocity.z);
+				transform.Translate (Vector3.left * speed * Time.deltaTime);
+				anim.SetInteger ("Direction", -1);
+				anim.SetBool ("IsMoving", true);
 
-			rb.velocity = new Vector3 (0f, rb.velocity.y, rb.velocity.z);
-			transform.Translate (Vector3.left * speed * Time.deltaTime);
-			anim.SetInteger ("Direction", -1);
-			anim.SetBool ("IsMoving", true);
+			} else if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) {
 
-		} else if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) {
+				rb.velocity = new Vector3 (0f, rb.velocity.y, rb.velocity.z);
+				transform.Translate (Vector3.right * speed * Time.deltaTime);
+				anim.SetInteger ("Direction", 1);
+				anim.SetBool ("IsMoving", true);
 
-			rb.velocity = new Vector3 (0f, rb.velocity.y, rb.velocity.z);
-			transform.Translate (Vector3.right * speed * Time.deltaTime);
-			anim.SetInteger ("Direction", 1);
-			anim.SetBool ("IsMoving", true);
+			} else if (Input.GetKeyDown (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) {
 
-		} else if (Input.GetKeyDown (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) {
+				if (jumped == false) {
+					anim.SetBool ("Jumped", true);
+				}
+			} else if (Input.GetKeyDown (KeyCode.Z)) {
 
-			if (jumped == false) {
-				anim.SetBool ("Jumped", true);
+				anim.SetTrigger ("Punch");
+
+			} else if (Input.GetKey (KeyCode.Z) && Input.GetKey (KeyCode.X)) {
+
+				if (gameObject.GetComponent<Player_Controller> ().powerbar.value == 1f) {
+
+					anim.SetTrigger ("Special");
+					freezeControl = true;
+
+				}
+
 			}
-		} else if (Input.GetKeyDown (KeyCode.Z)) {
-
-			anim.SetTrigger ("Punch");
-
-		} else if (Input.GetKey (KeyCode.Z) && Input.GetKey (KeyCode.X)) {
-
-			if (gameObject.GetComponent<Player_Controller> ().powerbar.value == 1f) {
-
-				anim.SetTrigger ("Special");
-
-			}
-
 		}
 
 		else {

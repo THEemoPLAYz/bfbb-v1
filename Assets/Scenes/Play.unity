@@ -862,7 +862,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1419230778}
   m_HandleRect: {fileID: 0}
@@ -1231,6 +1231,7 @@ MonoBehaviour:
   speed: 10
   jumppower: 15
   jumped: 0
+  freezeControl: 0
   anim: {fileID: 332881597}
   pencilcontroller: {fileID: 9100000, guid: 7fe45c3908fad4399b7be310f2d1cb2c, type: 2}
   punchR: {fileID: 21300000, guid: 866925167714a40c6a219cacea164492, type: 3}
@@ -2341,7 +2342,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1064711125}
   m_HandleRect: {fileID: 0}
@@ -2590,7 +2591,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1086405793}
   m_HandleRect: {fileID: 0}
@@ -2963,7 +2964,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 614047279}
   m_HandleRect: {fileID: 0}
@@ -3593,6 +3594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCenter: {fileID: 6925759}
+  player: {fileID: 332881591}
   lerpSpeed: 5
 --- !u!1 &1132538283
 GameObject:

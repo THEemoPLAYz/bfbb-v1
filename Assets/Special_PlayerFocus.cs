@@ -5,7 +5,7 @@ using UnityEngine;
 public class Special_PlayerFocus : MonoBehaviour {
 
 	Vector3 playerPosition;
-	public GameObject playerCenter;
+	public GameObject playerCenter, player;
 	public float lerpSpeed;
 
 	// Use this for initialization
@@ -16,6 +16,7 @@ public class Special_PlayerFocus : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		player.GetComponent<Player_Controller> ().currentPower = 0f;
 		playerPosition = new Vector3 (playerCenter.transform.position.x + 2f, playerCenter.transform.position.y, playerCenter.transform.position.z - 7f);
 		transform.position = Vector3.Lerp (transform.position, playerPosition, Time.deltaTime * lerpSpeed);
 		gameObject.GetComponent<Camera>().fieldOfView = 36f;
