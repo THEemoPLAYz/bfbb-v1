@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Player_Controller : MonoBehaviour {
 
-	public float currentHealth, newHealth;
-	public float currentPower, newPower;
+	public float currentHealth, newHealth, barUpdateSpeed;
+	public float currentPower;
 	public Slider healthbar, powerbar;
 	public AnimationClip hurt;
 	public Animation healthanim;
@@ -28,16 +28,22 @@ public class Player_Controller : MonoBehaviour {
 
 	void Update () {
 
-		powerbar.value = currentPower;
-		powerAnim.SetFloat("Power", powerbar.value);
+		if (powerbar.value != currentPower) {
+			powerbar.value = Mathf.Lerp (powerbar.value, currentPower, barUpdateSpeed * Time.deltaTime);
+			powerAnim.SetFloat ("Power", powerbar.value);
+		}
 
+		if (healthbar.value != currentHealth) {
+
+			healthbar.value = Mathf.Lerp (healthbar.value, currentHealth, barUpdateSpeed * Time.deltaTime);
+
+		}
 		if (currentHealth != newHealth) {
 
 			healthanim.clip = hurt;
-			healthbar.value = newHealth;
 			currentHealth = newHealth;
 			healthanim.Play ();
-
+		
 		}
 		if (currentHealth == 0f) {
 

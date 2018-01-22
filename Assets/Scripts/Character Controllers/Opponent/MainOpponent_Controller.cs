@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MainOpponent_Controller : MonoBehaviour {
 
 
-	public float currentHealth, newHealth, currentPower;
+	public float currentHealth, newHealth, currentPower, barUpdateSpeed;
 	public Slider healthbar, powerbar;
 	public GameObject bar, player;
 	public AnimationClip hurt;
@@ -25,17 +25,25 @@ public class MainOpponent_Controller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-		powerbar.value = currentPower;
-		powerAnim.SetFloat ("Power", currentPower);
+		
+		if (powerbar.value != currentPower) {
+			powerbar.value = Mathf.Lerp (powerbar.value, currentPower, barUpdateSpeed * Time.deltaTime);
+			powerAnim.SetFloat ("Power", powerbar.value);
+		}
 
 		//healthcheck
+
+		if (healthbar.value != currentHealth) {
+
+			healthbar.value = Mathf.Lerp (healthbar.value, currentHealth, barUpdateSpeed * Time.deltaTime);
+
+		}
 		if (currentHealth != newHealth) {
 
-			healthbar.value = newHealth;
-			currentHealth = newHealth;
 			healthanim.clip = hurt;
+			currentHealth = newHealth;
 			healthanim.Play ();
+
 		}
 		if (currentHealth < 0f) {
 
