@@ -1104,7 +1104,6 @@ MonoBehaviour:
   newHealth: 0
   barUpdateSpeed: 5
   currentPower: 0
-  newPower: 0
   healthbar: {fileID: 793861466}
   powerbar: {fileID: 1071839471}
   hurt: {fileID: 7400000, guid: c942033e11a1a49a1904d5bb45daac20, type: 2}
@@ -2949,7 +2948,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.07586192, g: 0, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2973,7 +2972,7 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 1
-  m_WholeNumbers: 1
+  m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:

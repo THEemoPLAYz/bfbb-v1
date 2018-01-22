@@ -25,10 +25,13 @@ public class MainOpponent_Controller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+		powerAnim.SetFloat ("Power", powerbar.value);
+
 		if (powerbar.value != currentPower) {
+			
 			powerbar.value = Mathf.Lerp (powerbar.value, currentPower, barUpdateSpeed * Time.deltaTime);
-			powerAnim.SetFloat ("Power", powerbar.value);
+
 		}
 
 		//healthcheck

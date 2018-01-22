@@ -28,10 +28,13 @@ public class Player_Controller : MonoBehaviour {
 
 	void Update () {
 
+		powerAnim.SetFloat ("Power", currentPower);
+		
 		if (powerbar.value != currentPower) {
+
 			powerbar.value = Mathf.Lerp (powerbar.value, currentPower, barUpdateSpeed * Time.deltaTime);
-			powerAnim.SetFloat ("Power", powerbar.value);
 		}
+
 
 		if (healthbar.value != currentHealth) {
 
