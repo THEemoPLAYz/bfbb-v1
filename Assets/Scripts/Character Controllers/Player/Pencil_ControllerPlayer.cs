@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pencil_ControllerPlayer : MonoBehaviour {
 
 	public Rigidbody rb;
-	public GameObject punchtriggerR, punchTriggerL, cam, specialParticles, playerCenter, opponent;
+	public GameObject punchtriggerR, punchTriggerL, cam, specialParticles1, specialParticles2, playerCenter, opponent;
 
 	[Header("Initialize Stuff")]
 	public BoxCollider collider;
@@ -157,8 +157,10 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 	}
 	public void Special_Particles(){
 
-		GameObject specialClone = Instantiate (specialParticles, playerCenter.transform.position, Quaternion.identity);
-		specialClone.SetActive (true);
+		GameObject specialClone1 = Instantiate (specialParticles1, playerCenter.transform.position, Quaternion.identity);
+		GameObject specialClone2 = Instantiate (specialParticles2, playerCenter.transform.position, Quaternion.identity);
+		specialClone1.SetActive (true);
+		specialClone2.SetActive (true);
 
 	}
 	public void Special_JumpR(){
