@@ -39,6 +39,15 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+	void Update(){
+
+		Vector3 pencilvelocity;
+		pencilvelocity = rb.velocity;
+		Debug.Log (pencilvelocity);
+
+	}
+
+
 	void FixedUpdate () {
 
 		if (freezeControl == false) {
@@ -150,6 +159,16 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 
 		GameObject specialClone = Instantiate (specialParticles, playerCenter.transform.position, Quaternion.identity);
 		specialClone.SetActive (true);
+
+	}
+	public void Special_JumpR(){
+
+		rb.velocity = new Vector3 (5f, 15f, 0f);
+
+	}
+	public void Special_Dive(){
+
+		rb.velocity = new Vector3 (0f, -15f, 0f);
 
 	}
 }

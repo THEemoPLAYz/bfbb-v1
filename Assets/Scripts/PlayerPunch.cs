@@ -11,7 +11,7 @@ public class PlayerPunch : MonoBehaviour {
 	public Transform opponentSpawn;
 	public AudioSource audio;
 	public AudioClip smolslap;
-	public GameObject opponent, debris, player;
+	public GameObject opponent, debris, player, cam;
 
 	// Use this for initialization
 	void Start () {
@@ -29,8 +29,8 @@ public class PlayerPunch : MonoBehaviour {
 			opponent.GetComponent<MainOpponent_Controller> ().newHealth -= punchpower;
 			player.GetComponent<Player_Controller> ().currentPower += powerAddAttack;
 			opponent.GetComponent<MainOpponent_Controller> ().currentPower += powerAddDefense;
-			Debug.Log ("Punch!");
 			audio.PlayOneShot (smolslap);
+			cam.GetComponent<Camera_Controller> ().ZoomPunch ();
 
 			if (gameObject.name == "PunchTriggerR") {
 
