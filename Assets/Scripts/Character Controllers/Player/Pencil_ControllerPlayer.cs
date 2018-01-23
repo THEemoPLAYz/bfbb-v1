@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pencil_ControllerPlayer : MonoBehaviour {
 
 	public Rigidbody rb;
-	public GameObject punchtriggerR, punchTriggerL, cam, specialParticles1, specialParticles2, playerCenter, opponent;
+	public GameObject punchtriggerR, punchTriggerL, specialTrigger,cam, specialParticles1, specialParticles2, playerCenter, opponent;
 
 	[Header("Initialize Stuff")]
 	public BoxCollider collider;
@@ -153,6 +153,7 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 	public void Special_Done(){
 
 		freezeControl = false;
+		specialTrigger.SetActive (false);
 
 	}
 	public void Special_Particles(){
@@ -170,7 +171,8 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 	}
 	public void Special_Dive(){
 
-		rb.velocity = new Vector3 (0f, -15f, 0f);
+		rb.velocity = new Vector3 (1f, -15f, 0f);
+		specialTrigger.SetActive (true);
 
 	}
 }

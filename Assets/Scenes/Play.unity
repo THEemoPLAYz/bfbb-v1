@@ -263,7 +263,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 332881592}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &38238278
 GameObject:
@@ -601,7 +601,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 332881592}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!199 &135671377
 ParticleSystemRenderer:
@@ -4480,6 +4480,7 @@ Transform:
   - {fileID: 2025633753}
   - {fileID: 382844231}
   - {fileID: 1292467669}
+  - {fileID: 647170432}
   - {fileID: 5385339}
   - {fileID: 1765442226}
   - {fileID: 135671376}
@@ -4691,6 +4692,7 @@ MonoBehaviour:
   rb: {fileID: 332881594}
   punchtriggerR: {fileID: 2025633752}
   punchTriggerL: {fileID: 382844230}
+  specialTrigger: {fileID: 1292467668}
   cam: {fileID: 1117942446}
   specialParticles1: {fileID: 1765442225}
   specialParticles2: {fileID: 135671375}
@@ -5432,6 +5434,82 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 614047278}
+--- !u!1 &647170431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 647170432}
+  - component: {fileID: 647170435}
+  - component: {fileID: 647170434}
+  - component: {fileID: 647170433}
+  m_Layer: 8
+  m_Name: SpecialTriggerL
+  m_TagString: PunchTrigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &647170432
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 647170431}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.1389999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 332881592}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &647170433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 647170431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88210d2455f6d450b97e78103dfbe2a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: 0
+  knockback: 0
+  opponent: {fileID: 0}
+  cam: {fileID: 0}
+  opponentAnim: {fileID: 0}
+  audio: {fileID: 0}
+  superslap: {fileID: 0}
+--- !u!54 &647170434
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 647170431}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
+--- !u!65 &647170435
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 647170431}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.92, y: 1.43, z: 1}
+  m_Center: {x: 0, y: 1.74, z: 0}
 --- !u!1 &658061063
 GameObject:
   m_ObjectHideFlags: 0
@@ -7611,8 +7689,9 @@ GameObject:
   - component: {fileID: 1292467669}
   - component: {fileID: 1292467671}
   - component: {fileID: 1292467670}
+  - component: {fileID: 1292467672}
   m_Layer: 8
-  m_Name: SpecialTriggerPencil
+  m_Name: SpecialTriggerR
   m_TagString: PunchTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7658,6 +7737,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.92, y: 1.43, z: 1}
   m_Center: {x: 0, y: 1.74, z: 0}
+--- !u!114 &1292467672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1292467668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88210d2455f6d450b97e78103dfbe2a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: 0.07
+  knockback: 10
+  opponent: {fileID: 1547836869}
+  cam: {fileID: 1117942446}
+  opponentAnim: {fileID: 1547836875}
+  audio: {fileID: 332881598}
+  superslap: {fileID: 8300000, guid: 723c79b2199c944d5a16936421925b4a, type: 3}
 --- !u!1 &1306664477
 GameObject:
   m_ObjectHideFlags: 0
@@ -8922,7 +9019,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 332881592}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!199 &1765442227
 ParticleSystemRenderer:
@@ -16051,7 +16148,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4664713541075284, guid: fb3e29ac8722145c8952636f1ce5cb08, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb3e29ac8722145c8952636f1ce5cb08, type: 2}

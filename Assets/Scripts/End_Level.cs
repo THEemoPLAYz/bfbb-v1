@@ -33,6 +33,7 @@ public class End_Level : MonoBehaviour {
 		player.GetComponent<Animator> ().SetTrigger ("Win");
 		audio.PlayOneShot (winMusic);
 		opponent.GetComponent<End_Level>().enabled = true;
+		opponent.GetComponent<BoxCollider> ().isTrigger = true;
 		Animation playerAnim = healthPlayer.GetComponent<Animation> ();
 		Animation opponentAnim = healthOpponent.GetComponent<Animation> ();
 		Animation timerAnim = timer.GetComponent<Animation> ();
