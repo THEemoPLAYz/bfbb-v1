@@ -75,5 +75,10 @@ public class Camera_Controller : MonoBehaviour {
 		transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z + 1f);
 
 	}
+	public void ZoomSpecial(){
+
+		transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z + 3f);
+
+	}
 
 }

@@ -26,19 +26,22 @@ public class Special_AttackPencil : MonoBehaviour {
 			opponent.GetComponent<MainOpponent_Controller> ().newHealth -= power;
 			//opponentAnim.SetTrigger ("Stun");
 			audio.PlayOneShot (superslap);
-			cam.GetComponent<Camera_Controller> ().ZoomPunch();
-			GameObject specialParticles = Instantiate (specialParticle, transform.position, Quaternion.identity);
-			specialParticle.SetActive (true);
+			cam.GetComponent<Camera_Controller> ().ZoomSpecial();
+			gameObject.SetActive (false);
 
 		}
 		if (gameObject.name == "SpecialTriggerR") {
 
 			opponent.GetComponent<Rigidbody> ().AddForce (Vector3.right * knockback, ForceMode.Impulse);
+			GameObject specialParticles = Instantiate (specialParticle, transform.position, Quaternion.identity);
+			specialParticle.SetActive (true);
 
 		}
 		if (gameObject.name == "SpecialTriggerL") {
 
 			opponent.GetComponent<Rigidbody> ().AddForce (Vector3.left * knockback, ForceMode.Impulse);
+			GameObject specialParticles = Instantiate (specialParticle, transform.position, Quaternion.identity);
+			specialParticle.SetActive (true);
 
 		}
 			
