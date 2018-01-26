@@ -5,7 +5,7 @@ using UnityEngine;
 public class Special_AttackPencil : MonoBehaviour {
 
 	public float power, knockback;
-	public GameObject opponent, cam;
+	public GameObject opponent, cam, specialParticle;
 	public Animator opponentAnim;
 	public AudioSource audio;
 	public AudioClip superslap;
@@ -24,9 +24,11 @@ public class Special_AttackPencil : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Opponent")) {
 
 			opponent.GetComponent<MainOpponent_Controller> ().newHealth -= power;
-			opponentAnim.SetTrigger ("Stun");
+			//opponentAnim.SetTrigger ("Stun");
 			audio.PlayOneShot (superslap);
 			cam.GetComponent<Camera_Controller> ().ZoomPunch();
+			GameObject specialParticles = Instantiate (specialParticle, transform.position, Quaternion.identity);
+			specialParticle.SetActive (true);
 
 		}
 		if (gameObject.name == "SpecialTriggerR") {

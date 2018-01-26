@@ -17,7 +17,7 @@ public class Special_PlayerFocus : MonoBehaviour {
 	void Update () {
 
 		player.GetComponent<Player_Controller> ().currentPower = 0f;
-		playerPosition = new Vector3 (playerCenter.transform.position.x + 2f, playerCenter.transform.position.y, playerCenter.transform.position.z - 7f);
+		playerPosition = new Vector3 (playerCenter.transform.position.x, playerCenter.transform.position.y, playerCenter.transform.position.z - 7f);
 		transform.position = Vector3.Lerp (transform.position, playerPosition, Time.deltaTime * lerpSpeed);
 		gameObject.GetComponent<Camera>().fieldOfView = 36f;
 
