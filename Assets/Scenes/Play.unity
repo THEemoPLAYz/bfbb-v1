@@ -4698,11 +4698,13 @@ MonoBehaviour:
   specialParticles2: {fileID: 135671375}
   playerCenter: {fileID: 6925759}
   opponent: {fileID: 1547836869}
+  pp: {fileID: 11400000, guid: bf39b0f095b2949e4847ef9ac9bc15e3, type: 2}
   collider: {fileID: 332881593}
   ColliderPosition: {x: 0, y: 1.74, z: 0}
   ColliderScale: {x: 0.77, y: 3.03, z: 1}
   speed: 10
   jumppower: 15
+  maxVelocity: 20
   jumped: 0
   freezeControl: 0
   anim: {fileID: 332881597}

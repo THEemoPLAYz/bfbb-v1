@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PostProcessing;
 
 public class Pencil_ControllerPlayer : MonoBehaviour {
 
 	public Rigidbody rb;
 	public GameObject punchtriggerR, punchTriggerL, specialTrigger,cam, specialParticles1, specialParticles2, playerCenter, opponent;
+	public PostProcessingProfile pp;
 
 	[Header("Initialize Stuff")]
 	public BoxCollider collider;
@@ -15,7 +17,9 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 	[Space]
 
 	[Header("Variables")]
-	public float speed, jumppower;
+	public float speed;
+	public float jumppower;
+	public float maxVelocity;
 	public bool jumped, freezeControl = false;
 
 	[Space]
@@ -45,10 +49,12 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 		pencilvelocity = rb.velocity;
 		Debug.Log (pencilvelocity);
 
-	}
+		if (rb.velocity.magnitude > maxVelocity) {
 
+			rb.velocity = Vector3.ClampMagnitude (rb.velocity, maxVelocity);
 
-	void FixedUpdate () {
+		}
+
 
 		if (freezeControl == false) {
 			if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) {
@@ -141,6 +147,8 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 		cam.GetComponent<Camera_Controller> ().enabled = false;
 		cam.GetComponent<Special_PlayerFocus> ().enabled = true;
 		opponent.GetComponent<David_ControllerAI> ().enabled = false;
+		var vignette = pp.vignette.settings;
+		vignette.intensity = 0.2f;
 
 	}
 	public void Special_CameraBackToNormal(){
@@ -148,6 +156,8 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 		cam.GetComponent<Camera_Controller> ().enabled = true;
 		cam.GetComponent<Special_PlayerFocus> ().enabled = false;
 		opponent.GetComponent<David_ControllerAI> ().enabled = true;
+		var vignette = pp.vignette.settings;
+		vignette.intensity = 0.0f;
 
 	}
 	public void Special_Done(){
