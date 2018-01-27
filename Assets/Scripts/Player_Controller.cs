@@ -7,10 +7,12 @@ public class Player_Controller : MonoBehaviour {
 
 	public float currentHealth, newHealth, barUpdateSpeed;
 	public float currentPower;
+	public GameObject bar, opponent;
 	public Slider healthbar, powerbar;
 	public AnimationClip hurt;
 	public Animation healthanim;
 	public Animator anim, powerAnim;
+	public AudioSource music;
 
 	// Use this for initialization
 	void Start () {
@@ -48,9 +50,14 @@ public class Player_Controller : MonoBehaviour {
 			healthanim.Play ();
 		
 		}
-		if (currentHealth == 0f) {
+		if (currentHealth < 0f) {
 
 			anim.SetTrigger ("Death");
+			gameObject.GetComponent<Pencil_ControllerPlayer> ().enabled = false;
+			bar.SetActive (false);
+			opponent.GetComponent<David_ControllerAI> ().enabled = false;
+			gameObject.GetComponent<Player_Controller> ().enabled = false;
+			music.Stop ();
 
 		}
 

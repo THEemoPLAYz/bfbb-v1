@@ -19,7 +19,6 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 	[Header("Variables")]
 	public float speed;
 	public float jumppower;
-	public float maxVelocity;
 	public bool jumped, freezeControl = false;
 
 	[Space]
@@ -48,12 +47,6 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 		Vector3 pencilvelocity;
 		pencilvelocity = rb.velocity;
 		Debug.Log (pencilvelocity);
-
-		if (rb.velocity.magnitude > maxVelocity) {
-
-			rb.velocity = Vector3.ClampMagnitude (rb.velocity, maxVelocity);
-
-		}
 
 
 		if (freezeControl == false) {
