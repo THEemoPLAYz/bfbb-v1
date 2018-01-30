@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
+using UnityEngine.UI;
 
 public class Pencil_ControllerPlayer : MonoBehaviour {
 
@@ -13,6 +14,8 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 	public BoxCollider collider;
 	public Vector3 ColliderPosition;
 	public Vector3 ColliderScale;
+	public Text playerName;
+
 
 	[Space]
 
@@ -39,6 +42,7 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 		anim.runtimeAnimatorController = pencilcontroller;
 		collider.center = new Vector3 (ColliderPosition.x, ColliderPosition.y, ColliderPosition.z);
 		collider.size = new Vector3 (ColliderScale.x, ColliderScale.y, ColliderScale.z);
+		playerName.text = "PENCIL";
 	}
 	
 	// Update is called once per frame

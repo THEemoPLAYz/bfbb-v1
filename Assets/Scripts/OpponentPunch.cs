@@ -9,7 +9,7 @@ public class OpponentPunch : MonoBehaviour {
 	public float knockback;
 	public Transform playerSpawn;
 	public AudioSource audio;
-	public AudioClip smolslap;
+	public List<AudioClip> punchList;
 	public GameObject player, debris, opponent, cam;
 
 	// Use this for initialization
@@ -29,8 +29,9 @@ public class OpponentPunch : MonoBehaviour {
 			player.GetComponent<Player_Controller> ().newHealth -= punchpower;
 			opponent.GetComponent<MainOpponent_Controller> ().currentPower += powerAddAttack;
 			player.GetComponent<Player_Controller> ().currentPower += powerAddDefense;
-
-			audio.PlayOneShot (smolslap);
+			int randomize = Random.Range (0, punchList.Count);
+			AudioClip punch = punchList [randomize];
+			audio.PlayOneShot(punch);
 			cam.GetComponent<Camera_Controller> ().ZoomPunch ();
 
 			if (gameObject.name == "PunchTriggerR") {

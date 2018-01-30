@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class David_ControllerAI : MonoBehaviour {
 
@@ -8,6 +9,7 @@ public class David_ControllerAI : MonoBehaviour {
 	public BoxCollider collider;
 	public Vector3 ColliderPosition;
 	public Vector3 ColliderScale;
+	public Text opponentName;
 
 	[Space]
 
@@ -41,6 +43,7 @@ public class David_ControllerAI : MonoBehaviour {
 		anim.runtimeAnimatorController = davidcontroller;
 		collider.center = new Vector3 (ColliderPosition.x, ColliderPosition.y, ColliderPosition.z);
 		collider.size = new Vector3 (ColliderScale.x, ColliderScale.y, ColliderScale.z);
+		opponentName.text = "DAVID";
 	}
 	
 	// Update is called once per frame

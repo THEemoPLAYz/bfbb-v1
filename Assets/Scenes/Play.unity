@@ -4614,7 +4614,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: cfbe72b5cf14142af81e23190fbb5fe8,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -4708,6 +4708,7 @@ MonoBehaviour:
   collider: {fileID: 332881593}
   ColliderPosition: {x: 0, y: 1.74, z: 0}
   ColliderScale: {x: 0.77, y: 3.03, z: 1}
+  playerName: {fileID: 1022081241}
   speed: 10
   jumppower: 15
   jumped: 0
@@ -4845,8 +4846,10 @@ MonoBehaviour:
   knockback: 15
   powerValue: 0
   opponentSpawn: {fileID: 38238279}
-  audio: {fileID: 1117942453}
-  smolslap: {fileID: 8300000, guid: 86051aeafcac049f3b326fa029513c57, type: 3}
+  audio: {fileID: 332881598}
+  punchList:
+  - {fileID: 8300000, guid: d3ed06e8df53f4e3180d2f3584906aef, type: 3}
+  - {fileID: 8300000, guid: 6d32fbfbf3ac34b6db491761b91a4995, type: 3}
   opponent: {fileID: 1547836869}
   debris: {fileID: 1669726413937052, guid: 86045ec06f7af4c9f86c16606d7db3a3, type: 2}
   player: {fileID: 332881591}
@@ -5831,8 +5834,10 @@ MonoBehaviour:
   powerAddDefense: 0.03
   knockback: 10
   playerSpawn: {fileID: 6925760}
-  audio: {fileID: 1117942453}
-  smolslap: {fileID: 8300000, guid: 86051aeafcac049f3b326fa029513c57, type: 3}
+  audio: {fileID: 1547836876}
+  punchList:
+  - {fileID: 8300000, guid: 6d32fbfbf3ac34b6db491761b91a4995, type: 3}
+  - {fileID: 8300000, guid: d3ed06e8df53f4e3180d2f3584906aef, type: 3}
   player: {fileID: 332881591}
   debris: {fileID: 1014452154665550, guid: fb3e29ac8722145c8952636f1ce5cb08, type: 2}
   opponent: {fileID: 1547836869}
@@ -10389,8 +10394,10 @@ MonoBehaviour:
   powerAddDefense: 0.03
   knockback: 10
   playerSpawn: {fileID: 6925760}
-  audio: {fileID: 1117942453}
-  smolslap: {fileID: 8300000, guid: 86051aeafcac049f3b326fa029513c57, type: 3}
+  audio: {fileID: 1547836876}
+  punchList:
+  - {fileID: 8300000, guid: 6d32fbfbf3ac34b6db491761b91a4995, type: 3}
+  - {fileID: 8300000, guid: d3ed06e8df53f4e3180d2f3584906aef, type: 3}
   player: {fileID: 332881591}
   debris: {fileID: 1014452154665550, guid: fb3e29ac8722145c8952636f1ce5cb08, type: 2}
   opponent: {fileID: 1547836869}
@@ -11403,7 +11410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88210d2455f6d450b97e78103dfbe2a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 0.07
+  power: 0.2
   knockback: 10
   opponent: {fileID: 1547836869}
   cam: {fileID: 1117942446}
@@ -12287,7 +12294,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: cfbe72b5cf14142af81e23190fbb5fe8,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -12371,6 +12378,7 @@ MonoBehaviour:
   collider: {fileID: 1547836870}
   ColliderPosition: {x: 0, y: 1.25, z: 0}
   ColliderScale: {x: 1.09, y: 2.1, z: 1}
+  opponentName: {fileID: 1800203027}
   speed: 5
   player: {fileID: 332881591}
   punchtriggerR: {fileID: 769285807}
@@ -16298,7 +16306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 47.474396, y: -9.701263}
+  m_AnchoredPosition: {x: 40.9, y: -9.701263}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1800203027
@@ -16327,7 +16335,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 300
-    m_Alignment: 4
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
@@ -20378,8 +20386,10 @@ MonoBehaviour:
   knockback: 15
   powerValue: 0
   opponentSpawn: {fileID: 38238279}
-  audio: {fileID: 1117942453}
-  smolslap: {fileID: 8300000, guid: 86051aeafcac049f3b326fa029513c57, type: 3}
+  audio: {fileID: 332881598}
+  punchList:
+  - {fileID: 8300000, guid: d3ed06e8df53f4e3180d2f3584906aef, type: 3}
+  - {fileID: 8300000, guid: 6d32fbfbf3ac34b6db491761b91a4995, type: 3}
   opponent: {fileID: 1547836869}
   debris: {fileID: 1669726413937052, guid: 86045ec06f7af4c9f86c16606d7db3a3, type: 2}
   player: {fileID: 332881591}
