@@ -4458,10 +4458,12 @@ GameObject:
   - component: {fileID: 332881597}
   - component: {fileID: 332881596}
   - component: {fileID: 332881599}
+  - component: {fileID: 332881603}
   - component: {fileID: 332881598}
   - component: {fileID: 332881600}
   - component: {fileID: 332881602}
   - component: {fileID: 332881601}
+  - component: {fileID: 332881604}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -4501,8 +4503,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.77, y: 3.03, z: 1}
-  m_Center: {x: 0, y: 1.74, z: 0}
+  m_Size: {x: 2.25, y: 2.62, z: 1}
+  m_Center: {x: -0.05, y: 1.45, z: 0}
 --- !u!54 &332881594
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4552,7 +4554,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 920cc8185616549c48cdc4da95d0f3b4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 18c04d09658e242bc85624c8324e9088, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4595,7 +4597,7 @@ Animator:
   m_GameObject: {fileID: 332881591}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7fe45c3908fad4399b7be310f2d1cb2c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 63826d3fc8fb54c4d91cb34d0114392f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4690,7 +4692,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 332881591}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1477812c17c3146828059affb7b858ee, type: 3}
   m_Name: 
@@ -4704,20 +4706,17 @@ MonoBehaviour:
   specialParticles2: {fileID: 135671375}
   playerCenter: {fileID: 6925759}
   opponent: {fileID: 1547836869}
-  pp: {fileID: 11400000, guid: bf39b0f095b2949e4847ef9ac9bc15e3, type: 2}
   collider: {fileID: 332881593}
   ColliderPosition: {x: 0, y: 1.74, z: 0}
   ColliderScale: {x: 0.77, y: 3.03, z: 1}
+  PunchTriggerRPosition: {x: 0.83, y: 1.74, z: 0}
+  PunchTriggerLPosition: {x: -0.83, y: 1.74, z: 0}
   playerName: {fileID: 1022081241}
   speed: 10
   jumppower: 15
   jumped: 0
   freezeControl: 0
   anim: {fileID: 332881597}
-  pencilcontroller: {fileID: 9100000, guid: 7fe45c3908fad4399b7be310f2d1cb2c, type: 2}
-  punchR: {fileID: 21300000, guid: 866925167714a40c6a219cacea164492, type: 3}
-  punchL: {fileID: 21300000, guid: 4549775def5524f4d80fe1927912c866, type: 3}
-  playersprite: {fileID: 332881595}
 --- !u!114 &332881600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4733,6 +4732,11 @@ MonoBehaviour:
   pencilWin: {fileID: 8300000, guid: 0adec9e815e2c4c028364ba2b5d14cee, type: 3}
   pencilPunch: {fileID: 8300000, guid: 768df6e71a9a246d29ef715bbc6c4825, type: 3}
   pencilSpecial: {fileID: 8300000, guid: 1fe7fa87fcc724e91bfc6e0425e01e2f, type: 3}
+  pencilDies: {fileID: 8300000, guid: a8e187093de714dee8f35835468f35c5, type: 3}
+  woodyPunch:
+  - {fileID: 8300000, guid: 24aff01e3736c418c8aa56f20fd146aa, type: 3}
+  - {fileID: 8300000, guid: dcbe5afbc9c034f87a8d10053c9ce2af, type: 3}
+  - {fileID: 8300000, guid: bf16cb6e3b28340bb9006dd0a1dd6269, type: 3}
 --- !u!114 &332881601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4771,6 +4775,51 @@ MonoBehaviour:
   loseMusic: {fileID: 0}
   lerpSpeed: 3
   playerPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &332881603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 332881591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a010c4e20070742a299ac229c61a777a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 332881594}
+  punchtriggerR: {fileID: 2025633752}
+  punchTriggerL: {fileID: 382844230}
+  specialTrigger: {fileID: 1292467668}
+  cam: {fileID: 1117942446}
+  specialParticles1: {fileID: 1765442225}
+  specialParticles2: {fileID: 135671375}
+  playerCenter: {fileID: 6925759}
+  opponent: {fileID: 1547836869}
+  collider: {fileID: 332881593}
+  ColliderPosition: {x: -0.05, y: 1.45, z: 0}
+  ColliderScale: {x: 2.25, y: 2.62, z: 1}
+  PunchTriggerRPosition: {x: 1.4, y: 1.74, z: 0}
+  PunchTriggerLPosition: {x: -1.4, y: 1.74, z: 0}
+  playerName: {fileID: 1022081241}
+  speed: 12
+  jumppower: 0
+  jumped: 0
+  freezeControl: 0
+  anim: {fileID: 332881597}
+--- !u!114 &332881604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 332881591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da32e42c45da44296a2232fc8b5048bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 332881597}
+  pencil: {fileID: 9100000, guid: 7fe45c3908fad4399b7be310f2d1cb2c, type: 2}
+  woody: {fileID: 9100000, guid: 63826d3fc8fb54c4d91cb34d0114392f, type: 2}
 --- !u!1 &382844230
 GameObject:
   m_ObjectHideFlags: 0
@@ -4796,7 +4845,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 382844230}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.83, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 332881592}
@@ -4813,7 +4862,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.51, y: 2.08, z: 1}
-  m_Center: {x: 0, y: 1.74, z: 0}
+  m_Center: {x: -0.83, y: 1.74, z: 0}
 --- !u!54 &382844233
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5797,7 +5846,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 769285807}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.83, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1547836873}
@@ -5853,7 +5902,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.51, y: 2.08, z: 1}
-  m_Center: {x: 0, y: 1.25, z: 0}
+  m_Center: {x: 0.91, y: 1.25, z: 0}
 --- !u!1 &793861463
 GameObject:
   m_ObjectHideFlags: 0
@@ -10372,7 +10421,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1102881862}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.83, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1547836873}
@@ -10428,7 +10477,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.51, y: 2.08, z: 1}
-  m_Center: {x: 0, y: 1.25, z: 0}
+  m_Center: {x: -0.91, y: 1.25, z: 0}
 --- !u!1 &1111709416
 GameObject:
   m_ObjectHideFlags: 0
@@ -10705,7 +10754,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 0b97b4eede5cf4f99bdb76cdbb9fc32f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -12380,6 +12429,7 @@ MonoBehaviour:
   ColliderScale: {x: 1.09, y: 2.1, z: 1}
   opponentName: {fileID: 1800203027}
   speed: 5
+  attackRange: 0
   player: {fileID: 332881591}
   punchtriggerR: {fileID: 769285807}
   punchtriggerL: {fileID: 1102881862}
@@ -12464,7 +12514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1564449596
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20351,7 +20401,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2025633752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.83, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 332881592}
@@ -20368,14 +20418,14 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.51, y: 2.08, z: 1}
-  m_Center: {x: 0, y: 1.74, z: 0}
+  m_Center: {x: 1.4, y: 1.74, z: 0}
 --- !u!114 &2025633755
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2025633752}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba834aa2e78364d56aa9728a62b2d032, type: 3}
   m_Name: 

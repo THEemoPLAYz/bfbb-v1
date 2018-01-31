@@ -8,12 +8,13 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 
 	public Rigidbody rb;
 	public GameObject punchtriggerR, punchTriggerL, specialTrigger,cam, specialParticles1, specialParticles2, playerCenter, opponent;
-	public PostProcessingProfile pp;
 
 	[Header("Initialize Stuff")]
 	public BoxCollider collider;
 	public Vector3 ColliderPosition;
 	public Vector3 ColliderScale;
+	public Vector3 PunchTriggerRPosition;
+	public Vector3 PunchTriggerLPosition;
 	public Text playerName;
 
 
@@ -28,21 +29,15 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 
 	[Header("Animation")]
 	public Animator anim;
-	public RuntimeAnimatorController pencilcontroller;
-
-	[Space]
-
-	[Header("Sprite")]
-	public Sprite punchR;
-	public Sprite punchL;
-	public SpriteRenderer playersprite;
 
 	// Use this for initialization
 	void Start () {
-		anim.runtimeAnimatorController = pencilcontroller;
 		collider.center = new Vector3 (ColliderPosition.x, ColliderPosition.y, ColliderPosition.z);
 		collider.size = new Vector3 (ColliderScale.x, ColliderScale.y, ColliderScale.z);
+		punchtriggerR.GetComponent<BoxCollider> ().center = new Vector3 (PunchTriggerRPosition.x, PunchTriggerRPosition.y, PunchTriggerRPosition.z);
+		punchTriggerL.GetComponent<BoxCollider> ().center = new Vector3 (PunchTriggerLPosition.x, PunchTriggerLPosition.y, PunchTriggerLPosition.z);
 		playerName.text = "PENCIL";
+		anim.SetInteger ("Direction", 1);
 	}
 	
 	// Update is called once per frame
@@ -93,23 +88,6 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 			}
 		}
 
-		if (playersprite.sprite == punchR) {
-
-			punchtriggerR.SetActive (true);
-			punchTriggerL.SetActive (false);
-
-		} else if (playersprite.sprite == punchL) {
-
-			punchTriggerL.SetActive (true);
-			punchtriggerR.SetActive (false);
-
-		} else {
-
-			punchtriggerR.SetActive (false);
-			punchTriggerL.SetActive (false);
-
-		}
-
 		if (transform.position.x > 21f) {
 
 			transform.position = new Vector3 (21f, transform.position.y, transform.position.z);
@@ -136,6 +114,30 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 			jumped = true;
 		}
 	}
+	public void PunchR(){
+
+
+		punchtriggerR.SetActive (true);
+		punchTriggerL.SetActive (false);
+
+
+	}
+	public void PunchL(){
+
+
+		punchtriggerR.SetActive (false);
+		punchTriggerL.SetActive (true);
+
+
+	}
+	public void StopPunch(){
+
+
+		punchtriggerR.SetActive (false);
+		punchTriggerL.SetActive (false);
+
+
+	}
 
 
 	//Special Handlers
@@ -144,8 +146,6 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 		cam.GetComponent<Camera_Controller> ().enabled = false;
 		cam.GetComponent<Special_PlayerFocus> ().enabled = true;
 		opponent.GetComponent<David_ControllerAI> ().enabled = false;
-		var vignette = pp.vignette.settings;
-		vignette.intensity = 0.2f;
 
 	}
 	public void Special_CameraBackToNormal(){
@@ -153,8 +153,6 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 		cam.GetComponent<Camera_Controller> ().enabled = true;
 		cam.GetComponent<Special_PlayerFocus> ().enabled = false;
 		opponent.GetComponent<David_ControllerAI> ().enabled = true;
-		var vignette = pp.vignette.settings;
-		vignette.intensity = 0.0f;
 
 	}
 	public void Special_Done(){
@@ -174,6 +172,11 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 	public void Special_JumpR(){
 
 		rb.velocity = new Vector3 (5f, 15f, 0f);
+
+	}
+	public void Special_JumpL(){
+
+		rb.velocity = new Vector3 (-5f, 15f, 0f);
 
 	}
 	public void Special_Dive(){

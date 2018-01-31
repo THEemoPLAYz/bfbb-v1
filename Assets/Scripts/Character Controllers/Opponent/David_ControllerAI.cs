@@ -15,6 +15,7 @@ public class David_ControllerAI : MonoBehaviour {
 
 	[Header("Variables")]
 	public float speed;
+	public float attackRange;
 
 
 	[Space]
@@ -40,10 +41,19 @@ public class David_ControllerAI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
 		anim.runtimeAnimatorController = davidcontroller;
 		collider.center = new Vector3 (ColliderPosition.x, ColliderPosition.y, ColliderPosition.z);
 		collider.size = new Vector3 (ColliderScale.x, ColliderScale.y, ColliderScale.z);
 		opponentName.text = "DAVID";
+
+		//Range between player detection
+		if (player.GetComponent<Pencil_ControllerPlayer> ().enabled == true) {
+			attackRange = 1.5f;
+		} else if (player.GetComponent<Woody_ControllerPlayer>().enabled == true){
+			attackRange = 1.8f;
+		}
+
 	}
 	
 	// Update is called once per frame
@@ -55,7 +65,7 @@ public class David_ControllerAI : MonoBehaviour {
 		//Negative = Player is on the left
 		//Positive = Player is on the right
 
-		if (distance > 1.2f && direction < 0f) {
+		if (distance < attackRange == false && direction < 0f) {
 
 			punchtriggerR.SetActive (false);
 			punchtriggerL.SetActive (false);
@@ -64,7 +74,7 @@ public class David_ControllerAI : MonoBehaviour {
 			anim.SetBool ("IsMoving", true);
 
 
-		} else if (distance > 1.2f && direction > 0f) {
+		} else if (distance < attackRange == false && direction > 0f) {
 
 			punchtriggerR.SetActive (false);
 			punchtriggerL.SetActive (false);
