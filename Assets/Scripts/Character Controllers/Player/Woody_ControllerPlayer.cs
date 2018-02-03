@@ -72,12 +72,29 @@ public class Woody_ControllerPlayer : MonoBehaviour {
 
 				anim.SetTrigger ("Punch");
 
-			} else if (Input.GetKey (KeyCode.Z) && Input.GetKey (KeyCode.X) || Input.GetKey (KeyCode.X) && Input.GetKey (KeyCode.Z)) {
+			} else if(Input.GetKeyDown(KeyCode.X)){
+
+				anim.SetTrigger ("Kick");
+
+			} else if ((Input.GetKey (KeyCode.Z) && Input.GetKey (KeyCode.X)) ||
+				(Input.GetKey (KeyCode.X) && Input.GetKey (KeyCode.Z))) {
 
 				if (gameObject.GetComponent<Player_Controller> ().powerbar.value == 1f) {
 
 					anim.SetTrigger ("Special");
 					freezeControl = true;
+
+				}
+
+			} else if ((Input.GetKey (KeyCode.DownArrow) && Input.GetKey (KeyCode.Z)) ||
+				(Input.GetKey (KeyCode.DownArrow) && Input.GetKey (KeyCode.Z))) {
+
+				if (gameObject.GetComponent<Player_Controller> ().powerbar.value > 0.1f) {
+
+					anim.SetTrigger ("MiniSpecial");
+					freezeControl = true;
+					gameObject.GetComponent<Player_Controller> ().currentPower -= 0.1f;
+
 
 				}
 
@@ -139,50 +156,20 @@ public class Woody_ControllerPlayer : MonoBehaviour {
 
 	}
 
-
-	//Special Handlers
-	public void Special_CameraFocusToPlayer(){
-
-		cam.GetComponent<Camera_Controller> ().enabled = false;
-		cam.GetComponent<Special_PlayerFocus> ().enabled = true;
-		opponent.GetComponent<David_ControllerAI> ().enabled = false;
-
-	}
-	public void Special_CameraBackToNormal(){
-
-		cam.GetComponent<Camera_Controller> ().enabled = true;
-		cam.GetComponent<Special_PlayerFocus> ().enabled = false;
-		opponent.GetComponent<David_ControllerAI> ().enabled = true;
-
-	}
-	public void Special_Done(){
+	//Mini Special (Dab Hadoken)
+	public void MiniSpecial_HadokenR(){
 
 		freezeControl = false;
-		specialTrigger.SetActive (false);
 
 	}
-	public void Special_Particles(){
+	public void MiniSpecial_HadokenL(){
 
-		GameObject specialClone1 = Instantiate (specialParticles1, playerCenter.transform.position, Quaternion.identity);
-		GameObject specialClone2 = Instantiate (specialParticles2, playerCenter.transform.position, Quaternion.identity);
-		specialClone1.SetActive (true);
-		specialClone2.SetActive (true);
+		freezeControl = false;
 
 	}
-	public void Special_JumpR(){
+	public void MiniSpecial_Particles(){
 
-		rb.velocity = new Vector3 (5f, 15f, 0f);
 
-	}
-	public void Special_JumpL(){
-
-		rb.velocity = new Vector3 (-5f, 15f, 0f);
-
-	}
-	public void Special_Dive(){
-
-		rb.velocity = new Vector3 (1f, -15f, 0f);
-		specialTrigger.SetActive (true);
 
 	}
 }
