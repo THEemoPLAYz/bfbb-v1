@@ -16,6 +16,7 @@ public class Sound_ManagementPlayer : MonoBehaviour {
 	[Space]
 	[Header("Woody")]
 	public List<AudioClip> woodyPunch;
+	public AudioClip woodyDab;
 
 	//PENCIL
 	public void PencilWin(){
@@ -45,6 +46,11 @@ public class Sound_ManagementPlayer : MonoBehaviour {
 		int randomize = Random.Range (0, woodyPunch.Count);
 		AudioClip punch = woodyPunch [randomize];
 		audio.PlayOneShot (punch);
+
+	}
+	public void WoodyDab(){
+
+		audio.PlayOneShot (woodyDab);
 
 	}
 }

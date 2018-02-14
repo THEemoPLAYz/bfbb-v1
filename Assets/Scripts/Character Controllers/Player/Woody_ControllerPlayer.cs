@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Woody_ControllerPlayer : MonoBehaviour {
 
 	public Rigidbody rb;
-	public GameObject punchtriggerR, punchTriggerL, specialTrigger,cam, specialParticles1, specialParticles2, playerCenter, opponent;
+	public GameObject punchtriggerR, punchTriggerL, specialTrigger, cam, specialParticles1, specialParticles2, playerCenter, opponent, hadokenR, hadokenL;
 
 	[Header("Initialize Stuff")]
 	public BoxCollider collider;
@@ -160,16 +160,15 @@ public class Woody_ControllerPlayer : MonoBehaviour {
 	public void MiniSpecial_HadokenR(){
 
 		freezeControl = false;
+		GameObject hadokenClone = Instantiate (hadokenR, new Vector3 (playerCenter.transform.position.x, playerCenter.transform.position.y, playerName.transform.position.z), Quaternion.identity);
+		hadokenClone.SetActive (true);
 
 	}
 	public void MiniSpecial_HadokenL(){
 
 		freezeControl = false;
-
-	}
-	public void MiniSpecial_Particles(){
-
-
+		GameObject hadokenClone = Instantiate (hadokenL, new Vector3 (playerCenter.transform.position.x, playerCenter.transform.position.y, playerName.transform.position.z), Quaternion.identity);
+		hadokenClone.SetActive (true);
 
 	}
 }

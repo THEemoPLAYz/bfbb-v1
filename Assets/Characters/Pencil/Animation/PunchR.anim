@@ -88,7 +88,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.1
+  - time: 0.06666667
     functionName: PencilPunch
     data: 
     objectReferenceParameter: {fileID: 0}
