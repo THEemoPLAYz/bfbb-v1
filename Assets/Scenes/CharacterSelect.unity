@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 11427719}
   - component: {fileID: 11427718}
   - component: {fileID: 11427720}
+  - component: {fileID: 11427721}
   m_Layer: 5
   m_Name: Taco
   m_TagString: Untagged
@@ -204,7 +205,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -234,6 +235,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &11427721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 11427716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &24425206
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,6 +382,7 @@ GameObject:
   - component: {fileID: 35194024}
   - component: {fileID: 35194023}
   - component: {fileID: 35194025}
+  - component: {fileID: 35194026}
   m_Layer: 5
   m_Name: Puffball
   m_TagString: Untagged
@@ -446,7 +463,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -476,6 +493,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &35194026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 35194021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &72251785
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,6 +640,7 @@ GameObject:
   - component: {fileID: 113423757}
   - component: {fileID: 113423756}
   - component: {fileID: 113423758}
+  - component: {fileID: 113423759}
   m_Layer: 5
   m_Name: Clock
   m_TagString: Untagged
@@ -688,7 +721,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -718,6 +751,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &113423759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 113423754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &153855849
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,6 +777,7 @@ GameObject:
   - component: {fileID: 153855852}
   - component: {fileID: 153855851}
   - component: {fileID: 153855853}
+  - component: {fileID: 153855854}
   m_Layer: 5
   m_Name: Nickel
   m_TagString: Untagged
@@ -809,7 +858,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -821,7 +870,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 153855851}
   m_OnClick:
     m_PersistentCalls:
@@ -839,6 +888,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &153855854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 153855849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &216378356
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,6 +914,7 @@ GameObject:
   - component: {fileID: 216378359}
   - component: {fileID: 216378358}
   - component: {fileID: 216378360}
+  - component: {fileID: 216378361}
   m_Layer: 5
   m_Name: Woody
   m_TagString: Untagged
@@ -930,7 +995,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -960,6 +1025,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &216378361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 216378356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &277070808
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +1051,7 @@ GameObject:
   - component: {fileID: 277070811}
   - component: {fileID: 277070810}
   - component: {fileID: 277070812}
+  - component: {fileID: 277070813}
   m_Layer: 5
   m_Name: Pillow
   m_TagString: Untagged
@@ -1051,7 +1132,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1081,6 +1162,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &277070813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 277070808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &298786747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,8 +1188,9 @@ GameObject:
   - component: {fileID: 298786750}
   - component: {fileID: 298786749}
   - component: {fileID: 298786751}
+  - component: {fileID: 298786752}
   m_Layer: 5
-  m_Name: FireyJr
+  m_Name: Firey Jr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1172,7 +1269,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1202,6 +1299,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &298786752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 298786747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &310708134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,6 +1366,7 @@ GameObject:
   - component: {fileID: 331192095}
   - component: {fileID: 331192094}
   - component: {fileID: 331192096}
+  - component: {fileID: 331192097}
   m_Layer: 5
   m_Name: Eggy
   m_TagString: Untagged
@@ -1334,7 +1447,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1364,6 +1477,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &331192097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 331192092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &384781586
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,6 +1503,7 @@ GameObject:
   - component: {fileID: 384781589}
   - component: {fileID: 384781588}
   - component: {fileID: 384781590}
+  - component: {fileID: 384781591}
   m_Layer: 5
   m_Name: Grassy
   m_TagString: Untagged
@@ -1455,7 +1584,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1485,6 +1614,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &384781591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 384781586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &396586605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,6 +1640,7 @@ GameObject:
   - component: {fileID: 396586608}
   - component: {fileID: 396586607}
   - component: {fileID: 396586609}
+  - component: {fileID: 396586610}
   m_Layer: 5
   m_Name: Foldy
   m_TagString: Untagged
@@ -1576,7 +1721,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1606,6 +1751,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &396586610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 396586605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &409630840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,8 +1777,9 @@ GameObject:
   - component: {fileID: 409630843}
   - component: {fileID: 409630842}
   - component: {fileID: 409630844}
+  - component: {fileID: 409630845}
   m_Layer: 5
-  m_Name: TennisBall
+  m_Name: Tennis Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1697,7 +1858,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1727,6 +1888,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &409630845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 409630840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &412979210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1859,6 +2035,7 @@ GameObject:
   - component: {fileID: 421245160}
   - component: {fileID: 421245159}
   - component: {fileID: 421245161}
+  - component: {fileID: 421245162}
   m_Layer: 5
   m_Name: Donut
   m_TagString: Untagged
@@ -1939,7 +2116,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1969,6 +2146,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &421245162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 421245157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &434502089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1980,6 +2172,7 @@ GameObject:
   - component: {fileID: 434502092}
   - component: {fileID: 434502091}
   - component: {fileID: 434502093}
+  - component: {fileID: 434502094}
   m_Layer: 5
   m_Name: Gelatin
   m_TagString: Untagged
@@ -2060,7 +2253,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2090,6 +2283,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &434502094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 434502089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &439059079
 GameObject:
   m_ObjectHideFlags: 0
@@ -2169,6 +2377,7 @@ RectTransform:
   - {fileID: 439059080}
   - {fileID: 1965444008}
   - {fileID: 1549442842}
+  - {fileID: 1193527447}
   m_Father: {fileID: 1879829889}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2236,6 +2445,7 @@ GameObject:
   - component: {fileID: 456178640}
   - component: {fileID: 456178639}
   - component: {fileID: 456178641}
+  - component: {fileID: 456178642}
   m_Layer: 5
   m_Name: Bubble
   m_TagString: Untagged
@@ -2316,7 +2526,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2346,6 +2556,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &456178642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 456178637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &459094472
 GameObject:
   m_ObjectHideFlags: 0
@@ -2425,6 +2650,7 @@ GameObject:
   - component: {fileID: 476658233}
   - component: {fileID: 476658232}
   - component: {fileID: 476658234}
+  - component: {fileID: 476658235}
   m_Layer: 5
   m_Name: Stapy
   m_TagString: Untagged
@@ -2505,7 +2731,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2535,6 +2761,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &476658235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 476658230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &484149077
 GameObject:
   m_ObjectHideFlags: 0
@@ -2546,6 +2787,7 @@ GameObject:
   - component: {fileID: 484149080}
   - component: {fileID: 484149079}
   - component: {fileID: 484149081}
+  - component: {fileID: 484149082}
   m_Layer: 5
   m_Name: TV
   m_TagString: Untagged
@@ -2626,7 +2868,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2656,6 +2898,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &484149082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 484149077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &491624948
 GameObject:
   m_ObjectHideFlags: 0
@@ -2729,6 +2986,7 @@ GameObject:
   - component: {fileID: 497846959}
   - component: {fileID: 497846958}
   - component: {fileID: 497846960}
+  - component: {fileID: 497846961}
   m_Layer: 5
   m_Name: Blocky
   m_TagString: Untagged
@@ -2809,7 +3067,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2839,6 +3097,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &497846961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 497846956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &502014040
 GameObject:
   m_ObjectHideFlags: 0
@@ -2850,8 +3123,9 @@ GameObject:
   - component: {fileID: 502014043}
   - component: {fileID: 502014042}
   - component: {fileID: 502014044}
+  - component: {fileID: 502014045}
   m_Layer: 5
-  m_Name: 8Ball
+  m_Name: 8-Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2930,7 +3204,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2960,6 +3234,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &502014045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 502014040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &503009336
 GameObject:
   m_ObjectHideFlags: 0
@@ -2971,6 +3260,7 @@ GameObject:
   - component: {fileID: 503009339}
   - component: {fileID: 503009338}
   - component: {fileID: 503009340}
+  - component: {fileID: 503009341}
   m_Layer: 5
   m_Name: Bell
   m_TagString: Untagged
@@ -3051,7 +3341,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3081,6 +3371,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &503009341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 503009336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &508818628
 GameObject:
   m_ObjectHideFlags: 0
@@ -3334,6 +3639,7 @@ GameObject:
   - component: {fileID: 566202443}
   - component: {fileID: 566202442}
   - component: {fileID: 566202444}
+  - component: {fileID: 566202445}
   m_Layer: 5
   m_Name: Pin
   m_TagString: Untagged
@@ -3414,7 +3720,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3444,6 +3750,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &566202445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 566202440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &570293828
 GameObject:
   m_ObjectHideFlags: 0
@@ -3455,6 +3776,7 @@ GameObject:
   - component: {fileID: 570293831}
   - component: {fileID: 570293830}
   - component: {fileID: 570293832}
+  - component: {fileID: 570293833}
   m_Layer: 5
   m_Name: Tree
   m_TagString: Untagged
@@ -3535,7 +3857,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3565,6 +3887,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &570293833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 570293828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &597752070
 GameObject:
   m_ObjectHideFlags: 0
@@ -3576,6 +3913,7 @@ GameObject:
   - component: {fileID: 597752073}
   - component: {fileID: 597752072}
   - component: {fileID: 597752074}
+  - component: {fileID: 597752075}
   m_Layer: 5
   m_Name: Cake
   m_TagString: Untagged
@@ -3656,7 +3994,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3686,6 +4024,175 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &597752075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 597752070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
+--- !u!1 &616154802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 616154803}
+  - component: {fileID: 616154805}
+  - component: {fileID: 616154804}
+  m_Layer: 5
+  m_Name: Info
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &616154803
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 616154802}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 1193527447}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -25.007}
+  m_SizeDelta: {x: 200, y: 210.39}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &616154804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 616154802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1453722849, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_text: Information
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 04ce7cfc16973724dab9c7be4103bea3, type: 2}
+  m_sharedMaterial: {fileID: 21807045677358780, guid: 04ce7cfc16973724dab9c7be4103bea3,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_outlineColor:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontSize: 25.8
+  m_fontSizeBase: 25.8
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_textAlignment: 257
+  m_isAlignmentEnumConverted: 1
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_firstOverflowCharacterIndex: -1
+  m_linkedTextComponent: {fileID: 0}
+  m_isLinkedTextComponent: 0
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_ignoreRectMaskCulling: 0
+  m_ignoreCulling: 1
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_firstVisibleCharacter: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_textInfo:
+    textComponent: {fileID: 616154804}
+    characterCount: 11
+    spriteCount: 0
+    spaceCount: 0
+    wordCount: 1
+    linkCount: 0
+    lineCount: 1
+    pageCount: 1
+    materialCount: 1
+  m_havePropertiesChanged: 1
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_spriteAnimator: {fileID: 0}
+  m_isInputParsingRequired: 1
+  m_inputSource: 0
+  m_hasFontAssetChanged: 0
+  m_subTextObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &616154805
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 616154802}
 --- !u!1 &627375526
 GameObject:
   m_ObjectHideFlags: 0
@@ -3697,6 +4204,7 @@ GameObject:
   - component: {fileID: 627375529}
   - component: {fileID: 627375528}
   - component: {fileID: 627375530}
+  - component: {fileID: 627375531}
   m_Layer: 5
   m_Name: Roboty
   m_TagString: Untagged
@@ -3777,7 +4285,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3789,7 +4297,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 627375528}
   m_OnClick:
     m_PersistentCalls:
@@ -3807,6 +4315,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &627375531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 627375526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &647117117
 GameObject:
   m_ObjectHideFlags: 0
@@ -3818,6 +4341,7 @@ GameObject:
   - component: {fileID: 647117120}
   - component: {fileID: 647117119}
   - component: {fileID: 647117121}
+  - component: {fileID: 647117122}
   m_Layer: 5
   m_Name: Fanny
   m_TagString: Untagged
@@ -3898,7 +4422,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3928,6 +4452,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &647117122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 647117117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &682624947
 GameObject:
   m_ObjectHideFlags: 0
@@ -3939,6 +4478,7 @@ GameObject:
   - component: {fileID: 682624950}
   - component: {fileID: 682624949}
   - component: {fileID: 682624951}
+  - component: {fileID: 682624952}
   m_Layer: 5
   m_Name: Leafy
   m_TagString: Untagged
@@ -4019,7 +4559,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4031,7 +4571,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 682624949}
   m_OnClick:
     m_PersistentCalls:
@@ -4049,6 +4589,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &682624952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 682624947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &696171150
 GameObject:
   m_ObjectHideFlags: 0
@@ -4168,7 +4723,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -99.16454, w: 0}
   m_textInfo:
     textComponent: {fileID: 696171152}
     characterCount: 6
@@ -4214,8 +4769,9 @@ GameObject:
   - component: {fileID: 721794493}
   - component: {fileID: 721794492}
   - component: {fileID: 721794494}
+  - component: {fileID: 721794495}
   m_Layer: 5
-  m_Name: YellowFace
+  m_Name: Yellow Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4294,7 +4850,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4324,6 +4880,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &721794495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 721794490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &731042219
 GameObject:
   m_ObjectHideFlags: 0
@@ -4335,6 +4906,7 @@ GameObject:
   - component: {fileID: 731042222}
   - component: {fileID: 731042221}
   - component: {fileID: 731042223}
+  - component: {fileID: 731042224}
   m_Layer: 5
   m_Name: Match
   m_TagString: Untagged
@@ -4415,7 +4987,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4445,6 +5017,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &731042224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 731042219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &757149067
 GameObject:
   m_ObjectHideFlags: 0
@@ -4497,6 +5084,7 @@ GameObject:
   - component: {fileID: 785695001}
   - component: {fileID: 785695000}
   - component: {fileID: 785695002}
+  - component: {fileID: 785695003}
   m_Layer: 5
   m_Name: Spongy
   m_TagString: Untagged
@@ -4577,7 +5165,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4607,6 +5195,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &785695003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 785694998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &794595589
 GameObject:
   m_ObjectHideFlags: 0
@@ -4618,6 +5221,7 @@ GameObject:
   - component: {fileID: 794595592}
   - component: {fileID: 794595591}
   - component: {fileID: 794595593}
+  - component: {fileID: 794595594}
   m_Layer: 5
   m_Name: Ruby
   m_TagString: Untagged
@@ -4698,7 +5302,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4728,6 +5332,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &794595594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 794595589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &830270750
 GameObject:
   m_ObjectHideFlags: 0
@@ -4739,8 +5358,9 @@ GameObject:
   - component: {fileID: 830270753}
   - component: {fileID: 830270752}
   - component: {fileID: 830270754}
+  - component: {fileID: 830270755}
   m_Layer: 5
-  m_Name: BlackHole
+  m_Name: Black Hole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4819,7 +5439,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4849,6 +5469,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &830270755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 830270750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &830364149
 GameObject:
   m_ObjectHideFlags: 0
@@ -4860,8 +5495,9 @@ GameObject:
   - component: {fileID: 830364152}
   - component: {fileID: 830364151}
   - component: {fileID: 830364153}
+  - component: {fileID: 830364154}
   m_Layer: 5
-  m_Name: BarfBag
+  m_Name: Barf Bag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4940,7 +5576,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4970,6 +5606,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &830364154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 830364149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &862182637
 GameObject:
   m_ObjectHideFlags: 0
@@ -5022,8 +5673,9 @@ GameObject:
   - component: {fileID: 863112343}
   - component: {fileID: 863112342}
   - component: {fileID: 863112344}
+  - component: {fileID: 863112345}
   m_Layer: 5
-  m_Name: IceCube
+  m_Name: Ice Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5102,7 +5754,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -5132,6 +5784,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &863112345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 863112340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &876170911
 GameObject:
   m_ObjectHideFlags: 0
@@ -5143,6 +5810,7 @@ GameObject:
   - component: {fileID: 876170914}
   - component: {fileID: 876170913}
   - component: {fileID: 876170915}
+  - component: {fileID: 876170916}
   m_Layer: 5
   m_Name: Loser
   m_TagString: Untagged
@@ -5223,7 +5891,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -5253,6 +5921,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &876170916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 876170911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &887814454
 GameObject:
   m_ObjectHideFlags: 0
@@ -5264,6 +5947,7 @@ GameObject:
   - component: {fileID: 887814457}
   - component: {fileID: 887814456}
   - component: {fileID: 887814458}
+  - component: {fileID: 887814459}
   m_Layer: 5
   m_Name: Pie
   m_TagString: Untagged
@@ -5344,7 +6028,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -5374,6 +6058,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &887814459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 887814454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &902746904
 GameObject:
   m_ObjectHideFlags: 0
@@ -5426,7 +6125,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 143.9
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -5451,7 +6150,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 902746904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 620.15, y: 367, z: -840.9}
+  m_LocalPosition: {x: 620.15, y: 367, z: -157.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5558,6 +6257,7 @@ GameObject:
   - component: {fileID: 911028681}
   - component: {fileID: 911028680}
   - component: {fileID: 911028682}
+  - component: {fileID: 911028683}
   m_Layer: 5
   m_Name: Teardrop
   m_TagString: Untagged
@@ -5638,7 +6338,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -5668,6 +6368,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &911028683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 911028678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &912219773
 GameObject:
   m_ObjectHideFlags: 0
@@ -5925,7 +6640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &935877035
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6161,6 +6876,7 @@ GameObject:
   - component: {fileID: 1015129030}
   - component: {fileID: 1015129029}
   - component: {fileID: 1015129031}
+  - component: {fileID: 1015129032}
   m_Layer: 5
   m_Name: Flower
   m_TagString: Untagged
@@ -6241,7 +6957,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -6271,6 +6987,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1015129032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1015129027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1026121635
 GameObject:
   m_ObjectHideFlags: 0
@@ -6282,6 +7013,7 @@ GameObject:
   - component: {fileID: 1026121638}
   - component: {fileID: 1026121637}
   - component: {fileID: 1026121639}
+  - component: {fileID: 1026121640}
   m_Layer: 5
   m_Name: Naily
   m_TagString: Untagged
@@ -6362,7 +7094,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -6392,6 +7124,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1026121640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1026121635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1031461813
 GameObject:
   m_ObjectHideFlags: 0
@@ -6403,6 +7150,7 @@ GameObject:
   - component: {fileID: 1031461816}
   - component: {fileID: 1031461815}
   - component: {fileID: 1031461817}
+  - component: {fileID: 1031461818}
   m_Layer: 5
   m_Name: Needle
   m_TagString: Untagged
@@ -6483,7 +7231,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -6513,6 +7261,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1031461818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1031461813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1066228073
 GameObject:
   m_ObjectHideFlags: 0
@@ -6565,6 +7328,7 @@ GameObject:
   - component: {fileID: 1104291588}
   - component: {fileID: 1104291587}
   - component: {fileID: 1104291589}
+  - component: {fileID: 1104291590}
   m_Layer: 5
   m_Name: Gaty
   m_TagString: Untagged
@@ -6645,7 +7409,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -6675,6 +7439,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1104291590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1104291585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1112429720
 GameObject:
   m_ObjectHideFlags: 0
@@ -6686,6 +7465,7 @@ GameObject:
   - component: {fileID: 1112429723}
   - component: {fileID: 1112429722}
   - component: {fileID: 1112429724}
+  - component: {fileID: 1112429725}
   m_Layer: 5
   m_Name: Fries
   m_TagString: Untagged
@@ -6766,7 +7546,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -6796,6 +7576,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1112429725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1112429720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1128442922
 GameObject:
   m_ObjectHideFlags: 0
@@ -6928,6 +7723,7 @@ GameObject:
   - component: {fileID: 1155568094}
   - component: {fileID: 1155568093}
   - component: {fileID: 1155568095}
+  - component: {fileID: 1155568096}
   m_Layer: 5
   m_Name: Marker
   m_TagString: Untagged
@@ -7008,7 +7804,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -7038,6 +7834,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1155568096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1155568091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1183665630
 GameObject:
   m_ObjectHideFlags: 0
@@ -7049,6 +7860,7 @@ GameObject:
   - component: {fileID: 1183665633}
   - component: {fileID: 1183665632}
   - component: {fileID: 1183665634}
+  - component: {fileID: 1183665635}
   m_Layer: 5
   m_Name: Balloony
   m_TagString: Untagged
@@ -7129,7 +7941,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -7141,7 +7953,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1183665632}
   m_OnClick:
     m_PersistentCalls:
@@ -7159,6 +7971,327 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1183665635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1183665630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
+--- !u!1 &1193527446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1193527447}
+  - component: {fileID: 1193527450}
+  - component: {fileID: 1193527449}
+  - component: {fileID: 1193527448}
+  m_Layer: 5
+  m_Name: InfoHover
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1193527447
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1193527446}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.140756, y: 1.1407559, z: 1.1407559}
+  m_Children:
+  - {fileID: 1246355045}
+  - {fileID: 616154803}
+  m_Father: {fileID: 445235874}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.15987921, y: -270.99}
+  m_SizeDelta: {x: 214.9, y: 273.7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1193527448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1193527446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 270a064ebc5c247249d8695b05df4f61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charShow: 
+  smoothTime: 0.1
+  offsetX: 150
+  offsetY: 100
+  title: {fileID: 1246355046}
+  info: {fileID: 616154804}
+  eightBallInfo: He rol
+  balloonyInfo: He flot
+  barfBagInfo: She barf
+  basketballInfo: She bounc
+  bellInfo: She ring
+  blackHoleInfo: He succ
+  blockyInfo: He attac
+  bombyInfo: He explod
+  bookInfo: She read
+  bottleInfo: She fil
+  braceletyInfo: She fangurl
+  bubbleInfo: She pop
+  cakeInfo: He blus
+  clockInfo: He tic
+  cloudyInfo: He gollec
+  coinyInfo: He penny
+  davidInfo: He human
+  donutInfo: He tinkle
+  doraInfo: She footbal
+  eggyInfo: She yolk
+  eraserInfo: He eras
+  fannyInfo: She hate
+  fireyInfo: He hot
+  fireyJrInfo: He smol hot
+  flowerInfo: She prety
+  foldyInfo: She fold
+  friesInfo: He cannibal
+  gatyInfo: She clos
+  gelatinInfo: He 6 years old
+  golfBallInfo: She boss
+  grassyInfo: He useful
+  iceCubeInfo: She cold
+  leafyInfo: She green
+  lightningInfo: She zap
+  liyInfo: She clic
+  lollipopInfo: She lic
+  loserInfo: He sotp sign
+  markerInfo: He toss dirt
+  matchInfo: She stare
+  nailyInfo: She poc
+  needleInfo: She sharp
+  nickelInfo: He grey
+  penInfo: He ben
+  pencilInfo: She bencil
+  pieInfo: She explod
+  pillowInfo: She sof
+  pinInfo: She existential crisis
+  puffballInfo: She puffy
+  remoteInfo: She battery
+  robotFlowerInfo: She destroy
+  robotyInfo: He beep
+  rockyInfo: He barf
+  rubyInfo: She shine
+  sawInfo: She zigzag
+  snowballInfo: He kill
+  spongyInfo: He big
+  stapyInfo: He stap
+  tacoInfo: She escap
+  teardropInfo: She silen
+  tennisBallInfo: He co-boss
+  treeInfo: He leaf
+  tvInfo: He screen
+  woodyInfo: He screm
+  yellowFaceInfo: He ads
+--- !u!114 &1193527449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1193527446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19117647, g: 0.19117647, b: 0.19117647, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 8406583a82af5461aa4974e30ec333a0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1193527450
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1193527446}
+--- !u!1 &1246355044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1246355045}
+  - component: {fileID: 1246355047}
+  - component: {fileID: 1246355046}
+  m_Layer: 5
+  m_Name: Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1246355045
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1246355044}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1193527447}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.0000023841858, y: 105.186005}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1246355046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1246355044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1453722849, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_text: Character
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 04ce7cfc16973724dab9c7be4103bea3, type: 2}
+  m_sharedMaterial: {fileID: 21807045677358780, guid: 04ce7cfc16973724dab9c7be4103bea3,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_outlineColor:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 16
+  m_textAlignment: 258
+  m_isAlignmentEnumConverted: 1
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_firstOverflowCharacterIndex: -1
+  m_linkedTextComponent: {fileID: 0}
+  m_isLinkedTextComponent: 0
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_ignoreRectMaskCulling: 0
+  m_ignoreCulling: 1
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_firstVisibleCharacter: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -14.41578, y: 0, z: -14.415742, w: 0}
+  m_textInfo:
+    textComponent: {fileID: 1246355046}
+    characterCount: 9
+    spriteCount: 0
+    spaceCount: 0
+    wordCount: 1
+    linkCount: 0
+    lineCount: 1
+    pageCount: 1
+    materialCount: 1
+  m_havePropertiesChanged: 1
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_spriteAnimator: {fileID: 0}
+  m_isInputParsingRequired: 1
+  m_inputSource: 0
+  m_hasFontAssetChanged: 0
+  m_subTextObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1246355047
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1246355044}
 --- !u!1 &1281444855
 GameObject:
   m_ObjectHideFlags: 0
@@ -7211,6 +8344,7 @@ GameObject:
   - component: {fileID: 1314743122}
   - component: {fileID: 1314743121}
   - component: {fileID: 1314743123}
+  - component: {fileID: 1314743124}
   m_Layer: 5
   m_Name: Firey
   m_TagString: Untagged
@@ -7291,7 +8425,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -7321,6 +8455,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1314743124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1314743119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1352112644
 GameObject:
   m_ObjectHideFlags: 0
@@ -7332,8 +8481,9 @@ GameObject:
   - component: {fileID: 1352112647}
   - component: {fileID: 1352112646}
   - component: {fileID: 1352112648}
+  - component: {fileID: 1352112649}
   m_Layer: 5
-  m_Name: RobotFlower
+  m_Name: Robot Flower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7412,7 +8562,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -7442,6 +8592,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1352112649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1352112644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1379704102
 GameObject:
   m_ObjectHideFlags: 0
@@ -7453,6 +8618,7 @@ GameObject:
   - component: {fileID: 1379704105}
   - component: {fileID: 1379704104}
   - component: {fileID: 1379704106}
+  - component: {fileID: 1379704107}
   m_Layer: 5
   m_Name: Bottle
   m_TagString: Untagged
@@ -7533,7 +8699,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -7563,6 +8729,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1379704107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1379704102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1456378293
 GameObject:
   m_ObjectHideFlags: 0
@@ -7574,8 +8755,9 @@ GameObject:
   - component: {fileID: 1456378296}
   - component: {fileID: 1456378295}
   - component: {fileID: 1456378297}
+  - component: {fileID: 1456378298}
   m_Layer: 5
-  m_Name: Golfball
+  m_Name: Golf Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7654,7 +8836,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -7684,6 +8866,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1456378298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1456378293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1458160311
 GameObject:
   m_ObjectHideFlags: 0
@@ -7763,6 +8960,7 @@ GameObject:
   - component: {fileID: 1458325141}
   - component: {fileID: 1458325140}
   - component: {fileID: 1458325142}
+  - component: {fileID: 1458325143}
   m_Layer: 5
   m_Name: Saw
   m_TagString: Untagged
@@ -7843,7 +9041,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -7873,6 +9071,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1458325143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1458325138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1463694231
 GameObject:
   m_ObjectHideFlags: 0
@@ -7884,6 +9097,7 @@ GameObject:
   - component: {fileID: 1463694234}
   - component: {fileID: 1463694233}
   - component: {fileID: 1463694235}
+  - component: {fileID: 1463694236}
   m_Layer: 5
   m_Name: Remote
   m_TagString: Untagged
@@ -7964,7 +9178,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -7994,6 +9208,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1463694236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1463694231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1478866829
 GameObject:
   m_ObjectHideFlags: 0
@@ -8005,6 +9234,7 @@ GameObject:
   - component: {fileID: 1478866832}
   - component: {fileID: 1478866831}
   - component: {fileID: 1478866833}
+  - component: {fileID: 1478866834}
   m_Layer: 5
   m_Name: Bomby
   m_TagString: Untagged
@@ -8085,7 +9315,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -8115,6 +9345,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1478866834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1478866829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1513147409
 GameObject:
   m_ObjectHideFlags: 0
@@ -8126,6 +9371,7 @@ GameObject:
   - component: {fileID: 1513147412}
   - component: {fileID: 1513147411}
   - component: {fileID: 1513147413}
+  - component: {fileID: 1513147414}
   m_Layer: 5
   m_Name: Snowball
   m_TagString: Untagged
@@ -8206,7 +9452,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -8236,6 +9482,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1513147414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1513147409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1549442841
 GameObject:
   m_ObjectHideFlags: 0
@@ -8288,6 +9549,7 @@ GameObject:
   - component: {fileID: 1554978923}
   - component: {fileID: 1554978922}
   - component: {fileID: 1554978924}
+  - component: {fileID: 1554978925}
   m_Layer: 5
   m_Name: Liy
   m_TagString: Untagged
@@ -8368,7 +9630,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -8398,6 +9660,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1554978925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1554978920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1574272016
 GameObject:
   m_ObjectHideFlags: 0
@@ -8409,6 +9686,7 @@ GameObject:
   - component: {fileID: 1574272019}
   - component: {fileID: 1574272018}
   - component: {fileID: 1574272020}
+  - component: {fileID: 1574272021}
   m_Layer: 5
   m_Name: Eraser
   m_TagString: Untagged
@@ -8489,7 +9767,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -8519,6 +9797,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1574272021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1574272016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1642622695
 GameObject:
   m_ObjectHideFlags: 0
@@ -8854,6 +10147,7 @@ GameObject:
   - component: {fileID: 1697408852}
   - component: {fileID: 1697408851}
   - component: {fileID: 1697408853}
+  - component: {fileID: 1697408854}
   m_Layer: 5
   m_Name: David
   m_TagString: Untagged
@@ -8934,7 +10228,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -8964,6 +10258,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1697408854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1697408849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1739009951
 GameObject:
   m_ObjectHideFlags: 0
@@ -8975,6 +10284,7 @@ GameObject:
   - component: {fileID: 1739009954}
   - component: {fileID: 1739009953}
   - component: {fileID: 1739009955}
+  - component: {fileID: 1739009956}
   m_Layer: 5
   m_Name: Cloudy
   m_TagString: Untagged
@@ -9055,7 +10365,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -9067,7 +10377,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1739009953}
   m_OnClick:
     m_PersistentCalls:
@@ -9085,6 +10395,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1739009956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1739009951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1819202526
 GameObject:
   m_ObjectHideFlags: 0
@@ -9096,6 +10421,7 @@ GameObject:
   - component: {fileID: 1819202529}
   - component: {fileID: 1819202528}
   - component: {fileID: 1819202530}
+  - component: {fileID: 1819202531}
   m_Layer: 5
   m_Name: Lollipop
   m_TagString: Untagged
@@ -9176,7 +10502,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -9206,6 +10532,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1819202531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1819202526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1821853982
 GameObject:
   m_ObjectHideFlags: 0
@@ -9338,6 +10679,7 @@ GameObject:
   - component: {fileID: 1823397101}
   - component: {fileID: 1823397100}
   - component: {fileID: 1823397102}
+  - component: {fileID: 1823397103}
   m_Layer: 5
   m_Name: Pencil
   m_TagString: Untagged
@@ -9418,7 +10760,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -9448,6 +10790,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1823397103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1823397098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1857560610
 GameObject:
   m_ObjectHideFlags: 0
@@ -9459,6 +10816,7 @@ GameObject:
   - component: {fileID: 1857560613}
   - component: {fileID: 1857560612}
   - component: {fileID: 1857560614}
+  - component: {fileID: 1857560615}
   m_Layer: 5
   m_Name: Bracelety
   m_TagString: Untagged
@@ -9539,7 +10897,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -9569,6 +10927,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1857560615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1857560610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1876225077
 GameObject:
   m_ObjectHideFlags: 0
@@ -9580,6 +10953,7 @@ GameObject:
   - component: {fileID: 1876225080}
   - component: {fileID: 1876225079}
   - component: {fileID: 1876225081}
+  - component: {fileID: 1876225082}
   m_Layer: 5
   m_Name: Book
   m_TagString: Untagged
@@ -9660,7 +11034,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -9690,6 +11064,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1876225082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1876225077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1879829885
 GameObject:
   m_ObjectHideFlags: 0
@@ -9893,6 +11282,7 @@ GameObject:
   - component: {fileID: 1886889171}
   - component: {fileID: 1886889170}
   - component: {fileID: 1886889172}
+  - component: {fileID: 1886889173}
   m_Layer: 5
   m_Name: Rocky
   m_TagString: Untagged
@@ -9973,7 +11363,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -9985,7 +11375,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1886889170}
   m_OnClick:
     m_PersistentCalls:
@@ -10003,6 +11393,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1886889173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1886889168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1904698535
 GameObject:
   m_ObjectHideFlags: 0
@@ -10014,6 +11419,7 @@ GameObject:
   - component: {fileID: 1904698538}
   - component: {fileID: 1904698537}
   - component: {fileID: 1904698539}
+  - component: {fileID: 1904698540}
   m_Layer: 5
   m_Name: Basketball
   m_TagString: Untagged
@@ -10094,7 +11500,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -10124,6 +11530,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1904698540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1904698535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1965444007
 GameObject:
   m_ObjectHideFlags: 0
@@ -10176,6 +11597,7 @@ GameObject:
   - component: {fileID: 1975398786}
   - component: {fileID: 1975398785}
   - component: {fileID: 1975398787}
+  - component: {fileID: 1975398788}
   m_Layer: 5
   m_Name: Dora
   m_TagString: Untagged
@@ -10256,7 +11678,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -10286,6 +11708,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1975398788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1975398783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &1992467861
 GameObject:
   m_ObjectHideFlags: 0
@@ -10418,6 +11855,7 @@ GameObject:
   - component: {fileID: 2006892687}
   - component: {fileID: 2006892686}
   - component: {fileID: 2006892688}
+  - component: {fileID: 2006892689}
   m_Layer: 5
   m_Name: Lightning
   m_TagString: Untagged
@@ -10498,7 +11936,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -10528,6 +11966,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &2006892689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2006892684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &2020688301
 GameObject:
   m_ObjectHideFlags: 0
@@ -10539,6 +11992,7 @@ GameObject:
   - component: {fileID: 2020688304}
   - component: {fileID: 2020688303}
   - component: {fileID: 2020688305}
+  - component: {fileID: 2020688306}
   m_Layer: 5
   m_Name: Coiny
   m_TagString: Untagged
@@ -10619,7 +12073,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -10649,6 +12103,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &2020688306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2020688301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
 --- !u!1 &2049650225
 GameObject:
   m_ObjectHideFlags: 0
@@ -10660,6 +12129,7 @@ GameObject:
   - component: {fileID: 2049650228}
   - component: {fileID: 2049650227}
   - component: {fileID: 2049650229}
+  - component: {fileID: 2049650230}
   m_Layer: 5
   m_Name: Pen
   m_TagString: Untagged
@@ -10740,7 +12210,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -10770,3 +12240,18 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &2049650230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2049650225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa74f375aa74b9f810a03dcc06bb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoHover: {fileID: 1193527446}
+  referenceChar: {fileID: 1879829885}
+  hoveringChar: 
+  charThumbs: []
