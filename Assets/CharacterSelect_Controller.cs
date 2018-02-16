@@ -6,12 +6,30 @@ using TMPro;
 
 public class CharacterSelect_Controller : MonoBehaviour {
 
-	public GameObject selection;
+	public GameObject selection, playerControl, opponentControl, error;
 	public GameObject beep, betterName, blawowa, deathPact, freeFood, iance, iceCube, losers;
 	public Image playerPanel, opponentPanel;
+	public Sprite unselected;
+	public Button startButton;
 	public TextMeshProUGUI playerName, opponentName;
 	public bool selectingPlayer;
 	public List<Sprite> characterThumbs;
+
+	public void ErrorCheck(){
+
+		if (playerPanel.sprite == unselected || opponentPanel.sprite == unselected
+			|| playerControl.GetComponent<Dropdown> ().captionText.text == "Controller" || opponentControl.GetComponent<Dropdown> ().captionText.text == "Controller") {
+
+			error.SetActive (true);
+
+		} else {
+
+
+
+		}
+
+	}
+
 
 	//OPEN SELECTION AND DETECT WHICH PANEL TO CHANGE
 	public void PlayerSelect () {

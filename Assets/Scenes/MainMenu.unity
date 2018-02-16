@@ -387,8 +387,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 3.44, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -147.61826, y: 17.692928}
-  m_SizeDelta: {x: 350, y: 83.4}
+  m_AnchoredPosition: {x: -25.3, y: 23.1}
+  m_SizeDelta: {x: 104.8, y: 72.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &668343625
 MonoBehaviour:
@@ -470,6 +470,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1187267356}
         m_MethodName: LoadExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1187267357}
+        m_MethodName: PlayButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -826,6 +837,7 @@ GameObject:
   m_Component:
   - component: {fileID: 964293249}
   - component: {fileID: 964293248}
+  - component: {fileID: 964293251}
   - component: {fileID: 964293247}
   m_Layer: 0
   m_Name: Music
@@ -944,6 +956,87 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &964293251
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 964293246}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: cfbe72b5cf14142af81e23190fbb5fe8,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1033187649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,8 +1143,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -151, y: 192}
-  m_SizeDelta: {x: 350, y: 83.4}
+  m_AnchoredPosition: {x: -38, y: 197.4}
+  m_SizeDelta: {x: 124, y: 72.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1066129828
 MonoBehaviour:
@@ -1142,6 +1235,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1187267357}
+        m_MethodName: PlayButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1187267351
@@ -1156,6 +1260,7 @@ GameObject:
   - component: {fileID: 1187267353}
   - component: {fileID: 1187267352}
   - component: {fileID: 1187267356}
+  - component: {fileID: 1187267357}
   m_Layer: 5
   m_Name: UICanvas
   m_TagString: Untagged
@@ -1259,6 +1364,20 @@ MonoBehaviour:
   transitionOptions: {fileID: 225512375}
   transitionMain: {fileID: 0}
   loader: {fileID: 1563162079}
+--- !u!114 &1187267357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1187267351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b93f42a2e9b947098966c7e9fb463a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 964293248}
+  hover: {fileID: 8300000, guid: a724ce6f9aec54f928f3f0f7cd5649ca, type: 3}
+  click: {fileID: 8300000, guid: 38a91517ffce146b1a5676677fd81382, type: 3}
 --- !u!1 &1355622574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,8 +1926,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -150, y: 105}
-  m_SizeDelta: {x: 350, y: 83.4}
+  m_AnchoredPosition: {x: -80.661766, y: 112.5}
+  m_SizeDelta: {x: 211.3, y: 68.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1977795927
 MonoBehaviour:
@@ -1890,6 +2009,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1187267356}
         m_MethodName: ClickOptions
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1187267357}
+        m_MethodName: PlayButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
