@@ -1378,6 +1378,7 @@ MonoBehaviour:
   audio: {fileID: 964293248}
   hover: {fileID: 8300000, guid: a724ce6f9aec54f928f3f0f7cd5649ca, type: 3}
   click: {fileID: 8300000, guid: 38a91517ffce146b1a5676677fd81382, type: 3}
+  error: {fileID: 0}
 --- !u!1 &1355622574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,9 +1804,10 @@ Animation:
   m_GameObject: {fileID: 1729024578}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 7127f472bfa84451999250eab0e1c199, type: 2}
+  m_Animation: {fileID: 7400000, guid: e5b912a82b6c44f5c8f79239cf18af5f, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 7127f472bfa84451999250eab0e1c199, type: 2}
+  - {fileID: 7400000, guid: e5b912a82b6c44f5c8f79239cf18af5f, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0

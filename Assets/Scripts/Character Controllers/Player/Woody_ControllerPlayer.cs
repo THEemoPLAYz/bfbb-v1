@@ -29,6 +29,7 @@ public class Woody_ControllerPlayer : MonoBehaviour {
 
 	[Header("Animation")]
 	public Animator anim;
+	public RuntimeAnimatorController woodyAnim;
 
 	// Use this for initialization
 	void Start () {
@@ -38,6 +39,7 @@ public class Woody_ControllerPlayer : MonoBehaviour {
 		punchTriggerL.GetComponent<BoxCollider> ().center = new Vector3 (PunchTriggerLPosition.x, PunchTriggerLPosition.y, PunchTriggerLPosition.z);
 		playerName.text = "WOODY";
 		anim.SetInteger ("Direction", 1);
+		anim.runtimeAnimatorController = woodyAnim;
 	}
 	
 	// Update is called once per frame

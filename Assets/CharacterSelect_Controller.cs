@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CharacterSelect_Controller : MonoBehaviour {
 
-	public GameObject selection, playerControl, opponentControl, error;
+	public GameObject selection, playerControl, opponentControl, error, canvas;
 	public GameObject beep, betterName, blawowa, deathPact, freeFood, iance, iceCube, losers;
 	public Image playerPanel, opponentPanel;
 	public Sprite unselected;
@@ -24,7 +26,7 @@ public class CharacterSelect_Controller : MonoBehaviour {
 
 		} else {
 
-
+			canvas.GetComponent<SceneSwither> ().ClickPlay ();
 
 		}
 

@@ -29,6 +29,7 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 
 	[Header("Animation")]
 	public Animator anim;
+	public RuntimeAnimatorController pencilAnim;
 
 	// Use this for initialization
 	void Start () {
@@ -38,6 +39,7 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 		punchTriggerL.GetComponent<BoxCollider> ().center = new Vector3 (PunchTriggerLPosition.x, PunchTriggerLPosition.y, PunchTriggerLPosition.z);
 		playerName.text = "PENCIL";
 		anim.SetInteger ("Direction", 1);
+		anim.runtimeAnimatorController = pencilAnim;
 	}
 	
 	// Update is called once per frame

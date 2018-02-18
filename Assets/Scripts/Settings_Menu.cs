@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using TMPro;
 
 public class Settings_Menu : MonoBehaviour {
 
 	public AudioMixer audioMixer;
 	public Dropdown resolutionDropdown, qualityDropdown;
+	public GameObject camAudio;
+	public Button audioButton;
+	public Slider audioSlider;
 	Resolution[] resolutions;
 
 	void Start() {
@@ -45,13 +49,25 @@ public class Settings_Menu : MonoBehaviour {
 
 	public void SetVolume(float volume){
 
-		audioMixer.SetFloat ("volume", volume);
+		audioMixer.SetFloat ("volume", (volume - 100f));
 
 	}
 
 	public void SetQuality(int qualityIndex){
 
 		QualitySettings.SetQualityLevel (qualityIndex);
+
+	}
+
+	public void FocusAudio(){
+
+		if (camAudio.activeSelf == false) {
+			camAudio.SetActive (true);
+			audioSlider.interactable = true;
+		} else {
+			camAudio.SetActive (false);
+			audioSlider.interactable = false;
+		}
 
 	}
 }
