@@ -9,9 +9,12 @@ public class Settings_Menu : MonoBehaviour {
 
 	public AudioMixer audioMixer;
 	public Dropdown resolutionDropdown, qualityDropdown;
-	public GameObject camAudio;
-	public Button audioButton;
+	public GameObject camAudio, camResolution, camQuality;
+	public Dropdown dropdownResolution, dropdownQuality;
 	public Slider audioSlider;
+	public TextMeshProUGUI textResolution;
+	public Animator visualResolution;
+	public string ratio;
 	Resolution[] resolutions;
 
 	void Start() {
@@ -38,12 +41,21 @@ public class Settings_Menu : MonoBehaviour {
 		resolutionDropdown.AddOptions (options);
 		resolutionDropdown.value = currentResolutionIndex;
 		resolutionDropdown.RefreshShownValue ();
+
+		FindResolutionVisual ();
+		SetResolutionVisual ();
+	}
+
+	void Update(){
 	}
 
 	public void SetResolution (int resolutionIndex){
 
 		Resolution resolution = resolutions [resolutionIndex];
 		Screen.SetResolution (resolution.width, resolution.height, Screen.fullScreen);
+
+		FindResolutionVisual ();
+		SetResolutionVisual ();
 
 	}
 
@@ -58,6 +70,42 @@ public class Settings_Menu : MonoBehaviour {
 		QualitySettings.SetQualityLevel (qualityIndex);
 
 	}
+	public void SetResolutionVisual(){
+		
+		if (ratio == "16:9") {
+
+			textResolution.text = "16:9";
+			visualResolution.SetTrigger ("16.9");
+
+		} else if (ratio == "3:2") {
+
+			textResolution.text = "3:2";
+			visualResolution.SetTrigger ("3.2");
+
+		} else {
+
+			textResolution.text = "4:3";
+			visualResolution.SetTrigger ("4.3");
+
+		}
+
+	}
+	public void FindResolutionVisual(){
+
+		if (Camera.main.aspect >= 1.7) {
+
+			ratio = "16:9";
+
+		} else if (Camera.main.aspect >= 1.5) {
+
+			ratio = "3:2";
+
+		} else {
+
+			ratio = "4:3";
+
+		}
+	}
 
 	public void FocusAudio(){
 
@@ -67,6 +115,37 @@ public class Settings_Menu : MonoBehaviour {
 		} else {
 			camAudio.SetActive (false);
 			audioSlider.interactable = false;
+		}
+
+	}
+	public void FocusResolution(){
+
+		if (camResolution.activeSelf == false) {
+
+			camResolution.SetActive (true);
+			dropdownResolution.interactable = true;
+
+		} else {
+
+			camResolution.SetActive (false);
+			dropdownResolution.interactable = false;
+
+		}
+
+	}
+
+	public void FocusQuality(){
+
+		if (camQuality.activeSelf == false) {
+
+			camQuality.SetActive (true);
+			dropdownQuality.interactable = true;
+		
+		} else {
+
+			camQuality.SetActive (false);
+			dropdownQuality.interactable = false;
+
 		}
 
 	}

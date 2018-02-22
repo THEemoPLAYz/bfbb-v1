@@ -8,6 +8,7 @@ public class PlayerPunch : MonoBehaviour {
 	public float powerAddAttack, powerAddDefense;
 	public float knockback;
 	public float powerValue;
+	public float hadokenSpeed;
 	public Transform opponentSpawn;
 	public AudioSource audio;
 	public List<AudioClip> punchList;
@@ -20,7 +21,7 @@ public class PlayerPunch : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		
 	}
 
 	void OnTriggerEnter(Collider other){

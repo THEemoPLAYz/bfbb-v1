@@ -17,6 +17,7 @@ public class Sound_ManagementPlayer : MonoBehaviour {
 	[Header("Woody")]
 	public List<AudioClip> woodyPunch;
 	public AudioClip woodyDab;
+	public AudioClip woodyWin;
 
 	//PENCIL
 	public void PencilWin(){
@@ -51,6 +52,11 @@ public class Sound_ManagementPlayer : MonoBehaviour {
 	public void WoodyDab(){
 
 		audio.PlayOneShot (woodyDab);
+
+	}
+	public void WoodyWin(){
+
+		audio.PlayOneShot (woodyWin);
 
 	}
 }
