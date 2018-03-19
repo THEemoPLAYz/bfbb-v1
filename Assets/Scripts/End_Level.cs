@@ -29,7 +29,13 @@ public class End_Level : MonoBehaviour {
 	}
 
 	public void Win(){
-		
+
+		player.GetComponent<Player_Controller> ().enabled = false;
+		player.GetComponent<Pencil_ControllerPlayer> ().enabled = false;
+		player.GetComponent<Woody_ControllerPlayer> ().enabled = false;
+
+		opponent.GetComponent<David_ControllerAI> ().enabled = false;
+
 		player.GetComponent<Animator> ().SetTrigger ("Win");
 		audio.PlayOneShot (winMusic);
 		opponent.GetComponent<End_Level>().enabled = true;
@@ -48,8 +54,15 @@ public class End_Level : MonoBehaviour {
 	}
 
 	public void Lose(){
-		
+
+		player.GetComponent<Player_Controller> ().enabled = false;
+		player.GetComponent<Pencil_ControllerPlayer> ().enabled = false;
+		player.GetComponent<Woody_ControllerPlayer> ().enabled = false;
+
+		opponent.GetComponent<David_ControllerAI> ().enabled = false;
+
 		opponent.GetComponent<Animator> ().SetTrigger ("Win");
+		audio.PlayOneShot (loseMusic);
 		opponent.GetComponent<End_Level>().enabled = true;
 		Animation playerAnim = healthPlayer.GetComponent<Animation> ();
 		Animation opponentAnim = healthOpponent.GetComponent<Animation> ();

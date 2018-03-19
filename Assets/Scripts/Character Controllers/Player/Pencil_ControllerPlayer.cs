@@ -74,7 +74,11 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 
 				anim.SetTrigger ("Punch");
 
-			} else if (Input.GetKey (KeyCode.Z) && Input.GetKey (KeyCode.X) || Input.GetKey (KeyCode.X) && Input.GetKey (KeyCode.Z)) {
+			} else if(Input.GetKeyDown(KeyCode.X)){
+
+			    anim.SetTrigger ("Kick");
+
+		    } else if (Input.GetKey (KeyCode.Z) && Input.GetKey (KeyCode.X) || Input.GetKey (KeyCode.X) && Input.GetKey (KeyCode.Z)) {
 
 				if (gameObject.GetComponent<Player_Controller> ().powerbar.value == 1f) {
 
@@ -173,12 +177,12 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 	}
 	public void Special_JumpR(){
 
-		rb.velocity = new Vector3 (5f, 15f, 0f);
+		rb.velocity = new Vector3 (5f, jumppower, 0f);
 
 	}
 	public void Special_JumpL(){
 
-		rb.velocity = new Vector3 (-5f, 15f, 0f);
+		rb.velocity = new Vector3 (-5f, jumppower, 0f);
 
 	}
 	public void Special_Dive(){

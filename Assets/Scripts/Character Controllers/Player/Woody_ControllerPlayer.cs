@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Woody_ControllerPlayer : MonoBehaviour {
 
 	public Rigidbody rb;
-	public GameObject punchtriggerR, punchTriggerL, specialTrigger, cam, specialParticles1, specialParticles2, playerCenter, opponent, hadokenR, hadokenL;
+	public GameObject punchtriggerR, punchTriggerL, specialTrigger, cam, specialParticles1, specialParticles2, playerCenter, opponent, hadokenR, hadokenL, cakemixR, cakemixL;
 
 	[Header("Initialize Stuff")]
 	public BoxCollider collider;
@@ -100,6 +100,15 @@ public class Woody_ControllerPlayer : MonoBehaviour {
 
 				}
 
+			} else if (Input.GetKey (KeyCode.Z) && Input.GetKey (KeyCode.X) || Input.GetKey (KeyCode.X) && Input.GetKey (KeyCode.Z)) {
+
+				if (gameObject.GetComponent<Player_Controller> ().powerbar.value == 1f) {
+
+					anim.SetTrigger ("Special");
+					freezeControl = true;
+
+				}
+
 			} else {
 
 				anim.SetBool ("IsMoving", false);
@@ -155,6 +164,49 @@ public class Woody_ControllerPlayer : MonoBehaviour {
 		punchtriggerR.SetActive (false);
 		punchTriggerL.SetActive (false);
 
+
+	}
+	//Special Handlers
+	public void Special_CameraFocusToPlayer(){
+
+		cam.GetComponent<Camera_Controller> ().enabled = false;
+		cam.GetComponent<Special_PlayerFocus> ().enabled = true;
+		opponent.GetComponent<David_ControllerAI> ().enabled = false;
+
+	}
+	public void Special_CameraBackToNormal(){
+
+		cam.GetComponent<Camera_Controller> ().enabled = true;
+		cam.GetComponent<Special_PlayerFocus> ().enabled = false;
+		opponent.GetComponent<David_ControllerAI> ().enabled = true;
+
+	}
+	public void Special_Done(){
+
+		freezeControl = false;
+		specialTrigger.SetActive (false);
+
+	}
+	public void Special_Particles(){
+
+		GameObject specialClone1 = Instantiate (specialParticles1, playerCenter.transform.position, Quaternion.identity);
+		GameObject specialClone2 = Instantiate (specialParticles2, playerCenter.transform.position, Quaternion.identity);
+		specialClone1.SetActive (true);
+		specialClone2.SetActive (true);
+
+	}
+	public void Special_CakeMixR(){
+
+		GameObject cakemixClone = Instantiate (cakemixR, cakemixR.transform.position, cakemixR.transform.rotation);
+		cakemixClone.transform.parent = gameObject.transform;
+		cakemixClone.SetActive (true);
+
+	}
+	public void Special_CakeMixL(){
+
+		GameObject cakemixClone = Instantiate (cakemixL, cakemixL.transform.position, cakemixL.transform.rotation);
+		cakemixClone.transform.parent = gameObject.transform;
+		cakemixClone.SetActive (true);
 
 	}
 

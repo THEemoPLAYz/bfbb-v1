@@ -52,12 +52,14 @@ public class Player_Controller : MonoBehaviour {
 		}
 		if (currentHealth < 0f) {
 
-			anim.SetTrigger ("Death");
+			gameObject.GetComponent<Player_Controller> ().enabled = false;
 			gameObject.GetComponent<Pencil_ControllerPlayer> ().enabled = false;
 			gameObject.GetComponent<Woody_ControllerPlayer> ().enabled = false;
-			bar.SetActive (false);
+
 			opponent.GetComponent<David_ControllerAI> ().enabled = false;
-			gameObject.GetComponent<Player_Controller> ().enabled = false;
+
+			anim.SetTrigger ("Death");
+			bar.SetActive (false);
 			music.Stop ();
 
 		}

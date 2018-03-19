@@ -19,6 +19,9 @@ public class Sound_ManagementPlayer : MonoBehaviour {
 	public AudioClip woodyDab;
 	public AudioClip woodyWin;
 	public AudioClip woodyLose;
+	public AudioClip woodySpecial;
+	public AudioClip woodyMock;
+	public AudioClip woodyGag;
 
 	//PENCIL
 	public void PencilWin(){
@@ -63,6 +66,21 @@ public class Sound_ManagementPlayer : MonoBehaviour {
 	public void WoodyLose(){
 
 		audio.PlayOneShot (woodyLose);
+
+	}
+	public void WoodySpecial(){
+
+		audio.PlayOneShot (woodySpecial);
+
+	}
+	public void WoodyMock(){
+
+		audio.PlayOneShot (woodyMock);
+
+	}
+	public void WoodyGag(){
+
+		audio.PlayOneShot (woodyGag);
 
 	}
 }
