@@ -11,19 +11,19 @@ MonoBehaviour:
   m_Script: {fileID: -667331979, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
   m_Name: Andre_SF SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: -368738873
   material: {fileID: 21783194216387532}
-  materialHashCode: 0
+  materialHashCode: 672645356
   fontAssetType: 1
   m_fontInfo:
     Name: Andre SF
     PointSize: 76
-    Scale: 0
+    Scale: 1
     CharacterCount: 97
     LineHeight: 87.1875
     Baseline: 0
     Ascender: 69.625
-    CapHeight: 0
+    CapHeight: 54.75
     Descender: -17.5625
     CenterLine: 0
     SuperscriptOffset: 69.625
@@ -33,7 +33,7 @@ MonoBehaviour:
     UnderlineThickness: 3.5719998
     strikethrough: 18.931818
     strikethroughThickness: 3.5719998
-    TabWidth: 0
+    TabWidth: 220.625
     Padding: 5
     AtlasWidth: 512
     AtlasHeight: 512
@@ -42,10 +42,10 @@ MonoBehaviour:
   - id: 32
     x: 6
     y: 517
-    width: 0
-    height: 0
+    width: 22.0625
+    height: 87.1875
     xOffset: 0
-    yOffset: 0
+    yOffset: 69.625
     xAdvance: 22.0625
     scale: 1
   - id: 33
@@ -1025,9 +1025,9 @@ Material:
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 1
-    - _ScaleRatioB: 1
-    - _ScaleRatioC: 1
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.6770833
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0

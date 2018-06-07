@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GetDataFromSelecction : MonoBehaviour {
-
+    
 	GameObject selectionData;
 	public GameObject player, opponent;
 
@@ -12,16 +12,15 @@ public class GetDataFromSelecction : MonoBehaviour {
 
 		Player1Selection ();
 		Player2Selection ();
+		Destroy (selectionData);
 
 	}
 
 	public void Player1Selection(){
 
 		selectionData = GameObject.FindGameObjectWithTag("SelectionData");
-		string player1char = selectionData.GetComponent<SaveSelections> ().playerselectedChar;
-		int controlIndex = selectionData.GetComponent<SaveSelections> ().playerselectedControl;
-
-		string controlComponent;
+        string player1char = selectionData.GetComponent<CharSelectSave_Selections> ().selectedChar1;
+        int controlIndex = selectionData.GetComponent<CharSelectSave_Selections> ().selectedController1;
 
 		if (controlIndex == 1) {
 
@@ -40,10 +39,8 @@ public class GetDataFromSelecction : MonoBehaviour {
 	public void Player2Selection(){
 
 		selectionData = GameObject.FindGameObjectWithTag("SelectionData");
-		string player2char = selectionData.GetComponent<SaveSelections> ().opponentselectedChar;
-		int controlIndex = selectionData.GetComponent<SaveSelections> ().opponentselectedControl;
-
-		string controlComponent;
+        string player2char = selectionData.GetComponent<CharSelectSave_Selections> ().selectedChar2;
+		int controlIndex = selectionData.GetComponent<CharSelectSave_Selections> ().selectedController2;
 
 		if (controlIndex == 1) {
 
@@ -57,4 +54,5 @@ public class GetDataFromSelecction : MonoBehaviour {
 
 		}
 }
+
 }

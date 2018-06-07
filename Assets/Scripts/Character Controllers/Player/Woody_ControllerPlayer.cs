@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Woody_ControllerPlayer : MonoBehaviour {
 
 	public Rigidbody rb;
-	public GameObject punchtriggerR, punchTriggerL, specialTrigger, cam, specialParticles1, specialParticles2, playerCenter, opponent, hadokenR, hadokenL, cakemixR, cakemixL;
+	public GameObject punchtriggerR, punchTriggerL, specialTrigger, cam, specialParticles1, specialParticles2, playerCenter, opponent, hadokenR, hadokenL, cakemixR, cakemixL, woodyUI;
 
 	[Header("Initialize Stuff")]
 	public BoxCollider collider;
@@ -15,7 +15,6 @@ public class Woody_ControllerPlayer : MonoBehaviour {
 	public Vector3 ColliderScale;
 	public Vector3 PunchTriggerRPosition;
 	public Vector3 PunchTriggerLPosition;
-	public Text playerName;
 
 
 	[Space]
@@ -23,23 +22,26 @@ public class Woody_ControllerPlayer : MonoBehaviour {
 	[Header("Variables")]
 	public float speed;
 	public float jumppower;
+	public float punchpower;
 	public bool jumped, freezeControl = false;
 
 	[Space]
 
 	[Header("Animation")]
 	public Animator anim;
+	public Animator uiControlFear;
+	public Animator uiControlTitle;
 	public RuntimeAnimatorController woodyAnim;
 
 	// Use this for initialization
 	void Start () {
+		anim.runtimeAnimatorController = woodyAnim;
+		anim.SetInteger ("Direction", 1);
 		collider.center = new Vector3 (ColliderPosition.x, ColliderPosition.y, ColliderPosition.z);
 		collider.size = new Vector3 (ColliderScale.x, ColliderScale.y, ColliderScale.z);
 		punchtriggerR.GetComponent<BoxCollider> ().center = new Vector3 (PunchTriggerRPosition.x, PunchTriggerRPosition.y, PunchTriggerRPosition.z);
 		punchTriggerL.GetComponent<BoxCollider> ().center = new Vector3 (PunchTriggerLPosition.x, PunchTriggerLPosition.y, PunchTriggerLPosition.z);
-		playerName.text = "WOODY";
-		anim.SetInteger ("Direction", 1);
-		anim.runtimeAnimatorController = woodyAnim;
+		woodyUI.SetActive (true);
 	}
 	
 	// Update is called once per frame
@@ -214,15 +216,28 @@ public class Woody_ControllerPlayer : MonoBehaviour {
 	public void MiniSpecial_HadokenR(){
 
 		freezeControl = false;
-		GameObject hadokenClone = Instantiate (hadokenR, new Vector3 (playerCenter.transform.position.x, playerCenter.transform.position.y, playerName.transform.position.z), Quaternion.identity);
+		GameObject hadokenClone = Instantiate (hadokenR, new Vector3 (playerCenter.transform.position.x, playerCenter.transform.position.y, playerCenter.transform.position.z), Quaternion.identity);
 		hadokenClone.SetActive (true);
 
 	}
 	public void MiniSpecial_HadokenL(){
 
 		freezeControl = false;
-		GameObject hadokenClone = Instantiate (hadokenL, new Vector3 (playerCenter.transform.position.x, playerCenter.transform.position.y, playerName.transform.position.z), Quaternion.identity);
+		GameObject hadokenClone = Instantiate (hadokenL, new Vector3 (playerCenter.transform.position.x, playerCenter.transform.position.y, playerCenter.transform.position.z), Quaternion.identity);
 		hadokenClone.SetActive (true);
+
+	}
+
+	//Miscellaneous
+	public void TriggerFear(){
+
+		uiControlFear.SetTrigger ("Fear");
+
+	}
+	public void DisableWoodyUI(){
+
+		uiControlFear.SetTrigger ("Exit");
+		uiControlTitle.SetTrigger ("End");
 
 	}
 }

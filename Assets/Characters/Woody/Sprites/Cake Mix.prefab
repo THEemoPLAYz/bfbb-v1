@@ -65,8 +65,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1401744524912316}
-  m_LocalRotation: {x: -0.5835393, y: 0.4168555, z: -0.4483865, w: 0.53353816}
-  m_LocalPosition: {x: 0.901, y: 2.8389997, z: -0.0224}
+  m_LocalRotation: {x: -0.5344474, y: -0.44887713, z: 0.45999745, w: 0.5488878}
+  m_LocalPosition: {x: -1.479, y: 2.8389993, z: -0.0224}
   m_LocalScale: {x: 1, y: 1.0000002, z: 1}
   m_Children:
   - {fileID: 4381142657712592}
@@ -86,8 +86,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   opponent: {fileID: 0}
   cam: {fileID: 0}
-  cakemixPower: 0
-  knockback: 0
+  cakemixPower: 0.01
+  knockback: 5
 --- !u!198 &198202302913227974
 ParticleSystem:
   m_ObjectHideFlags: 1

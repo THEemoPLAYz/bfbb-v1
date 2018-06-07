@@ -46,7 +46,7 @@ public class SceneSwither : MonoBehaviour {
 	}
 	public void LoadCharacterSelect(){
 
-		SceneManager.LoadSceneAsync ("CharacterSelect");
+		SceneManager.LoadSceneAsync ("CharacterSelectNew");
 		loader.SetActive (true);
 
 	}

@@ -39,6 +39,13 @@ public class David_ControllerAI : MonoBehaviour {
 	public Sprite right1, right2, right3, right4;
 	public Sprite left1, left2, left3, left4;
 
+	[Space]
+
+	[Header("Range Between Player")]
+	public float pencilRange;
+	public float woodyRange;
+	public float spongyRange;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -49,9 +56,11 @@ public class David_ControllerAI : MonoBehaviour {
 
 		//Range between player detection
 		if (player.GetComponent<Pencil_ControllerPlayer> ().enabled == true) {
-			attackRange = 1.5f;
+			attackRange = pencilRange;
 		} else if (player.GetComponent<Woody_ControllerPlayer>().enabled == true){
-			attackRange = 1.8f;
+			attackRange = woodyRange;
+		} else if (player.GetComponent<Spongy_ControllerPlayer>().enabled == true){
+			attackRange = spongyRange;
 		}
 
 	}

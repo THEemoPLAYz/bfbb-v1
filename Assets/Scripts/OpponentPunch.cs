@@ -36,15 +36,13 @@ public class OpponentPunch : MonoBehaviour {
 
 			if (gameObject.name == "PunchTriggerR") {
 
-				player.GetComponent<Rigidbody> ().AddForce (Vector3.right * knockback, ForceMode.Impulse);
-				GameObject DebrisClone = Instantiate (debris, playerSpawn.position, Quaternion.identity);
-				DebrisClone.SetActive (true);
+                player.GetComponent<Rigidbody> ().AddForce (Vector3.right * knockback, ForceMode.Impulse);
+                player.GetComponent<Player_Controller>().PlayerSpawnDebris();
 
 			} else if (gameObject.name == "PunchTriggerL") {
 
-				player.GetComponent<Rigidbody> ().AddForce (Vector3.left * knockback, ForceMode.Impulse);
-				GameObject DebrisClone = Instantiate (debris, playerSpawn.position, Quaternion.identity);
-				DebrisClone.SetActive (true);
+                player.GetComponent<Rigidbody> ().AddForce (Vector3.left * knockback, ForceMode.Impulse);
+                player.GetComponent<Player_Controller>().PlayerSpawnDebris();
 
 			}
 		}

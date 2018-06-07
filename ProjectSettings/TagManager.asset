@@ -8,6 +8,7 @@ TagManager:
   - Music
   - Opponent
   - SelectionData
+  - PreviewCam
   layers:
   - Default
   - TransparentFX

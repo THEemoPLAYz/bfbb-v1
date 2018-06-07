@@ -7,12 +7,16 @@ public class Player_Controller : MonoBehaviour {
 
 	public float currentHealth, newHealth, barUpdateSpeed;
 	public float currentPower;
-	public GameObject bar, opponent;
+	public bool testForOof;
+	public GameObject bar, opponent, oof;
+    public GameObject pencilDebris, woodyDebris, spongyDebris;
+    public GameObject currentDebris;
 	public Slider healthbar, powerbar;
 	public AnimationClip hurt;
 	public Animation healthanim;
 	public Animator anim, powerAnim;
 	public AudioSource music;
+    public Transform playerSpawn;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +24,21 @@ public class Player_Controller : MonoBehaviour {
 		currentPower = 0f;
 		currentHealth = 1f;
 		newHealth = 1f;
+		testForOof = false;
+
+        if (GetComponent<Pencil_ControllerPlayer>().enabled == true){
+
+            currentDebris = pencilDebris;
+
+        } else if (GetComponent<Woody_ControllerPlayer>().enabled == true){
+
+            currentDebris = woodyDebris;
+
+        } else if (GetComponent<Spongy_ControllerPlayer>().enabled == true){
+
+            currentDebris = spongyDebris;
+
+        }
 
 	}
 	
@@ -52,19 +71,47 @@ public class Player_Controller : MonoBehaviour {
 		}
 		if (currentHealth < 0f) {
 
-			gameObject.GetComponent<Player_Controller> ().enabled = false;
-			gameObject.GetComponent<Pencil_ControllerPlayer> ().enabled = false;
-			gameObject.GetComponent<Woody_ControllerPlayer> ().enabled = false;
+			if (testForOof == false) {
 
-			opponent.GetComponent<David_ControllerAI> ().enabled = false;
+				TryGetOof ();
 
-			anim.SetTrigger ("Death");
-			bar.SetActive (false);
-			music.Stop ();
+			}
+			if (testForOof == true) {
+				gameObject.GetComponent<Player_Controller> ().enabled = false;
+				gameObject.GetComponent<Pencil_ControllerPlayer> ().enabled = false;
+				gameObject.GetComponent<Woody_ControllerPlayer> ().enabled = false;
+
+				opponent.GetComponent<David_ControllerAI> ().enabled = false;
+
+				anim.SetTrigger ("Death");
+				bar.SetActive (false);
+				music.Stop ();
+			}
 
 		}
 
 	}
+	public void TryGetOof(){
+
+		int randomize = Random.Range (1, 100);
+		if (randomize == 1) {
+
+			oof.SetActive (true);
+			testForOof = true;
+
+		} else {
+
+			testForOof = true;
+
+		}
+
+	}
+    public void PlayerSpawnDebris(){
+        
+        GameObject DebrisClone = Instantiate(currentDebris, playerSpawn.position, Quaternion.identity);
+        DebrisClone.SetActive(true);
+
+    }
 
 	}
 

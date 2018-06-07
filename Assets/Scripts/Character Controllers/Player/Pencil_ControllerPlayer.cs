@@ -23,6 +23,7 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 	[Header("Variables")]
 	public float speed;
 	public float jumppower;
+	public float punchpower;
 	public bool jumped, freezeControl = false;
 
 	[Space]
@@ -33,13 +34,13 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		anim.runtimeAnimatorController = pencilAnim;
+		anim.SetInteger ("Direction", 1);
 		collider.center = new Vector3 (ColliderPosition.x, ColliderPosition.y, ColliderPosition.z);
 		collider.size = new Vector3 (ColliderScale.x, ColliderScale.y, ColliderScale.z);
 		punchtriggerR.GetComponent<BoxCollider> ().center = new Vector3 (PunchTriggerRPosition.x, PunchTriggerRPosition.y, PunchTriggerRPosition.z);
 		punchTriggerL.GetComponent<BoxCollider> ().center = new Vector3 (PunchTriggerLPosition.x, PunchTriggerLPosition.y, PunchTriggerLPosition.z);
 		playerName.text = "PENCIL";
-		anim.SetInteger ("Direction", 1);
-		anim.runtimeAnimatorController = pencilAnim;
 	}
 	
 	// Update is called once per frame

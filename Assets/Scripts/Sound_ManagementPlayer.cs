@@ -23,6 +23,16 @@ public class Sound_ManagementPlayer : MonoBehaviour {
 	public AudioClip woodyMock;
 	public AudioClip woodyGag;
 
+	[Space]
+	[Header("Spongy")]
+	public List<AudioClip> spongyPunch;
+	public AudioClip spongyWin;
+	public AudioClip spongyLose;
+	public AudioClip spongyMock;
+    public AudioClip spongySpecial;
+    public AudioClip spongyWaterfall;
+    public AudioClip spongySplash;
+
 	//PENCIL
 	public void PencilWin(){
 
@@ -83,4 +93,45 @@ public class Sound_ManagementPlayer : MonoBehaviour {
 		audio.PlayOneShot (woodyGag);
 
 	}
+
+	//SPONGY
+	public void Sound_SpongyPunch(){
+
+		int randomize = Random.Range (0, spongyPunch.Count);
+		AudioClip punch = spongyPunch [randomize];
+		audio.PlayOneShot (punch);
+
+	}
+	public void Sound_SpongyWin(){
+
+		audio.PlayOneShot (spongyWin);
+
+	}
+	public void Sound_SpongyLose(){
+
+		audio.PlayOneShot (spongyLose);
+
+	}
+	public void Sound_SpongyMock(){
+
+		audio.PlayOneShot (spongyMock);
+
+	}
+	public void Sound_SpongySpecialWaterFall(){
+
+		audio.PlayOneShot (spongyWaterfall);
+
+    }
+    public void Sound_SpongySpecial()
+    {
+
+        audio.PlayOneShot(spongySpecial);
+
+    }
+    public void Sound_SpongySpecialSplash()
+    {
+
+        audio.PlayOneShot(spongySplash);
+
+    }
 }

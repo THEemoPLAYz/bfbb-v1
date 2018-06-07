@@ -7,7 +7,7 @@ public class End_Level : MonoBehaviour {
 
 	public GameObject player, opponent, endMessageWin, endMessageLose, healthPlayer, healthOpponent, timer, playerCenter;
 	public Camera cam;
-	public AnimationClip healthExit;
+	public AnimationClip healthExitPlayer, healthExitOpponent, exitOther;
 	public AudioSource audio;
 	public AudioClip winMusic, loseMusic;
 	public float lerpSpeed;
@@ -43,9 +43,9 @@ public class End_Level : MonoBehaviour {
 		Animation playerAnim = healthPlayer.GetComponent<Animation> ();
 		Animation opponentAnim = healthOpponent.GetComponent<Animation> ();
 		Animation timerAnim = timer.GetComponent<Animation> ();
-		playerAnim.clip = healthExit;
-		opponentAnim.clip = healthExit;
-		timerAnim.clip = healthExit;
+		playerAnim.clip = healthExitPlayer;
+		opponentAnim.clip = healthExitOpponent;
+		timerAnim.clip = exitOther;
 		timerAnim.Play ();
 		playerAnim.Play ();
 		opponentAnim.Play ();
@@ -67,9 +67,9 @@ public class End_Level : MonoBehaviour {
 		Animation playerAnim = healthPlayer.GetComponent<Animation> ();
 		Animation opponentAnim = healthOpponent.GetComponent<Animation> ();
 		Animation timerAnim = timer.GetComponent<Animation> ();
-		playerAnim.clip = healthExit;
-		opponentAnim.clip = healthExit;
-		timerAnim.clip = healthExit;
+		playerAnim.clip = healthExitPlayer;
+		opponentAnim.clip = healthExitOpponent;
+		timerAnim.clip = exitOther;
 		timerAnim.Play ();
 		playerAnim.Play ();
 		opponentAnim.Play ();
