@@ -24,6 +24,8 @@ public class Spongy_ControllerPlayer : MonoBehaviour {
 	public float jumppower;
 	public float punchpower;
 	public bool freezeControl = false;
+    public float stompKnockback;
+    public float stompPower;
 
 	[Space]
 
@@ -183,6 +185,26 @@ public class Spongy_ControllerPlayer : MonoBehaviour {
 		spongySplashClone.SetActive (true);
 
 	}
+    public void SpongyStompR() {
+
+        opponent.GetComponent<Rigidbody>().AddForce(Vector3.right * stompKnockback, ForceMode.Impulse);
+        opponent.GetComponent<Rigidbody>().AddForce(Vector3.up * 5f, ForceMode.Impulse);
+        opponent.GetComponent<MainOpponent_Controller>().newHealth -= (punchpower / 100f);
+        List<AudioClip> punchList = GetComponent<PlayerPunch>().punchList;
+        int randomize = Random.Range(0, punchList.Count);
+        AudioClip punch = punchList[randomize];
+        audio.PlayOneShot(punch);
+
+    }
+    public void SpongyStompL()
+    {
+
+        opponent.GetComponent<Rigidbody>().AddForce(Vector3.left * stompPower, ForceMode.Impulse);
+        opponent.GetComponent<Rigidbody>().AddForce(Vector3.up * 5f, ForceMode.Impulse);
+        opponent.GetComponent<MainOpponent_Controller>().newHealth -= (stompPower / 100f);
+
+    }
+
     public void ExitSpecial(){
 
         if(anim.GetInteger("Direction") > 0){

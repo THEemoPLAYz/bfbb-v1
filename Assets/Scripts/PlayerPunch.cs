@@ -55,12 +55,14 @@ public class PlayerPunch : MonoBehaviour {
 			if (gameObject.name == "PunchTriggerR") {
 
 				opponent.GetComponent<Rigidbody> ().AddForce (Vector3.right * knockback, ForceMode.Impulse);
+                opponent.GetComponent<MainOpponent_Controller>().SpawnOpponentDebris();
 
 			} else if (gameObject.name == "PunchTriggerL") {
 
                 opponent.GetComponent<Rigidbody> ().AddForce (Vector3.left * knockback, ForceMode.Impulse);
+                opponent.GetComponent<MainOpponent_Controller>().SpawnOpponentDebris();
 
-			}
+            }
 		}
 	}
 }

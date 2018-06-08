@@ -16,7 +16,7 @@ public class Player_Controller : MonoBehaviour {
 	public Animation healthanim;
 	public Animator anim, powerAnim;
 	public AudioSource music;
-    public Transform playerSpawn;
+    public Transform playerCenter;
 
 	// Use this for initialization
 	void Start () {
@@ -108,7 +108,7 @@ public class Player_Controller : MonoBehaviour {
 	}
     public void PlayerSpawnDebris(){
         
-        GameObject DebrisClone = Instantiate(currentDebris, playerSpawn.position, Quaternion.identity);
+        GameObject DebrisClone = Instantiate(currentDebris, playerCenter.position, Quaternion.identity);
         DebrisClone.SetActive(true);
 
     }

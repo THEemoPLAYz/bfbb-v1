@@ -17,6 +17,7 @@ public class MainOpponent_Controller : MonoBehaviour {
 	public Animation healthanim;
 	public Animator anim, powerAnim;
 	public AudioSource music;
+    public Transform opponentCenter;
 
 	// Use this for initialization
 	void Start () {
@@ -97,4 +98,10 @@ public class MainOpponent_Controller : MonoBehaviour {
 		}
 
 	}
+    public void SpawnOpponentDebris() {
+
+        GameObject DebrisClone = Instantiate(currentDebris, opponentCenter.position, Quaternion.identity);
+        DebrisClone.SetActive(true);
+
+    }
 }
