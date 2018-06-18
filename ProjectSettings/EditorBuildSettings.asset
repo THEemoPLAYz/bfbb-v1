@@ -5,22 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: 1e2163c2f62014e9d8aae60c26f2756e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Options.unity
     guid: 18fe440a3def9403d9da0f7ee295bfdf
-  - enabled: 1
-    path: Assets/Scenes/CharacterSelectNew.unity
-    guid: 670064c10ddf5407199654947710ab81
-  - enabled: 0
-    path: Assets/Scenes/CharacterSelect.unity
-    guid: 717b34995ae5579428ba9ab6af17ff49
   - enabled: 0
     path: Assets/Scenes/Play_YoyleLand.unity
     guid: 2b970cfc7934d4a2099edab79865c56f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Play_Goiky.unity
     guid: fee65c6127cce42a287aa87bf9258edf
+  - enabled: 1
+    path: Assets/Scenes/CharacterSelect3.unity
+    guid: 00df8a57eef8a8c45a78a103fc9be088
+  - enabled: 0
+    path: Assets/Scenes/Play_Workplace.unity
+    guid: 1a77c25bd53d1480ba30d43fea366660
+  - enabled: 1
+    path: Assets/Scenes/Play_EvilForest.unity
+    guid: 814fd64060ba976489fbb47a24e85b30
   m_configObjects: {}

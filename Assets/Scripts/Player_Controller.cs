@@ -9,7 +9,7 @@ public class Player_Controller : MonoBehaviour {
 	public float currentPower;
 	public bool testForOof;
 	public GameObject bar, opponent, oof;
-    public GameObject pencilDebris, woodyDebris, spongyDebris;
+    public GameObject pencilDebris, woodyDebris, spongyDebris, penDebris;
     public GameObject currentDebris;
 	public Slider healthbar, powerbar;
 	public AnimationClip hurt;
@@ -18,10 +18,19 @@ public class Player_Controller : MonoBehaviour {
 	public AudioSource music;
     public Transform playerCenter;
 
+    [Header("Player Stats")]
+    public int playerstatPunch;
+    public int playerstatKick, playerstatMiniSpecial, playerstatSpecial;
+
 	// Use this for initialization
 	void Start () {
 
-		currentPower = 0f;
+        playerstatPunch = 0;
+        playerstatKick = 0;
+        playerstatMiniSpecial = 0;
+        playerstatSpecial = 0;
+
+        currentPower = 0f;
 		currentHealth = 1f;
 		newHealth = 1f;
 		testForOof = false;
@@ -39,8 +48,14 @@ public class Player_Controller : MonoBehaviour {
             currentDebris = spongyDebris;
 
         }
+        else if (GetComponent<Pen_ControllerPlayer>().enabled == true)
+        {
 
-	}
+            currentDebris = penDebris;
+
+        }
+
+    }
 	
 	// Update is called once per frame
 
@@ -71,17 +86,18 @@ public class Player_Controller : MonoBehaviour {
 		}
 		if (currentHealth < 0f) {
 
-			if (testForOof == false) {
+            gameObject.GetComponent<Player_Controller>().enabled = false;
+            gameObject.GetComponent<Pencil_ControllerPlayer>().enabled = false;
+            gameObject.GetComponent<Woody_ControllerPlayer>().enabled = false;
+
+            opponent.GetComponent<David_ControllerAI>().enabled = false;
+
+            if (testForOof == false) {
 
 				TryGetOof ();
 
 			}
 			if (testForOof == true) {
-				gameObject.GetComponent<Player_Controller> ().enabled = false;
-				gameObject.GetComponent<Pencil_ControllerPlayer> ().enabled = false;
-				gameObject.GetComponent<Woody_ControllerPlayer> ().enabled = false;
-
-				opponent.GetComponent<David_ControllerAI> ().enabled = false;
 
 				anim.SetTrigger ("Death");
 				bar.SetActive (false);
@@ -112,6 +128,29 @@ public class Player_Controller : MonoBehaviour {
         DebrisClone.SetActive(true);
 
     }
+    public void PlayerStat_Punch() {
 
-	}
+        playerstatPunch += 1;
+
+    }
+    public void PlayerStat_Kick()
+    {
+
+        playerstatKick += 1;
+
+    }
+    public void PlayerStat_MiniSpecial()
+    {
+
+        playerstatMiniSpecial += 1;
+
+    }
+    public void PlayerStat_Special()
+    {
+
+        playerstatSpecial += 1;
+
+    }
+
+}
 

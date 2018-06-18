@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
 public class HadokenR_Controller : MonoBehaviour {
 
@@ -22,8 +23,11 @@ public class HadokenR_Controller : MonoBehaviour {
 
 		if (other.gameObject.CompareTag ("Opponent")) {
 
-			opponent.GetComponent<MainOpponent_Controller> ().newHealth -= hadokenPower;
-			Destroy (gameObject);
+            CameraShaker.Instance.ShakeOnce(2f, 5f, 0.1f, 0.5f);
+            opponent.GetComponent<MainOpponent_Controller> ().newHealth -= hadokenPower;
+            opponent.GetComponent<Rigidbody>().AddForce(Vector3.right * knockback, ForceMode.Impulse);
+
+            Destroy (gameObject);
 
 		}
 

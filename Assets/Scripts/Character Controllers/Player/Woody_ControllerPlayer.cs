@@ -35,7 +35,9 @@ public class Woody_ControllerPlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		anim.runtimeAnimatorController = woodyAnim;
+
+        GetComponent<Player_Controller>().currentDebris = GetComponent<Player_Controller>().woodyDebris;
+        anim.runtimeAnimatorController = woodyAnim;
 		anim.SetInteger ("Direction", 1);
 		collider.center = new Vector3 (ColliderPosition.x, ColliderPosition.y, ColliderPosition.z);
 		collider.size = new Vector3 (ColliderScale.x, ColliderScale.y, ColliderScale.z);
@@ -76,19 +78,24 @@ public class Woody_ControllerPlayer : MonoBehaviour {
 
 				anim.SetTrigger ("Punch");
 
-			} else if(Input.GetKeyDown(KeyCode.X)){
+                GetComponent<Player_Controller>().PlayerStat_Punch();
+
+            } else if(Input.GetKeyDown(KeyCode.X)){
 
 				anim.SetTrigger ("Kick");
 
-			} else if ((Input.GetKey (KeyCode.Z) && Input.GetKey (KeyCode.X)) ||
+                GetComponent<Player_Controller>().PlayerStat_Kick();
+
+            } else if ((Input.GetKey (KeyCode.Z) && Input.GetKey (KeyCode.X)) ||
 				(Input.GetKey (KeyCode.X) && Input.GetKey (KeyCode.Z))) {
 
 				if (gameObject.GetComponent<Player_Controller> ().powerbar.value == 1f) {
 
 					anim.SetTrigger ("Special");
 					freezeControl = true;
+                    GetComponent<Player_Controller>().PlayerStat_Special();
 
-				}
+                }
 
 			} else if ((Input.GetKey (KeyCode.DownArrow) && Input.GetKey (KeyCode.Z)) ||
 				(Input.GetKey (KeyCode.DownArrow) && Input.GetKey (KeyCode.Z))) {
@@ -98,9 +105,9 @@ public class Woody_ControllerPlayer : MonoBehaviour {
 					anim.SetTrigger ("MiniSpecial");
 					freezeControl = true;
 					gameObject.GetComponent<Player_Controller> ().currentPower -= 0.1f;
+                    GetComponent<Player_Controller>().PlayerStat_MiniSpecial();
 
-
-				}
+                }
 
 			} else if (Input.GetKey (KeyCode.Z) && Input.GetKey (KeyCode.X) || Input.GetKey (KeyCode.X) && Input.GetKey (KeyCode.Z)) {
 
@@ -108,8 +115,9 @@ public class Woody_ControllerPlayer : MonoBehaviour {
 
 					anim.SetTrigger ("Special");
 					freezeControl = true;
+                    GetComponent<Player_Controller>().PlayerStat_Special();
 
-				}
+                }
 
 			} else {
 

@@ -45,11 +45,13 @@ public class David_ControllerAI : MonoBehaviour {
 	public float pencilRange;
 	public float woodyRange;
 	public float spongyRange;
+    public float penRange;
 
 	// Use this for initialization
 	void Start () {
-		
-		anim.runtimeAnimatorController = davidcontroller;
+
+        GetComponent<MainOpponent_Controller>().currentDebris = GetComponent<MainOpponent_Controller>().davidDebris;
+        anim.runtimeAnimatorController = davidcontroller;
 		collider.center = new Vector3 (ColliderPosition.x, ColliderPosition.y, ColliderPosition.z);
 		collider.size = new Vector3 (ColliderScale.x, ColliderScale.y, ColliderScale.z);
 		opponentName.text = "DAVID";
@@ -61,9 +63,11 @@ public class David_ControllerAI : MonoBehaviour {
 			attackRange = woodyRange;
 		} else if (player.GetComponent<Spongy_ControllerPlayer>().enabled == true){
 			attackRange = spongyRange;
-		}
+        } else if (player.GetComponent<Pen_ControllerPlayer>().enabled == true){
+            attackRange = penRange;
+        }
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {

@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Punch1R 1
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: 80eb1649d417d1f448d09ce994d5c23a, type: 3}
+    - time: 0.041666668
+      value: {fileID: 21300000, guid: 6de0951c7b654d24b86f38b7d1aed189, type: 3}
+    - time: 0.083333336
+      value: {fileID: 21300000, guid: 9b4881de7587b9e4082fc34bc331462a, type: 3}
+    - time: 0.125
+      value: {fileID: 21300000, guid: ad45a7836f9f60a48a1e0ebb73423c9c, type: 3}
+    - time: 0.16666667
+      value: {fileID: 21300000, guid: 0e1c09851cca6384093cfa537f4ade35, type: 3}
+    - time: 0.20833333
+      value: {fileID: 21300000, guid: d3b22d945299d2e4b950808897b09160, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: 3bb8e8966f70cd14681217e9e202d8ae, type: 3}
+    - time: 0.29166666
+      value: {fileID: 21300000, guid: 6e5e14176dc68464294b3781314e297b, type: 3}
+    - time: 0.33333334
+      value: {fileID: 21300000, guid: 5a4bcb575ab057142b55cb60f33b516d, type: 3}
+    - time: 0.375
+      value: {fileID: 21300000, guid: 9f68332719614df469a6ec222d3e69be, type: 3}
+    - time: 0.41666666
+      value: {fileID: 21300000, guid: f806eea7d8f09a74eaeeb0bdd112b480, type: 3}
+    - time: 0.45833334
+      value: {fileID: 21300000, guid: 6d61aad9b74ab8e469d862dc871366e0, type: 3}
+    - time: 0.5
+      value: {fileID: 21300000, guid: face5bbbc973d454b81ea2311330051e, type: 3}
+    attribute: m_Sprite
+    path: 
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 24
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 21300000, guid: 80eb1649d417d1f448d09ce994d5c23a, type: 3}
+    - {fileID: 21300000, guid: 6de0951c7b654d24b86f38b7d1aed189, type: 3}
+    - {fileID: 21300000, guid: 9b4881de7587b9e4082fc34bc331462a, type: 3}
+    - {fileID: 21300000, guid: ad45a7836f9f60a48a1e0ebb73423c9c, type: 3}
+    - {fileID: 21300000, guid: 0e1c09851cca6384093cfa537f4ade35, type: 3}
+    - {fileID: 21300000, guid: d3b22d945299d2e4b950808897b09160, type: 3}
+    - {fileID: 21300000, guid: 3bb8e8966f70cd14681217e9e202d8ae, type: 3}
+    - {fileID: 21300000, guid: 6e5e14176dc68464294b3781314e297b, type: 3}
+    - {fileID: 21300000, guid: 5a4bcb575ab057142b55cb60f33b516d, type: 3}
+    - {fileID: 21300000, guid: 9f68332719614df469a6ec222d3e69be, type: 3}
+    - {fileID: 21300000, guid: f806eea7d8f09a74eaeeb0bdd112b480, type: 3}
+    - {fileID: 21300000, guid: 6d61aad9b74ab8e469d862dc871366e0, type: 3}
+    - {fileID: 21300000, guid: face5bbbc973d454b81ea2311330051e, type: 3}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 0.5416667
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 0
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_GenerateMotionCurves: 0
+  m_Events:
+  - time: 0
+    functionName: StopPunch
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.33333334
+    functionName: PunchR
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5
+    functionName: StopPunch
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

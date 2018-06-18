@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
 public class PlayerPunch : MonoBehaviour {
 
 	public float punchpower;
 	public float powerAddAttack, powerAddDefense;
-    public float knockback, pencilKnockback, woodyKnockback, spongyKnockback;
+    public float knockback, pencilKnockback, woodyKnockback, spongyKnockback, penKnockback;
 	public float powerValue;
 	public float hadokenSpeed;
 	public Transform opponentSpawn;
 	public AudioSource audio;
 	public List<AudioClip> punchList;
-	public GameObject opponent, debris, player, cam;
+	public GameObject opponent, player, cam;
 
 	// Use this for initialization
 	void Start () {
@@ -32,9 +33,16 @@ public class PlayerPunch : MonoBehaviour {
             punchpower = player.GetComponent<Spongy_ControllerPlayer> ().punchpower;
             knockback = spongyKnockback;
 
-		}
+        }
+        else if (player.GetComponent<Pen_ControllerPlayer>().enabled == true)
+        {
 
-	}
+            punchpower = player.GetComponent<Pen_ControllerPlayer>().punchpower;
+            knockback = penKnockback;
+
+        }
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -42,6 +50,8 @@ public class PlayerPunch : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
+
+        CameraShaker.Instance.ShakeOnce(2f, 5f, 0.1f, 0.5f);
 
 		if (other.gameObject.CompareTag ("Opponent")) {
 			opponent.GetComponent<MainOpponent_Controller> ().newHealth -= (punchpower / 100f);

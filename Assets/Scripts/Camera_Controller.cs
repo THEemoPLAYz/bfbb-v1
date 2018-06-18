@@ -1,21 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
-[RequireComponent(typeof(Camera))]
 public class Camera_Controller : MonoBehaviour {
 
-
+    public Camera cam;
 	public List<Transform> targets;
 	public Vector3 offset;
 	public float smoothTime, maxZoom, minZoom, zoomLimiter;
 
 	private Vector3 velocity;
-	private Camera cam;
 
 	void Start(){
-
-		cam = GetComponent<Camera> ();
 
 	}
 
@@ -80,5 +77,4 @@ public class Camera_Controller : MonoBehaviour {
 		transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z + 3f);
 
 	}
-
 }

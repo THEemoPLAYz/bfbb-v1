@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
 public class OpponentPunch : MonoBehaviour {
 
@@ -24,7 +25,9 @@ public class OpponentPunch : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 
-		if (other.gameObject.CompareTag ("Player")) {
+        CameraShaker.Instance.ShakeOnce(2f, 5f, 0.1f, 0.5f);
+
+        if (other.gameObject.CompareTag ("Player")) {
 			
 			player.GetComponent<Player_Controller> ().newHealth -= punchpower;
 			opponent.GetComponent<MainOpponent_Controller> ().currentPower += powerAddAttack;

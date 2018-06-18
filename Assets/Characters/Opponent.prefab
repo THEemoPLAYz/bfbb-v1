@@ -58,7 +58,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1415821762017476
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,7 +76,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1710035026762942
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,9 +478,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  newHealth: -0.15
+  newHealth: 0
   currentPower: 0
   barUpdateSpeed: 5
+  projectilehitForce: 10
   testForOof: 0
   random: 0
   healthbar: {fileID: 0}
@@ -545,7 +546,7 @@ MonoBehaviour:
   exitOther: {fileID: 7400000, guid: 8bd9642dc54ea451fa7325af66b993ce, type: 2}
   audio: {fileID: 0}
   winMusic: {fileID: 8300000, guid: 65bff4c28ccee44e1b862c37eeb6982d, type: 3}
-  loseMusic: {fileID: 0}
+  loseMusic: {fileID: 8300000, guid: 8c0f5306e0fcc451a839f92ebbe0a451, type: 3}
   lerpSpeed: 3
   playerPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &114826716861493866
@@ -580,9 +581,10 @@ MonoBehaviour:
   left2: {fileID: 21300000, guid: ceca4e3a961914b2785d3bfc0be8a6cf, type: 3}
   left3: {fileID: 21300000, guid: 8d2afb9f098c0427f97a8fdc5c797f76, type: 3}
   left4: {fileID: 21300000, guid: db5dbb04fce074bbab84cbf3baf3597d, type: 3}
-  pencilRange: 1.5
+  pencilRange: 1.4
   woodyRange: 1.8
   spongyRange: 2.8
+  penRange: 1.1
 --- !u!114 &114856682494691112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -674,7 +676,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 3
+      scalar: 1
       minScalar: 0.1
       maxCurve:
         serializedVersion: 2
@@ -1165,7 +1167,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1218,12 +1220,12 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 5
     enabled: 1
-    type: 0
+    type: 17
     angle: 59.57
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
-    donutRadius: 0.2
+    donutRadius: 0.01
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
@@ -1247,7 +1249,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.01
+      value: 0.4
       mode: 0
       spread: 0
       speed:
@@ -1469,14 +1471,14 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    m_BurstCount: 1
+    m_BurstCount: 2
     m_Bursts:
     - serializedVersion: 2
       time: 0
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 3
+        scalar: 10
         minScalar: 0
         maxCurve:
           serializedVersion: 2
@@ -1526,8 +1528,65 @@ ParticleSystem:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-      cycleCount: 8
-      repeatInterval: 0.2
+      cycleCount: 3
+      repeatInterval: 0.3
+    - serializedVersion: 2
+      time: 0
+      countCurve:
+        serializedVersion: 2
+        minMaxState: 0
+        scalar: 5
+        minScalar: 5
+        maxCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        minCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      cycleCount: 3
+      repeatInterval: 0.5
   SizeModule:
     enabled: 1
     curve:

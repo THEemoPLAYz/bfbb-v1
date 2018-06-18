@@ -10,7 +10,8 @@ public class GetDataFromSelecction : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		Player1Selection ();
+        selectionData = GameObject.FindGameObjectWithTag("SelectionData");
+        Player1Selection ();
 		Player2Selection ();
 		Destroy (selectionData);
 
@@ -18,9 +19,8 @@ public class GetDataFromSelecction : MonoBehaviour {
 
 	public void Player1Selection(){
 
-		selectionData = GameObject.FindGameObjectWithTag("SelectionData");
-        string player1char = selectionData.GetComponent<CharSelectSave_Selections> ().selectedChar1;
-        int controlIndex = selectionData.GetComponent<CharSelectSave_Selections> ().selectedController1;
+        string player1char = selectionData.GetComponent<CharacterSelect_StorageDump> ().selectedChar1;
+        int controlIndex = selectionData.GetComponent<CharacterSelect_StorageDump> ().selectedController1;
 
 		if (controlIndex == 1) {
 
@@ -37,10 +37,9 @@ public class GetDataFromSelecction : MonoBehaviour {
 	}
 
 	public void Player2Selection(){
-
-		selectionData = GameObject.FindGameObjectWithTag("SelectionData");
-        string player2char = selectionData.GetComponent<CharSelectSave_Selections> ().selectedChar2;
-		int controlIndex = selectionData.GetComponent<CharSelectSave_Selections> ().selectedController2;
+        
+        string player2char = selectionData.GetComponent<CharacterSelect_StorageDump> ().selectedChar2;
+		int controlIndex = selectionData.GetComponent<CharacterSelect_StorageDump> ().selectedController2;
 
 		if (controlIndex == 1) {
 

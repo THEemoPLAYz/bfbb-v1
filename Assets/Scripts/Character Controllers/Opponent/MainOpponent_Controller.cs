@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MainOpponent_Controller : MonoBehaviour {
 
 
-	public float currentHealth, newHealth, currentPower, barUpdateSpeed;
+	public float currentHealth, newHealth, currentPower, barUpdateSpeed, projectilehitForce;
 	public bool testForOof;
 	public int random;
 	public Slider healthbar, powerbar;
@@ -21,7 +21,7 @@ public class MainOpponent_Controller : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+        
 		currentPower = 0f;
 		currentHealth = 1f;
 		newHealth = 1f;
@@ -62,7 +62,12 @@ public class MainOpponent_Controller : MonoBehaviour {
 		}
 		if (currentHealth < 0f) {
 
-			if (testForOof == false) {
+            gameObject.GetComponent<MainOpponent_Controller>().enabled = false;
+            player.GetComponent<Pencil_ControllerPlayer>().enabled = false;
+            player.GetComponent<Woody_ControllerPlayer>().enabled = false;
+            player.GetComponent<Spongy_ControllerPlayer>().enabled = false;
+
+            if (testForOof == false) {
 
 				TryGetOof ();
 
@@ -71,9 +76,7 @@ public class MainOpponent_Controller : MonoBehaviour {
 				anim.SetTrigger ("Death");
 				gameObject.GetComponent<David_ControllerAI> ().enabled = false;
 				bar.SetActive (false);
-				gameObject.GetComponent<MainOpponent_Controller> ().enabled = false;
-				player.GetComponent<Pencil_ControllerPlayer> ().enabled = false;
-				music.Stop ();
+                music.Stop ();
 			}
 
 

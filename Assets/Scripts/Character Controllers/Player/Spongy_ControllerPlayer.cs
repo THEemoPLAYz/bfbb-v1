@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
 using UnityEngine.UI;
+using EZCameraShake;
 
 public class Spongy_ControllerPlayer : MonoBehaviour {
 
 	public Rigidbody rb;
+    public AudioSource audio;
+    public AudioClip earthquake;
 	public GameObject punchtriggerR, punchTriggerL, specialTrigger, cam, specialParticles1, specialParticles2, spongySplash, playerCenter, opponent, spongyUI;
 
 	[Header("Initialize Stuff")]
@@ -35,7 +38,9 @@ public class Spongy_ControllerPlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		anim.runtimeAnimatorController = spongyAnim;
+
+        GetComponent<Player_Controller>().currentDebris = GetComponent<Player_Controller>().spongyDebris;
+        anim.runtimeAnimatorController = spongyAnim;
 		anim.SetInteger ("Direction", 1);
 		collider.center = new Vector3 (ColliderPosition.x, ColliderPosition.y, ColliderPosition.z);
 		collider.size = new Vector3 (ColliderScale.x, ColliderScale.y, ColliderScale.z);
@@ -65,48 +70,49 @@ public class Spongy_ControllerPlayer : MonoBehaviour {
 
 			} else if (Input.GetKeyDown (KeyCode.Z)) {
 
-				anim.SetTrigger ("Punch");
+                if ((Input.GetKey(KeyCode.Z) && Input.GetKey(KeyCode.X)) ||
+               (Input.GetKey(KeyCode.X) && Input.GetKey(KeyCode.Z)))
+                {
+
+                    if (gameObject.GetComponent<Player_Controller>().powerbar.value == 1f)
+                    {
+
+                        anim.SetTrigger("Special");
+                        freezeControl = true;
+                        GetComponent<Player_Controller>().PlayerStat_Special();
+
+                    }
+
+                } else if ((Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.Z)) ||
+                (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.Z)))
+                {
+
+                    if (gameObject.GetComponent<Player_Controller>().powerbar.value > 0.1f)
+                    {
+
+                        anim.SetTrigger("MiniSpecial");
+                        freezeControl = true;
+                        gameObject.GetComponent<Player_Controller>().currentPower -= 0.1f;
+                        GetComponent<Player_Controller>().PlayerStat_MiniSpecial();
+
+                    }
+
+                } else {
+
+                    anim.SetTrigger("Punch");
+                    GetComponent<Player_Controller>().PlayerStat_Punch();
+
+                }
 
 			} else if(Input.GetKeyDown(KeyCode.X)){
 
 				anim.SetTrigger ("Kick");
 
-			} else if ((Input.GetKey (KeyCode.Z) && Input.GetKey (KeyCode.X)) ||
-				(Input.GetKey (KeyCode.X) && Input.GetKey (KeyCode.Z))) {
-
-				if (gameObject.GetComponent<Player_Controller> ().powerbar.value == 1f) {
-
-					anim.SetTrigger ("Special");
-					freezeControl = true;
-
-				}
-
-			} else if ((Input.GetKey (KeyCode.DownArrow) && Input.GetKey (KeyCode.Z)) ||
-				(Input.GetKey (KeyCode.DownArrow) && Input.GetKey (KeyCode.Z))) {
-
-				if (gameObject.GetComponent<Player_Controller> ().powerbar.value > 0.1f) {
-
-					anim.SetTrigger ("MiniSpecial");
-					freezeControl = true;
-					gameObject.GetComponent<Player_Controller> ().currentPower -= 0.1f;
-
-
-				}
-
-            }else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)){
+			} else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)){
 
                 anim.SetTrigger("Jump");
 
-            } else if (Input.GetKey (KeyCode.Z) && Input.GetKey (KeyCode.X) || Input.GetKey (KeyCode.X) && Input.GetKey (KeyCode.Z)) {
-
-				if (gameObject.GetComponent<Player_Controller> ().powerbar.value == 1f) {
-
-					anim.SetTrigger ("Special");
-					freezeControl = true;
-
-				}
-
-			} else {
+            } else {
 
 				anim.SetBool ("IsMoving", false);
 
@@ -183,17 +189,17 @@ public class Spongy_ControllerPlayer : MonoBehaviour {
 		GameObject spongySplashClone = Instantiate (spongySplash, spongySplash.transform.position, spongySplash.transform.rotation);
 		spongySplashClone.transform.parent = gameObject.transform;
 		spongySplashClone.SetActive (true);
+        CameraShaker.Instance.ShakeOnce(4f, 4f, 0.1f, 2f);
 
-	}
+    }
     public void SpongyStompR() {
 
         opponent.GetComponent<Rigidbody>().AddForce(Vector3.right * stompKnockback, ForceMode.Impulse);
         opponent.GetComponent<Rigidbody>().AddForce(Vector3.up * 5f, ForceMode.Impulse);
         opponent.GetComponent<MainOpponent_Controller>().newHealth -= (punchpower / 100f);
-        List<AudioClip> punchList = GetComponent<PlayerPunch>().punchList;
-        int randomize = Random.Range(0, punchList.Count);
-        AudioClip punch = punchList[randomize];
-        audio.PlayOneShot(punch);
+        audio.PlayOneShot(earthquake);
+        CameraShaker.Instance.ShakeOnce(4f, 4f, 0.1f, 2f);
+        
 
     }
     public void SpongyStompL()
@@ -202,16 +208,8 @@ public class Spongy_ControllerPlayer : MonoBehaviour {
         opponent.GetComponent<Rigidbody>().AddForce(Vector3.left * stompPower, ForceMode.Impulse);
         opponent.GetComponent<Rigidbody>().AddForce(Vector3.up * 5f, ForceMode.Impulse);
         opponent.GetComponent<MainOpponent_Controller>().newHealth -= (stompPower / 100f);
-
-    }
-
-    public void ExitSpecial(){
-
-        if(anim.GetInteger("Direction") > 0){
-
-
-
-        }
+        audio.PlayOneShot(earthquake);
+        CameraShaker.Instance.ShakeOnce(4f, 4f, 0.1f, 2f);
 
     }
 }
