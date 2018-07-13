@@ -15,7 +15,11 @@ public class Timer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		timer = timer - Time.deltaTime;
-		timerText.text = Mathf.Round (timer).ToString();
+
+        if (timer > 0f)
+        {
+            timer = timer - Time.deltaTime;
+            timerText.text = Mathf.Round(timer).ToString();
+        }
 	}
 }

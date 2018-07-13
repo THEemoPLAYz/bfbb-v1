@@ -50,28 +50,43 @@ public class Spongy_ControllerPlayer : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update(){
+    void Update(){
+
+        float moveHorizontal = Input.GetAxis("Horizontal");
+
+        if (freezeControl == false)
+        {
+            if (moveHorizontal > 0)
+            {
+
+                anim.SetInteger("Direction", 1);
+                anim.SetBool("IsMoving", true);
+                rb.velocity = new Vector3(0f, rb.velocity.y, rb.velocity.z);
+                transform.Translate(Vector3.right * moveHorizontal * speed * Time.deltaTime);
+
+            }
+            else if (moveHorizontal < 0)
+            {
+
+                anim.SetInteger("Direction", -1);
+                anim.SetBool("IsMoving", true);
+                rb.velocity = new Vector3(0f, rb.velocity.y, rb.velocity.z);
+                transform.Translate(Vector3.left * -moveHorizontal * speed * Time.deltaTime);
+
+            }
+            else
+            {
+
+                anim.SetBool("IsMoving", false);
+
+            }
 
 
-		if (freezeControl == false) {
-			if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) {
+            if (Input.GetButtonDown("Punch"))
+            {
 
-				rb.velocity = new Vector3 (0f, rb.velocity.y, rb.velocity.z);
-				transform.Translate (Vector3.left * speed * Time.deltaTime);
-				anim.SetInteger ("Direction", -1);
-				anim.SetBool ("IsMoving", true);
 
-			} else if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) {
-
-				rb.velocity = new Vector3 (0f, rb.velocity.y, rb.velocity.z);
-				transform.Translate (Vector3.right * speed * Time.deltaTime);
-				anim.SetInteger ("Direction", 1);
-				anim.SetBool ("IsMoving", true);
-
-			} else if (Input.GetKeyDown (KeyCode.Z)) {
-
-                if ((Input.GetKey(KeyCode.Z) && Input.GetKey(KeyCode.X)) ||
-               (Input.GetKey(KeyCode.X) && Input.GetKey(KeyCode.Z)))
+                if (Input.GetButton("Punch") && Input.GetButton("Kick"))
                 {
 
                     if (gameObject.GetComponent<Player_Controller>().powerbar.value == 1f)
@@ -83,8 +98,8 @@ public class Spongy_ControllerPlayer : MonoBehaviour {
 
                     }
 
-                } else if ((Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.Z)) ||
-                (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.Z)))
+                }
+                else if (Input.GetButton("Duck") && Input.GetButton("Punch"))
                 {
 
                     if (gameObject.GetComponent<Player_Controller>().powerbar.value > 0.1f)
@@ -97,27 +112,32 @@ public class Spongy_ControllerPlayer : MonoBehaviour {
 
                     }
 
-                } else {
-
+                }
+                else
+                {
                     anim.SetTrigger("Punch");
                     GetComponent<Player_Controller>().PlayerStat_Punch();
-
                 }
 
-			} else if(Input.GetKeyDown(KeyCode.X)){
+            }
+            if (Input.GetButtonDown("Kick"))
+            {
 
-				anim.SetTrigger ("Kick");
+                anim.SetTrigger("Kick");
+                GetComponent<Player_Controller>().PlayerStat_Kick();
 
-			} else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)){
+                return;
 
-                anim.SetTrigger("Jump");
+            }
+            if (Input.GetButtonDown("Jump"))
+            {
+                
+                anim.SetBool("Jumped", true);
 
-            } else {
+            }
 
-				anim.SetBool ("IsMoving", false);
 
-			}
-		}
+        }
 
 		if (transform.position.x > 21f) {
 

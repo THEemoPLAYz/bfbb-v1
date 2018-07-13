@@ -33,6 +33,11 @@ public class Sound_ManagementPlayer : MonoBehaviour {
     public AudioClip spongyWaterfall;
     public AudioClip spongySplash;
 
+    [Space]
+    [Header("Pen")]
+    public List<AudioClip> penPunch;
+    public AudioClip penWin, penLose, penMock, penSpecial, penMiniSpecial;
+
 	//PENCIL
 	public void PencilWin(){
 
@@ -132,6 +137,44 @@ public class Sound_ManagementPlayer : MonoBehaviour {
     {
 
         audio.PlayOneShot(spongySplash);
+
+    }
+
+    //PEN
+    public void Sound_PenPunch()
+    {
+
+        int randomize = Random.Range(0, penPunch.Count);
+        AudioClip punch = penPunch[randomize];
+        audio.PlayOneShot(punch);
+
+    }
+    public void Sound_PenWin(){
+
+        audio.PlayOneShot(penWin);
+
+    }
+    public void Sound_PenLose()
+    {
+
+        audio.PlayOneShot(penLose);
+
+    }
+    public void Sound_PenSpecial()
+    {
+
+        audio.PlayOneShot(penSpecial);
+
+    }
+    public void Sound_PenMiniSpecial()
+    {
+
+        audio.PlayOneShot(penMiniSpecial);
+
+    }
+    public void Sound_PenMock(){
+
+        audio.PlayOneShot(penMock);
 
     }
 }

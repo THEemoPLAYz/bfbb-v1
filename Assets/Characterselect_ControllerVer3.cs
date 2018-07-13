@@ -109,7 +109,7 @@ public class Characterselect_ControllerVer3 : MonoBehaviour {
         int controller1 = storage.GetComponent<CharacterSelect_StorageDump>().selectedController1;
         int controller2 = storage.GetComponent<CharacterSelect_StorageDump>().selectedController2;
 
-        if (checktext1 != "" && checktext2 != "" && controller1 != 0 && controller2 != 0)
+        if (checktext1 != "player 1" && checktext2 != "player 2" && controller1 != 0 && controller2 != 0)
         {
 
             confirmButton.SetActive(true);

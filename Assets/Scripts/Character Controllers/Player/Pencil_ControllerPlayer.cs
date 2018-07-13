@@ -42,63 +42,100 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 		collider.size = new Vector3 (ColliderScale.x, ColliderScale.y, ColliderScale.z);
 		punchtriggerR.GetComponent<BoxCollider> ().center = new Vector3 (PunchTriggerRPosition.x, PunchTriggerRPosition.y, PunchTriggerRPosition.z);
 		punchTriggerL.GetComponent<BoxCollider> ().center = new Vector3 (PunchTriggerLPosition.x, PunchTriggerLPosition.y, PunchTriggerLPosition.z);
-		playerName.text = "PENCIL";
 	}
 	
 	// Update is called once per frame
-	void Update(){
+    void Update(){
 
-		Vector3 pencilvelocity;
-		pencilvelocity = rb.velocity;
-		Debug.Log (pencilvelocity);
+        float moveHorizontal = Input.GetAxis("Horizontal");
+
+        if (freezeControl == false)
+        {
+            if (moveHorizontal > 0)
+            {
+
+                anim.SetInteger("Direction", 1);
+                anim.SetBool("IsMoving", true);
+                rb.velocity = new Vector3(0f, rb.velocity.y, rb.velocity.z);
+                transform.Translate(Vector3.right * moveHorizontal * speed * Time.deltaTime);
+
+            }
+            else if (moveHorizontal < 0)
+            {
+
+                anim.SetInteger("Direction", -1);
+                anim.SetBool("IsMoving", true);
+                rb.velocity = new Vector3(0f, rb.velocity.y, rb.velocity.z);
+                transform.Translate(Vector3.left * -moveHorizontal * speed * Time.deltaTime);
+
+            }
+            else
+            {
+
+                anim.SetBool("IsMoving", false);
+
+            }
 
 
-		if (freezeControl == false) {
-			if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) {
+            if (Input.GetButtonDown("Punch"))
+            {
 
-				rb.velocity = new Vector3 (0f, rb.velocity.y, rb.velocity.z);
-				transform.Translate (Vector3.left * speed * Time.deltaTime);
-				anim.SetInteger ("Direction", -1);
-				anim.SetBool ("IsMoving", true);
 
-			} else if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) {
+                if (Input.GetButton("Punch") && Input.GetButton("Kick"))
+                {
 
-				rb.velocity = new Vector3 (0f, rb.velocity.y, rb.velocity.z);
-				transform.Translate (Vector3.right * speed * Time.deltaTime);
-				anim.SetInteger ("Direction", 1);
-				anim.SetBool ("IsMoving", true);
+                    if (gameObject.GetComponent<Player_Controller>().powerbar.value == 1f)
+                    {
 
-			} else if (Input.GetKeyDown (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) {
+                        anim.SetTrigger("Special");
+                        freezeControl = true;
+                        GetComponent<Player_Controller>().PlayerStat_Special();
 
-				if (jumped == false) {
-					anim.SetBool ("Jumped", true);
-				}
-			} else if (Input.GetKeyDown (KeyCode.Z)) {
-
-				anim.SetTrigger ("Punch");
-                GetComponent<Player_Controller>().PlayerStat_Punch();
-
-            } else if(Input.GetKeyDown(KeyCode.X)){
-
-			    anim.SetTrigger ("Kick");
-                GetComponent<Player_Controller>().PlayerStat_Kick();
-
-            } else if (Input.GetKey (KeyCode.Z) && Input.GetKey (KeyCode.X) || Input.GetKey (KeyCode.X) && Input.GetKey (KeyCode.Z)) {
-
-				if (gameObject.GetComponent<Player_Controller> ().powerbar.value == 1f) {
-
-					anim.SetTrigger ("Special");
-					freezeControl = true;
-                    GetComponent<Player_Controller>().PlayerStat_Special();
+                    }
 
                 }
+                else if (Input.GetButton("Duck") && Input.GetButton("Punch"))
+                {
 
-			} else {
+                    if (gameObject.GetComponent<Player_Controller>().powerbar.value > 0.1f)
+                    {
 
-				anim.SetBool ("IsMoving", false);
+                        anim.SetTrigger("MiniSpecial");
+                        freezeControl = true;
+                        gameObject.GetComponent<Player_Controller>().currentPower -= 0.1f;
+                        GetComponent<Player_Controller>().PlayerStat_MiniSpecial();
 
-			}
-		}
+                    }
+
+                }
+                else
+                {
+                    anim.SetTrigger("Punch");
+                    GetComponent<Player_Controller>().PlayerStat_Punch();
+                }
+
+            }
+            if (Input.GetButtonDown("Kick"))
+            {
+
+                anim.SetTrigger("Kick");
+                GetComponent<Player_Controller>().PlayerStat_Kick();
+
+                return;
+
+            }
+            if (Input.GetButtonDown("Jump"))
+            {
+
+                if (jumped == false)
+                {
+                    anim.SetBool("Jumped", true);
+                }
+
+            }
+
+
+        }
 
 		if (transform.position.x > 21f) {
 
@@ -119,7 +156,7 @@ public class Pencil_ControllerPlayer : MonoBehaviour {
 
 	}
 
-	public void Jump(){
+	public void PencilJump(){
 
 		if (jumped == false) {
 			rb.AddForce (Vector3.up * jumppower, ForceMode.Impulse);

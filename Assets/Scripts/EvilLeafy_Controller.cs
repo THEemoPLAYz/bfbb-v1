@@ -19,7 +19,7 @@ public class EvilLeafy_Controller : MonoBehaviour {
         timer = timer + Time.deltaTime;
         if (timer > teleportTime){
 
-            transform.position = new Vector3(Random.Range(-20f, 20f), transform.position.y, Random.Range(-3, 27));
+            transform.position = new Vector3(Random.Range(-20f, 20f), transform.position.y, Random.Range(8, 27));
             sound.PlayOneShot(teleport);
             timer = 0f;
             teleportTime = Random.Range(minValue, maxValue);

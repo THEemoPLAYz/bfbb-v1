@@ -54,7 +54,6 @@ public class David_ControllerAI : MonoBehaviour {
         anim.runtimeAnimatorController = davidcontroller;
 		collider.center = new Vector3 (ColliderPosition.x, ColliderPosition.y, ColliderPosition.z);
 		collider.size = new Vector3 (ColliderScale.x, ColliderScale.y, ColliderScale.z);
-		opponentName.text = "DAVID";
 
 		//Range between player detection
 		if (player.GetComponent<Pencil_ControllerPlayer> ().enabled == true) {

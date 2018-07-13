@@ -1090,7 +1090,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1443,7 +1443,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1081072628190698}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1bde9886c0b122469d3ac49489b316c, type: 3}
   m_Name: 
@@ -1467,7 +1467,7 @@ MonoBehaviour:
   PunchTriggerLPosition: {x: -0.98, y: 1.74, z: 0}
   playerName: {fileID: 0}
   speed: 9
-  jumppower: 4
+  jumppower: 15
   punchpower: 6
   pencapOffsetX: 0.95
   jumped: 0
@@ -1620,7 +1620,7 @@ MonoBehaviour:
   opponent: {fileID: 0}
   oof: {fileID: 0}
   pencilDebris: {fileID: 1736136025451216}
-  woodyDebris: {fileID: 0}
+  woodyDebris: {fileID: 1736136025451216}
   spongyDebris: {fileID: 1953772379809582}
   penDebris: {fileID: 0}
   currentDebris: {fileID: 0}
@@ -1771,13 +1771,21 @@ MonoBehaviour:
   spongySpecial: {fileID: 8300000, guid: a7850d219cc2a4e3d8108094627bd4bf, type: 3}
   spongyWaterfall: {fileID: 8300000, guid: dbb8fbc8a72484e69be56142a9222283, type: 3}
   spongySplash: {fileID: 8300000, guid: ef7aee09def7e44ccaec1aa9c789b3ff, type: 3}
+  penPunch:
+  - {fileID: 8300000, guid: ad814068611bd4a96847dc4f8843d068, type: 3}
+  - {fileID: 8300000, guid: 656ba7ab9e6494da0ba5a8966d564346, type: 3}
+  penWin: {fileID: 8300000, guid: 87f9a3fc5af7744488e7c3612e682a6a, type: 3}
+  penLose: {fileID: 8300000, guid: 97e15d127fb4041588ad7ff993c59f28, type: 3}
+  penMock: {fileID: 0}
+  penSpecial: {fileID: 8300000, guid: 0ceb507ee3d984b91b6c1b9b3583fa7e, type: 3}
+  penMiniSpecial: {fileID: 8300000, guid: 7d9bf279968f94d1e88a3d6b1d420680, type: 3}
 --- !u!114 &114736135606283364
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1081072628190698}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a010c4e20070742a299ac229c61a777a, type: 3}
   m_Name: 
@@ -1802,7 +1810,7 @@ MonoBehaviour:
   PunchTriggerRPosition: {x: 1.4, y: 1.74, z: 0}
   PunchTriggerLPosition: {x: -1.4, y: 1.74, z: 0}
   speed: 12
-  jumppower: 8
+  jumppower: 15
   punchpower: 3
   jumped: 0
   freezeControl: 0
@@ -1896,7 +1904,7 @@ MonoBehaviour:
   PunchTriggerLPosition: {x: -0.83, y: 1.74, z: 0}
   playerName: {fileID: 0}
   speed: 10
-  jumppower: 8
+  jumppower: 15
   punchpower: 5
   jumped: 0
   freezeControl: 0

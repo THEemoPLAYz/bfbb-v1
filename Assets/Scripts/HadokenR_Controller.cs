@@ -21,7 +21,7 @@ public class HadokenR_Controller : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider other){
 
-		if (other.gameObject.CompareTag ("Opponent")) {
+        if (other.gameObject.tag == "Opponent") {
 
             CameraShaker.Instance.ShakeOnce(2f, 5f, 0.1f, 0.5f);
             opponent.GetComponent<MainOpponent_Controller> ().newHealth -= hadokenPower;

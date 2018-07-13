@@ -43,37 +43,41 @@ public class Pen_ControllerPlayer : MonoBehaviour {
 		collider.size = new Vector3 (ColliderScale.x, ColliderScale.y, ColliderScale.z);
 		punchtriggerR.GetComponent<BoxCollider> ().center = new Vector3 (PunchTriggerRPosition.x, PunchTriggerRPosition.y, PunchTriggerRPosition.z);
 		punchtriggerL.GetComponent<BoxCollider> ().center = new Vector3 (PunchTriggerLPosition.x, PunchTriggerLPosition.y, PunchTriggerLPosition.z);
-		playerName.text = "PENCIL";
 	}
 	
 	// Update is called once per frame
 	void Update(){
 
+        float moveHorizontal = Input.GetAxis("Horizontal");
 
 		if (freezeControl == false) {
-			if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) {
+            if (moveHorizontal > 0) {
 
+                anim.SetInteger("Direction", 1);
+                anim.SetBool("IsMoving", true);
 				rb.velocity = new Vector3 (0f, rb.velocity.y, rb.velocity.z);
-				transform.Translate (Vector3.left * speed * Time.deltaTime);
-				anim.SetInteger ("Direction", -1);
-				anim.SetBool ("IsMoving", true);
+                transform.Translate (Vector3.right * moveHorizontal * speed * Time.deltaTime);
 
-			} else if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) {
+            } else if (moveHorizontal < 0) {
 
+                anim.SetInteger("Direction", -1);
+                anim.SetBool("IsMoving", true);
 				rb.velocity = new Vector3 (0f, rb.velocity.y, rb.velocity.z);
-				transform.Translate (Vector3.right * speed * Time.deltaTime);
-				anim.SetInteger ("Direction", 1);
-				anim.SetBool ("IsMoving", true);
+                transform.Translate (Vector3.left * -moveHorizontal * speed * Time.deltaTime);
 
-			} else if (Input.GetKeyDown (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) {
+			}
+            else {
 
-				if (jumped == false) {
-					anim.SetBool ("Jumped", true);
-				}
+				anim.SetBool ("IsMoving", false);
 
-			} else if (Input.GetKeyDown (KeyCode.Z))
+            }
+
+
+            if (Input.GetButtonDown("Punch"))
             {
-                if (Input.GetKey(KeyCode.Z) && Input.GetKey(KeyCode.X) || Input.GetKey(KeyCode.X) && Input.GetKey(KeyCode.Z))
+
+
+                if (Input.GetButton("Punch") && Input.GetButton("Kick"))
                 {
 
                     if (gameObject.GetComponent<Player_Controller>().powerbar.value == 1f)
@@ -86,8 +90,7 @@ public class Pen_ControllerPlayer : MonoBehaviour {
                     }
 
                 }
-                 else if ((Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.Z)) ||
-              (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.Z)))
+                else if (Input.GetButton("Duck") && Input.GetButton("Punch"))
                 {
 
                     if (gameObject.GetComponent<Player_Controller>().powerbar.value > 0.1f)
@@ -107,16 +110,24 @@ public class Pen_ControllerPlayer : MonoBehaviour {
                     GetComponent<Player_Controller>().PlayerStat_Punch();
                 }
 
-            } else if(Input.GetKeyDown(KeyCode.X)){
+            }
+            if(Input.GetButtonDown("Kick")){
 
-			    anim.SetTrigger ("Kick");
+                anim.SetTrigger ("Kick");
                 GetComponent<Player_Controller>().PlayerStat_Kick();
 
-            } else {
+                return;
 
-				anim.SetBool ("IsMoving", false);
+            } 
+            if (Input.GetButtonDown("Jump")) {
 
-			}
+                if (jumped == false) {
+                    anim.SetBool ("Jumped", true);
+                }
+
+            }
+
+
 		}
 
 		if (transform.position.x > 21f) {
@@ -146,7 +157,7 @@ public class Pen_ControllerPlayer : MonoBehaviour {
 
 	}
 
-	public void Jump(){
+	public void PenJump(){
 
 		if (jumped == false) {
 			rb.AddForce (Vector3.up * jumppower, ForceMode.Impulse);
@@ -221,18 +232,18 @@ public class Pen_ControllerPlayer : MonoBehaviour {
 		specialClone2.SetActive (true);
 
 	}
-    public void Special_PenCapThrowR()
+    public void Special_PenCapThrow()
     {
-
+        opponent.GetComponent<Rigidbody>().AddForce(Vector3.right * 10f, ForceMode.Impulse);
         pencap.transform.position = new Vector3(playerCenter.transform.position.x + pencapOffsetX, playerCenter.transform.position.y, playerCenter.transform.position.z);
         pencap.GetComponent<PenCap_ControllerR>().enabled = true;
         pencap.GetComponent<PenCap_ControllerL>().enabled = false;
         pencap.SetActive(true);
 
-    }
+     }
     public void Special_PenCapThrowL()
     {
-
+        opponent.GetComponent<Rigidbody>().AddForce(Vector3.left * 10, ForceMode.Impulse);
         pencap.transform.position = new Vector3(playerCenter.transform.position.x - pencapOffsetX, playerCenter.transform.position.y, playerCenter.transform.position.z);
         pencap.GetComponent<PenCap_ControllerR>().enabled = false;
         pencap.GetComponent<PenCap_ControllerL>().enabled = true;

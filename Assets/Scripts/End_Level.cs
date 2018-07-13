@@ -40,6 +40,7 @@ public class End_Level : MonoBehaviour {
         player.GetComponent<Pencil_ControllerPlayer>().enabled = false;
         player.GetComponent<Woody_ControllerPlayer>().enabled = false;
         player.GetComponent<Spongy_ControllerPlayer>().enabled = false;
+        player.GetComponent<Pen_ControllerPlayer>().enabled = false;
 
         opponent.GetComponent<David_ControllerAI>().enabled = false;
 
@@ -76,6 +77,8 @@ public class End_Level : MonoBehaviour {
         player.GetComponent<Player_Controller>().enabled = false;
         player.GetComponent<Pencil_ControllerPlayer>().enabled = false;
         player.GetComponent<Woody_ControllerPlayer>().enabled = false;
+        player.GetComponent<Spongy_ControllerPlayer>().enabled = false;
+        player.GetComponent<Pen_ControllerPlayer>().enabled = false;
 
         opponent.GetComponent<David_ControllerAI>().enabled = false;
 

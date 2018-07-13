@@ -91,7 +91,7 @@ AnimationClip:
   m_GenerateMotionCurves: 0
   m_Events:
   - time: 0.13333334
-    functionName: Jump
+    functionName: PencilJump
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

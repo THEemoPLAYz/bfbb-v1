@@ -112,7 +112,7 @@ AnimationClip:
   m_GenerateMotionCurves: 0
   m_Events:
   - time: 0.20833333
-    functionName: Jump
+    functionName: WoodyJump
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
