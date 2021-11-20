@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.00043031637, g: 0.029223073, b: 0.027737452, a: 1}
+  m_IndirectSpecularColor: {r: 0.00043034722, g: 0.029224306, b: 0.027738728, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7470,11 +7470,11 @@ MonoBehaviour:
   description: {fileID: 1213632726}
   image: {fileID: 91665265}
   leafy: Don't let her hold knives.
-  spongy: Thicc and useful in the kitchen.
-  pencil: Strives for justice through punishments.
+  spongy: Big.
+  pencil: Justice via punishments
   david: He finds the word 'seriously' AWfully adorable.
-  pen: Unknowingly charismatic. Has a private part.
-  woody: Everyone should give a little love for this helpless scaredy-cat.
+  pen: Unknowingly charismatic no cap
+  woody: Give a little love for this helpless scaredy-cat.
 --- !u!95 &758677068
 Animator:
   serializedVersion: 3

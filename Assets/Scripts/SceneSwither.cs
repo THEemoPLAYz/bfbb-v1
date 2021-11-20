@@ -40,13 +40,13 @@ public class SceneSwither : MonoBehaviour {
 	}
 	public void LoadMain(){
 
-		SceneManager.LoadSceneAsync ("CharacterSelect3");
+		SceneManager.LoadSceneAsync ("MainMenu");
 		loader.SetActive (true);
 
 	}
 	public void LoadCharacterSelect(){
 
-		SceneManager.LoadSceneAsync ("CharacterSelectNew");
+		SceneManager.LoadSceneAsync ("CharacterSelect3");
 		loader.SetActive (true);
 
 	}

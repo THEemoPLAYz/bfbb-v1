@@ -117,7 +117,7 @@ PlayerSettings:
     16:10: 0
     16:9: 1
     Others: 0
-  bundleVersion: 1.0
+  bundleVersion: april2018
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -650,7 +650,7 @@ PlayerSettings:
   apiCompatibilityLevel: 2
   cloudProjectId: 5c539747-2aba-45d8-9c36-49a51425ef5d
   projectName: Battle for BFDI Battle
-  organizationId: smolpadok
+  organizationId: muqasyateam
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
